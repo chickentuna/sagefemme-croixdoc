@@ -6,7 +6,7 @@ import ButtonLink from './components/ButtonLink';
 const useStyle = createUseStyles({
   wrapper: {
     padding: [80, 30],
-    backgroundImage: 'url(\'background.jpg\')',
+    backgroundImage: 'linear-gradient(rgba(0, 0, 0, 0.05), rgba(0, 0, 0, 0.15)), url(\'background.jpg\')',
     backgroundSize: 'cover',
     backgroundPosition: '25% 25%',
     display: 'flex',
