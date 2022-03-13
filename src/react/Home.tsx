@@ -50,13 +50,15 @@ const useStyle = createUseStyles({
   }  
 })
 
+//TODO: tell fanchon she should have a footer, maybe the current one
+
 const links = [    
-  {label: 'Grossesse et post-partum', to: '/grossesse'},
-  {label: 'Rééducation périnéale', to: '/reeducation'},
-  {label: 'Gynécologie', to: '/gynecologie'},
-  {label: 'Preparation a la naissance', to: '/pnp'},
-  {label: 'I.V.G.', to: '/ivg'},
-  {label: 'Urgences', to: '/urgences', alert: true}
+  {label: 'Grossesse et post-partum', to: 'grossesse'},
+  {label: 'Rééducation périnéale', to: 'reeducation'},
+  {label: 'Gynécologie', to: 'gynecologie'},
+  {label: 'Preparation a la naissance', to: 'pnp'},
+  {label: 'I.V.G.', to: 'ivg'},
+  {label: 'Urgences', to: 'urgences', alert: true}
 ]
 
 export default function Home() {
