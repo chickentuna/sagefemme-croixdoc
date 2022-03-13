@@ -1,0 +1,66 @@
+/* CSS */
+.button-39 {
+  width: 340px;
+  height: 180px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background-color: #FFFFFF;
+  border: 1px solid rgb(209,213,219);
+  border-radius: .5rem;
+  box-sizing: border-box;
+  color: #111827;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 20px;
+  text-align: center;
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+  cursor: pointer;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+
+  transition: all 150ms ease-out;
+  text-decoration: none;
+  a { 
+      text-decoration: none;
+    -webkit-transition: all 150ms ease-out;
+    -moz-transition: all 150ms ease-out;
+    -ms-transition: all 150ms ease-out;
+    -o-transition: all 150ms ease-out;
+    transition: all 150ms ease-out;
+  }
+}
+
+.button-39:hover {
+  background-color: rgb(249,250,251);
+  color: #7db6d3;	
+  text-decoration: none;
+}
+
+.button-39:focus {
+  outline: 2px solid transparent;
+  outline-offset: 2px;
+}
+
+.button-39:focus-visible {
+  box-shadow: none;
+}
+
+.alert {
+  background-color: #e62143;
+  border: none;
+  color: white;
+}
+
+.alert:hover {
+  background-color: #c41b39;
+  color: white;
+}
+
+.mini {
+  width: auto;
+  height: auto;
+  padding: 0.75rem 1rem;
+}
