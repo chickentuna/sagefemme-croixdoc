@@ -5,10 +5,10 @@ import './ButtonLink.scss'
 
 
 interface ButtonLinkProps {
-    to: string
-    children?: ReactNode
-    alert?: boolean
-    mini?: boolean
+  to: string
+  children?: ReactNode
+  alert?: boolean
+  mini?: boolean
 }
 
 export default function ButtonLink({to, children, alert = false, mini = false}: ButtonLinkProps) {
