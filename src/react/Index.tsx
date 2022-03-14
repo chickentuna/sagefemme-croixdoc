@@ -13,7 +13,7 @@ export function Index() {
       <Routes>
         <Route path="/" element={<App />}>
           <Route index element={ <Home /> }/>
-          <Route path="acceuil" element={ <Home /> }/>
+          <Route path="accueil" element={ <Home /> }/>
           <Route
             path="*"
             element={
