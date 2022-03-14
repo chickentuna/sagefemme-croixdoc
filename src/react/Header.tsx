@@ -7,7 +7,6 @@ import { createUseStyles } from 'react-jss'
 const useStyles = createUseStyles({
   header: {
     background: 'white',
-    height: 80,
   },
   container: {
     display: 'flex',
@@ -81,18 +80,20 @@ const useStyles = createUseStyles({
   }
 })
 
-export default function Header() {
+export function Header() {
 
   const { pathname } = useLocation()
 
   const classes = useStyles()
 
   const tabs = [
-    {label: 'Accueil', to: '/accueil'},
+    {label: 'Accueil', to: '/'},
     {label: 'Votre sage-femme', to: '/a-propos'},
     {label: 'Infos pratiques', to: '/infos-pratiques'},
     {label: 'Contact', to: '/contact'},
   ]
+
+  const selectedTab = tabs.find(tab => tab.to === pathname) ?? tabs[0]
 
   return (
     <>
@@ -112,13 +113,11 @@ export default function Header() {
       <div className={classes.nav}> 
     
         <div className={classes.container}>
-     
-
           <ul className={classes.sfMenu}>
             {tabs.map(({label, to}) => (
               <li
                 key={to} 
-                className={classNames([classes.menuItem, {[classes.currentMenuItem]: ('/'+pathname.split('/')[1]) === (to)}])}>
+                className={classNames([classes.menuItem, {[classes.currentMenuItem]: to === selectedTab.to}])}>
                 <Link to={to}>{label}</Link>
               </li>
             ))}
@@ -144,3 +143,5 @@ export default function Header() {
     </>
   )
 }
+
+export default React.memo(Header)
