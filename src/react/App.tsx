@@ -1,6 +1,7 @@
 import React from 'react'
 import { createUseStyles } from 'react-jss'
 import { Outlet } from 'react-router-dom'
+import Footer from './Footer'
 import Header from './Header'
 
 const useStyle = createUseStyles({
@@ -21,6 +22,7 @@ export default function App() {
     <div className={classes.box}>
       <Header />
       <Outlet />
+      <Footer />
     </div>
   )
 }

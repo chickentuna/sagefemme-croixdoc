@@ -1,0 +1,56 @@
+import React from 'react';
+import {createUseStyles} from 'react-jss'
+import ButtonLink from './components/ButtonLink';
+
+const useStyle = createUseStyles({
+  resources: {
+    flex: '0 1 60px',
+    display: 'flex',
+    width: '100%',
+    justifyContent: 'space-between',
+    alignItems: 'center'
+  },
+  adress: {
+    fontWeight: 'bold',
+    color: 'black'
+  },
+  documents:{
+
+  },
+  doctolib: {
+
+  },
+  cards: {
+
+  },
+  cardsImg: {
+    width: 100
+  }  
+})
+
+export default function Footer() {
+  const classes = useStyle()
+  return (
+    <div className={classes.resources}>
+      <div className={classes.adress}>
+        <div>7 croix d'occitanie</div>
+        <div>34400 Restinclières</div>
+      </div>
+      <div className={classes.documents}>
+        <ButtonLink mini to={'documents'}>
+            Documents utiles
+        </ButtonLink>
+      </div>
+      <div className={classes.doctolib}>
+        <ButtonLink mini to={'doctolib'}>
+            Doctolib
+        </ButtonLink>
+      </div>
+
+      <div className={classes.cards}>
+        <img   className={classes.cardsImg} src="https://www.institutsandra.pro/public/img/big/carte%20bleue%20200303-zoom-logo-cb.png" />
+      </div>
+
+    </div>
+  )
+}

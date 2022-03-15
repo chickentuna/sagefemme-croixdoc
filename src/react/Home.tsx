@@ -69,7 +69,7 @@ export default function Home() {
         ))}
           
       </div>
-      <div className={classes.resources}>
+      {/* <div className={classes.resources}>
         <div className={classes.adress}>
           <div>7 croix d'occitanie</div>
           <div>34400 Restinclières</div>
@@ -89,7 +89,7 @@ export default function Home() {
           <img   className={classes.cardsImg} src="https://www.institutsandra.pro/public/img/big/carte%20bleue%20200303-zoom-logo-cb.png" />
         </div>
 
-      </div>
+      </div> */}
 
     </PageWrapper>
   )

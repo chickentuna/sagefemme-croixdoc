@@ -1,7 +1,5 @@
-import classNames from 'classnames'
 import React, { HTMLProps, ReactNode } from 'react'
 import { createUseStyles } from 'react-jss'
-import './ButtonLink.scss'
 
 const useStyle = createUseStyles({
   wrapper: {
@@ -15,10 +13,6 @@ const useStyle = createUseStyles({
     flexDirection: 'column'
   }
 })
-
-interface PageWrapperProps extends HTMLProps<Element> {
-  children?: ReactNode
-}
 
 function PageWrapper({children, style}: HTMLProps<Element>) {
   const {wrapper} = useStyle()
