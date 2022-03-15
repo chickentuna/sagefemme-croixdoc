@@ -8,6 +8,7 @@ import App from './App'
 import Home from './Home'
 import Grossesse from './pages/Grossesse'
 import Gyneco from './pages/Gyneco'
+import Reeducation from './pages/Reeducation'
 
 export function Index() {
   return (
@@ -17,6 +18,7 @@ export function Index() {
           <Route index element={ <Home /> }/>
           <Route path="/gynecologie" element={ <Gyneco /> }/>
           <Route path="/grossesse-et-post-partum" element={ <Grossesse /> }/>
+          <Route path="/reeducation-perineale" element={ <Reeducation /> }/>
           <Route
             path="*"
             element={
