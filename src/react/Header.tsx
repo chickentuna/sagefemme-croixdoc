@@ -43,7 +43,7 @@ const useStyles = createUseStyles({
     '& a': {
       fontSize: 13,
       textDecoration: 'none',
-      padding: [21, 15, 20, 15],
+      padding: [15, 15, 15, 15],
       margin: 0,
       display: 'block',
       position: 'relative',

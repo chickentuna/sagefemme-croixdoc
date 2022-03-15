@@ -6,6 +6,7 @@ import {
 } from 'react-router-dom'
 import App from './App'
 import Home from './Home'
+import Gyneco from './pages/Gyneco'
 
 export function Index() {
   return (
@@ -13,6 +14,7 @@ export function Index() {
       <Routes>
         <Route path="/" element={<App />}>
           <Route index element={ <Home /> }/>
+          <Route path="/gynecologie" element={ <Gyneco /> }/>
           <Route
             path="*"
             element={

@@ -29,6 +29,7 @@ module.exports = {
     'react/no-unescaped-entities': 'off',
     '@typescript-eslint/no-useless-constructor': 'error',
     'no-unused-vars': 'off',
+    '@typescript-eslint/no-unused-vars': 'off',
     '@typescript-eslint/indent': [
       'error',
       2

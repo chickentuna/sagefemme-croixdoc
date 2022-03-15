@@ -2,18 +2,9 @@ import React from 'react';
 
 import {createUseStyles} from 'react-jss'
 import ButtonLink from './components/ButtonLink';
+import PageWrapper from './components/PageWrapper';
 
 const useStyle = createUseStyles({
-  wrapper: {
-    padding: [80, 30],
-    backgroundImage: 'linear-gradient(rgba(0, 0, 0, 0.05), rgba(0, 0, 0, 0.15)), url(\'background.jpg\')',
-    backgroundSize: 'cover',
-    backgroundPosition: '25% 25%',
-    display: 'flex',
-    alignItems: 'center',
-    flexDirection: 'column',
-    flex: '1 1 auto'
-  },
   buttons: {
     display: 'flex',
     flexWrap: 'wrap',
@@ -50,11 +41,11 @@ const useStyle = createUseStyles({
   }  
 })
 
-//TODO: tell fanchon she should have a footer, maybe the current one
+//TODO: make a footer out of the bottom of this home
 
 const links = [    
-  {label: 'Grossesse et post-partum', to: 'grossesse'},
-  {label: 'Rééducation périnéale', to: 'reeducation'},
+  {label: 'Grossesse et post-partum', to: 'grossesse-et-post-partum'},
+  {label: 'Rééducation périnéale', to: 'reeducation-perineale'},
   {label: 'Gynécologie', to: 'gynecologie'},
   {label: 'Preparation a la naissance', to: 'pnp'},
   {label: 'I.V.G.', to: 'ivg'},
@@ -64,7 +55,10 @@ const links = [
 export default function Home() {
   const classes = useStyle()
   return (
-    <div className={classes.wrapper}>
+    <PageWrapper style={{
+      backgroundImage: 'linear-gradient(rgba(0, 0, 0, 0.05), rgba(0, 0, 0, 0.15)), url(\'background.jpg\')',
+      backgroundPosition: '25% 25%',
+    }}>
       <div className={classes.buttons}>        
         {links.map(({label, to, alert = false}) => (
           <div key={to} className={classes.button}>
@@ -97,6 +91,6 @@ export default function Home() {
 
       </div>
 
-    </div>
+    </PageWrapper>
   )
 }
