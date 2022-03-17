@@ -1,5 +1,6 @@
 import React from 'react';
 import {createUseStyles} from 'react-jss'
+import { Link } from 'react-router-dom';
 import ButtonLink from './components/ButtonLink';
 
 const useStyle = createUseStyles({
@@ -37,14 +38,14 @@ export default function Footer() {
         <div>34400 Restinclières</div>
       </div>
       <div className={classes.documents}>
-        <ButtonLink mini to={'documents'}>
+        <Link className='button-39' to={'documents'}>
             Documents utiles
-        </ButtonLink>
+        </Link>
       </div>
       <div className={classes.doctolib}>
-        <ButtonLink mini to={'doctolib'}>
+        <Link className='button-39' to={'doctolib'}>
             Doctolib
-        </ButtonLink>
+        </Link>
       </div>
 
       <div className={classes.cards}>

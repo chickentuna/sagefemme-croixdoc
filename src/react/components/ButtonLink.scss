@@ -1,7 +1,8 @@
-/* CSS */
+/* deprecated (but for footer) CSS */
 .button-39 {
-  width: 340px;
-  height: 180px;
+  width: auto;
+  height: auto;
+  padding: 0.75rem 1rem;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -57,10 +58,4 @@
 .alert:hover {
   background-color: #c41b39;
   color: white;
-}
-
-.mini {
-  width: auto;
-  height: auto;
-  padding: 0.75rem 1rem;
 }
