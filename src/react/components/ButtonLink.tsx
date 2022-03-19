@@ -12,11 +12,11 @@ const useStyles = createUseStyles((theme: Theme) => ({
     display: 'flex',
     flex: '1 0 250px',
     backgroundColor: 'white',
-    //TODO: use this if gap property isn't compatible enough
-    // margin: [0, 15], 
+    // TODO: use this if gap property isn't compatible enough
+    // margin: [0, 15],
     cursor: 'pointer',
     userSelect: 'none',
-    transition:  'all 150ms ease-out',
+    transition: 'all 150ms ease-out',
     textDecoration: 'none',
 
     '&:hover': {
@@ -46,7 +46,7 @@ const useStyles = createUseStyles((theme: Theme) => ({
     padding: '22px',
     height: '88px',
     width: '88px',
-    color: 'white',
+    color: 'white'
   },
   title: {
     fontSize: '1.25rem',
@@ -76,12 +76,12 @@ const useStyles = createUseStyles((theme: Theme) => ({
       gap: 20,
       padding: 15,
       justifyContent: 'center',
-      '@media (max-width: 1150px)': {        
+      '@media (max-width: 1150px)': {
         justifyContent: 'center'
       }
     },
     '& $text': {
-      margin: 0,
+      margin: 0
     },
     '& $title': {
       margin: 0,
@@ -104,10 +104,10 @@ interface ButtonLinkProps {
   children?: ReactNode
 }
 
-export default function ButtonLink({to, children, icon, title, inline = false}: ButtonLinkProps) {
+export default function ButtonLink ({ to, children, icon, title, inline = false }: ButtonLinkProps) {
   const classes = useStyles()
   return (
-    <Link to={to} className={classNames([{[classes.inline]: inline}, classes.link])}>
+    <Link to={to} className={classNames([{ [classes.inline]: inline }, classes.link])}>
       <div className={classes.block}>
         <span className={classes.iconWrapper}>
           <FontAwesomeIcon icon={icon} />

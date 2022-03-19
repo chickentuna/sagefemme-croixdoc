@@ -21,18 +21,19 @@ const useStyles = createUseStyles({
   }
 })
 
-function Reeducation() {
+function Reeducation () {
   const classes = useStyles()
   return (
-    <PageWrapper style={{
-      backgroundImage: 'linear-gradient(rgba(0, 0, 0, 0.0), rgba(0, 0, 0, 0.0)), url(\'reeducation.jpg\')',
-      backgroundPosition: '100% 50%',
-      alignItems: 'flex-end'
-    }}>
+    <PageWrapper
+      style={{
+        backgroundImage: 'linear-gradient(rgba(0, 0, 0, 0.0), rgba(0, 0, 0, 0.0)), url(\'reeducation.jpg\')',
+        backgroundPosition: '100% 50%',
+        alignItems: 'flex-end'
+      }}
+      title='Rééducation périnéale'
+    >
       <div className={classes.content}>
-
-        <h1 className={classes.title}>Rééducation périnéale</h1>
-        <div className={classes.list} >
+        <div className={classes.list}>
           <p>
             Pas d’ordonnance nécessaire, dans la limite de (30 ?) séances<br />
             Pour les femmes de tout âge, en post-partum ou non<br />
@@ -51,6 +52,5 @@ function Reeducation() {
     </PageWrapper>
   )
 }
-
 
 export default React.memo(Reeducation)

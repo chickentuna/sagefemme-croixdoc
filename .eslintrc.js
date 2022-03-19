@@ -1,3 +1,4 @@
+/* eslint-disable */
 module.exports = {
   'env': {
     'browser': true,
@@ -6,7 +7,9 @@ module.exports = {
   'extends': [
     'eslint:recommended',
     'plugin:react/recommended',
-    'plugin:@typescript-eslint/recommended'
+    'plugin:@typescript-eslint/recommended',
+    'standard-jsx',
+    'standard'
   ],
   'parser': '@typescript-eslint/parser',
   'parserOptions': {

@@ -12,26 +12,35 @@ const useStyles = createUseStyles({
   content: {
     fontSize: 20,
     maxWidth: '87%',
-    minWidth: 500
+    minWidth: 500,
+    display: 'flex'
   },
   list: {
     color: 'black',
     marginTop: 10
+  },
+  imageBlock: {
+    flex: 1,
+    overflow: 'hidden',
+    display: 'flex',
+    justifyContent: 'center',
+    alignItems: 'center'
   }
 })
 
-function Grossesse() {
+function Grossesse () {
   const classes = useStyles()
   return (
-    <PageWrapper style={{
-      backgroundImage: 'linear-gradient(rgba(0, 0, 0, 0.00), rgba(0, 0, 0, 0.00)), url(\'bebe.jpg\')',
-      backgroundPosition: '22.5% 25%',
-      alignItems: 'flex-start'
-    }}>
+    <PageWrapper
+      title='Grossesse et post-partum'
+    >
       <div className={classes.content}>
 
-        <h1 className={classes.title}>Grossesse et post-partum</h1>
-        <div className={classes.list} >
+        <div className={classes.imageBlock}>
+          <img src='bebe.jpg' />
+        </div>
+
+        <div className={classes.list}>
           <List items={[
             'Consultation pré-conceptionnelle',
             'Suivi de grossesse physiologique - suivi semi-global',
@@ -49,13 +58,13 @@ function Grossesse() {
             'Accompagnement et soutien de l’allaitement maternel',
             'Consultation post-natale (6-8 semaines après l’accouchement)',
             'Rééducation périnéale',
-            'Vaccinations de la femme enceinte et de son entourage'            
-          ]} />
+            'Vaccinations de la femme enceinte et de son entourage'
+          ]}
+          />
         </div>
       </div>
     </PageWrapper>
   )
 }
-
 
 export default React.memo(Grossesse)

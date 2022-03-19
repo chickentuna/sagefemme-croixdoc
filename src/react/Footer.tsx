@@ -1,7 +1,7 @@
-import React from 'react';
-import {createUseStyles} from 'react-jss'
-import { Link } from 'react-router-dom';
-import ButtonLink from './components/ButtonLink';
+import React from 'react'
+import { createUseStyles } from 'react-jss'
+import { Link } from 'react-router-dom'
+import ButtonLink from './components/ButtonLink'
 
 const useStyle = createUseStyles({
   resources: {
@@ -15,7 +15,7 @@ const useStyle = createUseStyles({
     fontWeight: 'bold',
     color: 'black'
   },
-  documents:{
+  documents: {
 
   },
   doctolib: {
@@ -26,10 +26,10 @@ const useStyle = createUseStyles({
   },
   cardsImg: {
     width: 100
-  }  
+  }
 })
 
-export default function Footer() {
+export default function Footer () {
   const classes = useStyle()
   return (
     <div className={classes.resources}>
@@ -38,18 +38,18 @@ export default function Footer() {
         <div>34400 Restinclières</div>
       </div>
       <div className={classes.documents}>
-        <Link className='button-39' to={'documents'}>
-            Documents utiles
+        <Link className='button-39' to='documents'>
+          Documents utiles
         </Link>
       </div>
       <div className={classes.doctolib}>
-        <Link className='button-39' to={'doctolib'}>
-            Doctolib
+        <Link className='button-39' to='doctolib'>
+          Doctolib
         </Link>
       </div>
 
       <div className={classes.cards}>
-        <img   className={classes.cardsImg} src="https://www.institutsandra.pro/public/img/big/carte%20bleue%20200303-zoom-logo-cb.png" />
+        <img className={classes.cardsImg} src='https://www.institutsandra.pro/public/img/big/carte%20bleue%20200303-zoom-logo-cb.png' />
       </div>
 
     </div>

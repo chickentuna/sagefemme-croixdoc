@@ -22,8 +22,8 @@ interface ListProps {
   items: ReactNode[]
 }
 
-function List({icon='leaf', items}: ListProps) {
-  const {listItem, listIcon} = useStyle()
+function List ({ icon = 'leaf', items }: ListProps) {
+  const { listItem, listIcon } = useStyle()
   return (
     <div>
       {items.map((node, idx) => (

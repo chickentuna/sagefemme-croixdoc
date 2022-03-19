@@ -1,16 +1,16 @@
-import React from 'react';
+import React from 'react'
 
-import {createUseStyles} from 'react-jss'
-import ButtonLink from './components/ButtonLink';
-import PageWrapper from './components/PageWrapper';
-import { faStethoscope, faHandHoldingMedical, faDroplet, faBandage, faBaby, faPersonBreastfeeding, faBandAid, faHeartbeat, faHeartPulse, faAmbulance, faBriefcase, faBriefcaseMedical} from '@fortawesome/free-solid-svg-icons'
+import { createUseStyles } from 'react-jss'
+import ButtonLink from './components/ButtonLink'
+import PageWrapper from './components/PageWrapper'
+import { faStethoscope, faHandHoldingMedical, faDroplet, faBandage, faBaby, faPersonBreastfeeding, faBandAid, faHeartbeat, faHeartPulse, faAmbulance, faBriefcase, faBriefcaseMedical } from '@fortawesome/free-solid-svg-icons'
 
 const useStyle = createUseStyles({
   emergencyBanner: {
 
   },
   content: {
-    maxWidth: 1390,
+    maxWidth: 1390
   },
   buttons: {
     display: 'flex',
@@ -21,13 +21,12 @@ const useStyle = createUseStyles({
   '@media (max-width: 1150px)': {
     buttons: {
       flexDirection: 'column',
-      gap: 30, //TODO: use something more compatible??
+      gap: 30 // TODO: use something more compatible??
     }
   }
 })
 
-
-const links = [    
+const links = [
   {
     label: 'Grossesse et post-partum',
     to: 'grossesse-et-post-partum',
@@ -54,7 +53,7 @@ const links = [
   }
 ]
 
-export default function Home() {
+export default function Home () {
   const classes = useStyle()
   return (
     <>
@@ -64,11 +63,11 @@ export default function Home() {
           backgroundPosition: '25% 25%',
           justifyContent: 'center'
         }}
-        title={'Soins proposés'}
+        title='Mon cabinet'
       >
         <div className={classes.content}>
-          <div className={classes.buttons}>        
-            {links.map(({label, to, icon, description}) => (
+          <div className={classes.buttons}>
+            {links.map(({ label, to, icon, description }) => (
               <ButtonLink
                 key={to}
                 to={to}
@@ -78,18 +77,17 @@ export default function Home() {
                 {description}
               </ButtonLink>
             ))}
-          
+
           </div>
         </div>
       </PageWrapper>
       <div className={classes.emergencyBanner}>
-        <ButtonLink 
-          to={'/urgence'} 
+        <ButtonLink
+          to='/urgence'
           inline
           icon={faBriefcaseMedical}
           title={<>Une urgence&nbsp;?</>}
-        >
-        </ButtonLink>
+        />
       </div>
     </>
   )
