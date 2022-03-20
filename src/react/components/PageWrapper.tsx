@@ -6,12 +6,10 @@ const useStyle = createUseStyles({
   wrapper: {
     flex: '1 1 auto',
     padding: [20, 30, 50, 30],
-    backgroundImage: 'linear-gradient(rgba(0, 0, 0, 0.05), rgba(0, 0, 0, 0.15)), url(\'images/background.jpg\')',
-    backgroundSize: 'cover',
-    backgroundPosition: '50%',
     display: 'flex',
     alignItems: 'center',
-    flexDirection: 'column'
+    flexDirection: 'column',
+    backgroundColor: 'white'
   },
   title: {
     color: theme.medicalBlue,

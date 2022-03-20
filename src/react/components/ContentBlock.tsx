@@ -10,8 +10,20 @@ const useStyles = createUseStyles({
     alignItems: 'center',
     gap: 30,
     '@media (max-width: 992px)': {
-      flexDirection: 'column'
+      flexDirection: 'column',
+      '& $imageBlock': {
+        width: '100%'
+      },
+      '& $imageWrapper': {
+        maxWidth: 450
+      },
+      '&$flip': {
+        flexDirection: 'column'
+      }
     }
+  },
+  flip: {
+    flexDirection: 'row-reverse'
   },
   textBlock: {
 
@@ -91,10 +103,9 @@ function ContentBlock ({ imageUrl, children, flip = false, landscape = false }: 
   )
 
   return (
-    <div className={classes.container}>
-      {flip && textBlockDOM}
+    <div className={classNames([classes.container, { [classes.flip]: flip }])}>
+      {textBlockDOM}
       {imageBlockDOM}
-      {!flip && textBlockDOM}
     </div>
   )
 }

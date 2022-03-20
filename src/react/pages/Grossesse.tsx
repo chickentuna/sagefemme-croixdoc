@@ -2,11 +2,10 @@ import React, { ReactNode } from 'react'
 import { createUseStyles } from 'react-jss'
 import ContentBlock from '../components/ContentBlock'
 import PageWrapper from '../components/PageWrapper'
-import { faInfoCircle } from '@fortawesome/free-solid-svg-icons'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import ReactTooltip from 'react-tooltip'
 import './ReactTooltipHack.scss'
-import { theme } from '../theme'
+import List from '../components/List'
+import InfoBubble from '../components/InfoBubble'
 
 const useStyles = createUseStyles({
   content: {
@@ -15,19 +14,6 @@ const useStyles = createUseStyles({
     display: 'flex',
     flexFlow: 'column',
     gap: 60
-  },
-  tooltip: {
-    maxWidth: 400,
-    textAlign: 'justify',
-    '& ul': {
-      margin: 5
-    }
-  },
-  info: {
-    marginLeft: 0,
-    '&:hover': {
-      color: theme.medicalBlue
-    }
   }
 })
 
@@ -46,61 +32,42 @@ const dataTipSortie = 'Visite à domicile avec consultation mère-enfant, dans l
 function Grossesse () {
   const classes = useStyles()
 
-  function getTooltip (text:string): ReactNode {
-    return (
-      <FontAwesomeIcon
-        className={classes.info}
-        data-class={classes.tooltip}
-        data-html
-        data-place='right'
-        data-tip={text}
-        data-type='light'
-        data-effect='solid'
-        data-border
-        data-border-color='#555555'
-        data-scroll-hide={false}
-        icon={faInfoCircle}
-      />
-    )
-  }
-
   return (
     <PageWrapper
       title='Grossesse et post-partum'
-      style={{ background: 'white' }}
     >
       <div className={classes.content}>
         <ReactTooltip />
         <ContentBlock
           imageUrl='https://images.pexels.com/photos/8342884/pexels-photo-8342884.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940'
-          flip
         >
-          <ul>
-            <li>Consultation pré-conceptionnelle {getTooltip(dataTipGrossesse)}</li>
-            <li>Suivi de grossesse physiologique - suivi semi-global {getTooltip(dataTipPhysio)}</li>
-            <li>Bilan prénatal {getTooltip(dataTipBilan)}</li>
-            <li>Entretien prénatal précoce {getTooltip(dataTipEPP)}</li>
+          <List>
+            <li>Consultation pré-conceptionnelle <InfoBubble text={dataTipGrossesse} /></li>
+            <li>Suivi de grossesse physiologique - suivi semi-global <InfoBubble text={dataTipPhysio} /></li>
+            <li>Bilan prénatal <InfoBubble text={dataTipBilan} /></li>
+            <li>Entretien prénatal précoce <InfoBubble text={dataTipEPP} /></li>
             <li>Préparation à la Naissance et à la Parentalité - Accouchement naturel</li>
             <li>Monitoring</li>
             <li>Surveillance à domicile d’une grossesse à risque, avec ou sans monitoring, sur prescription</li>
             <li>Diagnostic de début de travail, diagnostic de rupture de la poche des eaux</li>
             <li>Vaccinations de la femme enceinte et de son entourage</li>
-          </ul>
+          </List>
         </ContentBlock>
 
         <ContentBlock
-          imageUrl='./images/parents.jpg'
+          imageUrl='https://image.shutterstock.com/z/stock-photo-portrait-of-a-young-family-mom-dad-and-newborn-baby-resting-at-home-473972065.jpg'
           landscape
+          flip
         >
-          <ul>
+          <List>
             <li>Visite à domicile - retour de maternité</li>
-            <li>Accompagnement sortie précoce {getTooltip(dataTipSortie)}</li>
+            <li>Accompagnement sortie précoce <InfoBubble text={dataTipSortie} /></li>
             <li>Consultation du nouveau-né</li>
             <li>Surveillance de la bilirubinémie (ictère), pesées de contrôle</li>
             <li>Accompagnement et soutien de l’allaitement maternel</li>
             <li>Consultation post-natale (6-8 semaines après l’accouchement)</li>
             <li>Rééducation périnéale</li>
-          </ul>
+          </List>
         </ContentBlock>
       </div>
     </PageWrapper>

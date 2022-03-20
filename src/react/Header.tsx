@@ -33,7 +33,7 @@ export function Header () {
 
   return (
     <header id='header'>
-      <div className='header-container container d-flex align-items-center'>
+      <div className='header-container container'>
 
         <div className='header-left'>
           <div className='site-name'>

@@ -1,14 +1,18 @@
+import { faLeaf, IconDefinition } from '@fortawesome/free-solid-svg-icons'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import classNames from 'classnames'
 import React, { HTMLProps, ReactNode } from 'react'
 import { createUseStyles } from 'react-jss'
 
 const useStyle = createUseStyles({
+  list: {
+    paddingLeft: 0,
+    listStyleType: 'none'
+  },
   listItem: {
     display: 'flex',
     flexWrap: 'nowrap',
-    alignItems: 'flex-start',
-    marginTop: 10,
-    paddingLeft: 40
+    alignItems: 'flex-start'
   },
   listIcon: {
     fontSize: 12,
@@ -18,23 +22,26 @@ const useStyle = createUseStyles({
 })
 
 interface ListProps {
-  icon?: string
-  items: ReactNode[]
+  icon?: IconDefinition
+  children: ReactNode[]
 }
 
-function List ({ icon = 'leaf', items }: ListProps) {
-  const { listItem, listIcon } = useStyle()
+function List ({ icon = faLeaf, children }: ListProps) {
+  const { list, listItem, listIcon } = useStyle()
+
   return (
-    <div>
-      {items.map((node, idx) => (
+    <ul className={list}>
+      {React.Children.map(children, (node, idx) => (
         <div key={idx} className={listItem}>
-          <div className={classNames([`icon-${icon}`, listIcon])} />
+          <div className={listIcon}>
+            <FontAwesomeIcon icon={icon} />
+          </div>
           <div>
             {node}
           </div>
         </div>
       ))}
-    </div>
+    </ul>
   )
 }
 

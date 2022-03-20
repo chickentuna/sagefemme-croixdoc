@@ -41,17 +41,16 @@ function Gyneco () {
           <img src='images/gyneco.jpg' />
         </div>
         <div className={classes.list}>
-          <List items={[
-            'Suivi gynécologique de prévention',
-            'Réalisation et interprétation de frottis cervico-vaginaux',
-            'Contraception naturelle ou médicalisée',
-            'Poses et ablations DIU, implants contraceptifs, diaphragme contraceptif',
-            'Consultation pré-conceptionnelle',
-            'Bilan périnéal et rééducation périnéale pour les femmes de tout âge',
-            'Consultation anonyme et gratuite de l’adolescente de 15 à 17 ans inclus',
-            'Vaccination des jeunes filles à partir de 11 ans'
-          ]}
-          />
+          <List>
+            <li>Suivi gynécologique de prévention</li>
+            <li>Réalisation et interprétation de frottis cervico-vaginaux</li>
+            <li>Contraception naturelle ou médicalisée</li>
+            <li>Poses et ablations DIU, implants contraceptifs, diaphragme contraceptif</li>
+            <li>Consultation pré-conceptionnelle</li>
+            <li>Bilan périnéal et rééducation périnéale pour les femmes de tout âge</li>
+            <li>Consultation anonyme et gratuite de l’adolescente de 15 à 17 ans inclus</li>
+            <li>'Vaccination des jeunes filles à partir de 11 ans'</li>
+          </List>
         </div>
       </div>
     </PageWrapper>
