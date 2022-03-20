@@ -12,8 +12,6 @@ const useStyles = createUseStyles((theme: Theme) => ({
     display: 'flex',
     flex: '1 0 250px',
     backgroundColor: 'white',
-    // TODO: use this if gap property isn't compatible enough
-    // margin: [0, 15],
     cursor: 'pointer',
     userSelect: 'none',
     transition: 'all 150ms ease-out',

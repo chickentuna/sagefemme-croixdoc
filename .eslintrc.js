@@ -28,6 +28,7 @@ module.exports = {
   'rules': {
     'react-hooks/rules-of-hooks': 'error',
     'react-hooks/exhaustive-deps': 'error',
+    'react/self-closing-comp': 'off',
     'no-useless-constructor': 'off',
     'react/no-unescaped-entities': 'off',
     '@typescript-eslint/no-useless-constructor': 'error',

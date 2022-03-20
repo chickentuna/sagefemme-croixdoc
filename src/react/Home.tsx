@@ -15,13 +15,12 @@ const useStyle = createUseStyles({
   buttons: {
     display: 'flex',
     flexWrap: 'nowrap',
-    // margin: [0, -15], //TODO: this is incase gap isnt compatible enough
     gap: 30
   },
   '@media (max-width: 1150px)': {
     buttons: {
       flexDirection: 'column',
-      gap: 30 // TODO: use something more compatible??
+      gap: 30
     }
   }
 })
@@ -64,6 +63,7 @@ export default function Home () {
           justifyContent: 'center'
         }}
         title='Mon cabinet'
+        whiteTitle
       >
         <div className={classes.content}>
           <div className={classes.buttons}>

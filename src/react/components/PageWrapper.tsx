@@ -24,11 +24,10 @@ const useStyle = createUseStyles({
     position: 'relative'
   },
   titleContainer: {
-    color: '#555555',
     paddingRight: 20,
     paddingLeft: 20,
     textAlign: 'center',
-    background: 'rgba(255, 255, 255, 0.95)',
+    background: '#adcce9',
     paddingTop: '30px',
     paddingBottom: '22px',
     marginBottom: '30px',
@@ -40,17 +39,16 @@ const useStyle = createUseStyles({
 
 interface PageWrapperProps extends Omit<HTMLProps<Element>, 'title'> {
   title?: ReactNode
+  whiteTitle?: boolean
 }
 
-function PageWrapper ({ children, style, title }:PageWrapperProps) {
+function PageWrapper ({ children, style, title, whiteTitle = false }:PageWrapperProps) {
   const classes = useStyle()
 
   return (
     <div className={classes.wrapper} style={style}>
       {title != null && (
-      // <h3 className={classes.title}>{title}</h3>
-
-        <div className={classes.titleContainer}>
+        <div className={classes.titleContainer} style={{ background: whiteTitle ? 'white' : undefined }}>
           <h3>{title}</h3>
         </div>
 
