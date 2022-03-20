@@ -10,7 +10,7 @@ import InfoBubble from '../components/InfoBubble'
 const useStyles = createUseStyles({
   content: {
     fontSize: 20,
-    maxWidth: 1390,
+    maxWidth: 1090,
     display: 'flex',
     flexFlow: 'column',
     gap: 60

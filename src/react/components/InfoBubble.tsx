@@ -37,7 +37,6 @@ function InfoBubble (text: Props) {
       data-effect='solid'
       data-border
       data-border-color='#555555'
-      data-scroll-hide={false}
       icon={faInfoCircle}
     />
   )
