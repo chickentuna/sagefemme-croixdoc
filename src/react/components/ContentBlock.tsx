@@ -1,4 +1,5 @@
 import classNames from 'classnames'
+import { relative } from 'node:path/win32'
 import React, { ReactNode } from 'react'
 import { createUseStyles } from 'react-jss'
 
@@ -8,37 +9,53 @@ const useStyles = createUseStyles({
     flexWrap: 'nowrap',
     justifyContent: 'center',
     alignItems: 'center',
+    position: 'relative',
     gap: 30,
     '@media (max-width: 992px)': {
       flexDirection: 'column',
-      '& $imageBlock': {
-        width: '100%'
+
+      '&$landscape': {
+        '& $imageBlock': {
+          width: '100%',
+          maxWidth: 500
+        },
+        '& $textBlock': {
+          maxWidth: 'none'
+        }
       },
-      '& $imageWrapper': {
+      '& $imageBlock': {
+        width: '100%',
         maxWidth: 450
+      },
+      '& $textBlock': {
+        maxWidth: 'none'
       },
       '&$flip': {
         flexDirection: 'column'
       }
     }
   },
+  landscape: {
+    '& $imageBlock': {
+      maxWidth: 500
+    },
+    '& $textBlock': {
+      maxWidth: 'calc(100% - 500px)'
+    }
+  },
   flip: {
     flexDirection: 'row-reverse'
   },
   textBlock: {
-
+    maxWidth: 'calc(100% - 320px)'
   },
   imageBlock: {
     position: 'relative',
     display: 'flex',
     justifyContent: 'center',
     alignItems: 'center',
-    width: '50%'
-  },
-  imageWrapper: {
+    width: '50%',
     padding: 20,
-    position: 'relative',
-    width: '100%',
     maxWidth: 320
   },
   rect: {
@@ -66,11 +83,6 @@ const useStyles = createUseStyles({
     width: '100%',
     height: '100%',
     objectFit: 'cover'
-  },
-  landscape: {
-    '& $imageWrapper': {
-      maxWidth: 500
-    }
   }
 })
 
@@ -84,28 +96,18 @@ interface ContentBlockProps {
 function ContentBlock ({ imageUrl, children, flip = false, landscape = false }: ContentBlockProps) {
   const classes = useStyles()
 
-  const imageBlockDOM = (
-    <div
-      className={classNames([classes.imageBlock, { [classes.landscape]: landscape }])}
-    >
-      <div className={classes.imageWrapper}>
+  return (
+    <div className={classNames([classes.container, { [classes.landscape]: landscape, [classes.flip]: flip }])}>
+      <div className={classes.textBlock}>
+        {children}
+      </div>
+      <div
+        className={classes.imageBlock}
+      >
         <div className={classNames(classes.rect, classes.rectA)}></div>
         <div className={classNames(classes.rect, classes.rectB)}></div>
         <img src={imageUrl} className={classes.image} />
       </div>
-    </div>
-  )
-
-  const textBlockDOM = (
-    <div className={classes.textBlock}>
-      {children}
-    </div>
-  )
-
-  return (
-    <div className={classNames([classes.container, { [classes.flip]: flip }])}>
-      {textBlockDOM}
-      {imageBlockDOM}
     </div>
   )
 }
