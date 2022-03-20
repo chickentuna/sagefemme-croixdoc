@@ -5,7 +5,7 @@ import { createUseStyles } from 'react-jss'
 const useStyles = createUseStyles({
   container: {
     display: 'flex',
-    flexWrap: 'wrap',
+    flexWrap: 'nowrap',
     justifyContent: 'center',
     alignItems: 'center',
     gap: 30,
@@ -14,14 +14,14 @@ const useStyles = createUseStyles({
     }
   },
   textBlock: {
-    flex: 0.6
+
   },
   imageBlock: {
-    flex: 0.4,
     position: 'relative',
     display: 'flex',
     justifyContent: 'center',
-    alignItems: 'center'
+    alignItems: 'center',
+    width: '50%'
   },
   imageWrapper: {
     padding: 20,
@@ -56,7 +56,9 @@ const useStyles = createUseStyles({
     objectFit: 'cover'
   },
   landscape: {
-
+    '& $imageWrapper': {
+      maxWidth: 500
+    }
   }
 })
 
