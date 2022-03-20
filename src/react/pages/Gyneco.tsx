@@ -38,7 +38,7 @@ function Gyneco () {
       <div className={classes.content}>
 
         <div className={classes.imageBlock}>
-          <img src='gyneco.jpg' />
+          <img src='images/gyneco.jpg' />
         </div>
         <div className={classes.list}>
           <List items={[

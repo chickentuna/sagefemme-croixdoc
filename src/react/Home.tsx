@@ -58,7 +58,7 @@ export default function Home () {
     <>
       <PageWrapper
         style={{
-          backgroundImage: 'linear-gradient(rgba(0, 0, 0, 0.05), rgba(0, 0, 0, 0.15)), url(\'background.jpg\')',
+          backgroundImage: 'linear-gradient(rgba(0, 0, 0, 0.05), rgba(0, 0, 0, 0.15)), url(\'images/background.jpg\')',
           backgroundPosition: '25% 25%',
           justifyContent: 'center'
         }}

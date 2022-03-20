@@ -26,7 +26,7 @@ function Reeducation () {
   return (
     <PageWrapper
       style={{
-        backgroundImage: 'linear-gradient(rgba(0, 0, 0, 0.0), rgba(0, 0, 0, 0.0)), url(\'reeducation.jpg\')',
+        backgroundImage: 'linear-gradient(rgba(0, 0, 0, 0.0), rgba(0, 0, 0, 0.0)), url(\'images/reeducation.jpg\')',
         backgroundPosition: '100% 50%',
         alignItems: 'flex-end'
       }}

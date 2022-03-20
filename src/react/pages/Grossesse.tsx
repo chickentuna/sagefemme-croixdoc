@@ -39,8 +39,9 @@ const dataTipGrossesse = `Effectuée dès le projet de grossesse, son but est de
   <li>Vos questions, vos éventuelles inquiétudes</li>
 </ul>`
 const dataTipPhysio = 'S’il exclut le temps de l’accouchement, le suivi semi-global permet cependant de proposer un suivi très personnalisé, au plus proche des attentes des femmes et des couples. La durée de cet accompagnement semi global, débuté tôt dans la grossesse – voire avant par une consultation préconceptionnelle – et se terminant quelques mois après la naissance, permet d’établir une réelle relation de confiance et d’écoute.'
-const dataTipBilan = 'Il s’agit d’un bilan de santé générale, effectué en début de grossesse, s’accompagnant de conseils concernant l’hygiène de vie durant la grossesse&nbsp;: alimentation, sexualité, pratique sportive, orientation vers un examen bucco-dentaire, tabacologie …'
+const dataTipBilan = 'Il s’agit d’un bilan de santé générale, effectué en début de grossesse, s’accompagnant de conseils concernant l’hygiène de vie durant la grossesse&nbsp;: alimentation, sexualité, pratique sportive, orientation vers un examen bucco-dentaire, tabacologie&nbsp;…'
 const dataTipEPP = 'Si le bilan prénatal fait état de votre santé physique, l’entretien prénatal précoce fait état de votre santé psychique. Il permet de connaître vos souhaits, vos spécificités, et de répondre à vos questions et éventuelles inquiétudes. L’EPP permet de préparer ensembles un plan de préparation à la naissance et d’élaborer ensembles votre projet de naissance.'
+const dataTipSortie = 'Visite à domicile avec consultation mère-enfant, dans les 24h suivant votre sortie. Renouvelable autant de fois que nécessaire.'
 
 function Grossesse () {
   const classes = useStyles()
@@ -88,30 +89,17 @@ function Grossesse () {
         </ContentBlock>
 
         <ContentBlock
-          imageUrl='https://images.pexels.com/photos/8342884/pexels-photo-8342884.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940'
+          imageUrl='./images/parents.jpg'
+          landscape
         >
           <ul>
-            <li>Consultation pré-conceptionnelle
-              <FontAwesomeIcon
-                data-class={classes.tooltip}
-                data-html
-                data-place='right'
-                data-tip={dataTipGrossesse}
-                data-type='light'
-                data-effect='solid'
-                data-border
-                data-border-color='#555555'
-                icon={faInfoCircle}
-              />
-            </li>
-            <li>Suivi de grossesse physiologique - suivi semi-global</li>
-            <li>Bilan prénatal</li>
-            <li>Entretien prénatal précoce</li>
-            <li>Préparation à la Naissance et à la Parentalité - Accouchement naturel</li>
-            <li>Monitoring</li>
-            <li>Surveillance à domicile d’une grossesse à risque, avec ou sans monitoring, sur prescription</li>
-            <li>Diagnostic de début de travail, diagnostic de rupture de la poche des eaux</li>
-            <li>Vaccinations de la femme enceinte et de son entourage</li>
+            <li>Visite à domicile - retour de maternité</li>
+            <li>Accompagnement sortie précoce {getTooltip(dataTipSortie)}</li>
+            <li>Consultation du nouveau-né</li>
+            <li>Surveillance de la bilirubinémie (ictère), pesées de contrôle</li>
+            <li>Accompagnement et soutien de l’allaitement maternel</li>
+            <li>Consultation post-natale (6-8 semaines après l’accouchement)</li>
+            <li>Rééducation périnéale</li>
           </ul>
         </ContentBlock>
       </div>

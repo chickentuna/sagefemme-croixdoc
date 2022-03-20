@@ -54,6 +54,9 @@ const useStyles = createUseStyles({
     width: '100%',
     height: '100%',
     objectFit: 'cover'
+  },
+  landscape: {
+
   }
 })
 
@@ -61,14 +64,15 @@ interface ContentBlockProps {
   imageUrl: string
   children: ReactNode
   flip?: boolean
+  landscape?: boolean
 }
 
-function ContentBlock ({ imageUrl, children, flip = false }: ContentBlockProps) {
+function ContentBlock ({ imageUrl, children, flip = false, landscape = false }: ContentBlockProps) {
   const classes = useStyles()
 
   const imageBlockDOM = (
     <div
-      className={classes.imageBlock}
+      className={classNames([classes.imageBlock, { [classes.landscape]: landscape }])}
     >
       <div className={classes.imageWrapper}>
         <div className={classNames(classes.rect, classes.rectA)}></div>
