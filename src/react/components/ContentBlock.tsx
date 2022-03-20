@@ -60,26 +60,35 @@ const useStyles = createUseStyles({
 interface ContentBlockProps {
   imageUrl: string
   children: ReactNode
+  flip?: boolean
 }
 
-function ContentBlock ({ imageUrl, children }: ContentBlockProps) {
+function ContentBlock ({ imageUrl, children, flip = false }: ContentBlockProps) {
   const classes = useStyles()
+
+  const imageBlockDOM = (
+    <div
+      className={classes.imageBlock}
+    >
+      <div className={classes.imageWrapper}>
+        <div className={classNames(classes.rect, classes.rectA)}></div>
+        <div className={classNames(classes.rect, classes.rectB)}></div>
+        <img src={imageUrl} className={classes.image} />
+      </div>
+    </div>
+  )
+
+  const textBlockDOM = (
+    <div className={classes.textBlock}>
+      {children}
+    </div>
+  )
+
   return (
     <div className={classes.container}>
-
-      <div
-        className={classes.imageBlock}
-      >
-        <div className={classes.imageWrapper}>
-          <div className={classNames(classes.rect, classes.rectA)}></div>
-          <div className={classNames(classes.rect, classes.rectB)}></div>
-          <img src={imageUrl} className={classes.image} />
-        </div>
-      </div>
-
-      <div className={classes.textBlock}>
-        {children}
-      </div>
+      {flip && textBlockDOM}
+      {imageBlockDOM}
+      {!flip && textBlockDOM}
     </div>
   )
 }

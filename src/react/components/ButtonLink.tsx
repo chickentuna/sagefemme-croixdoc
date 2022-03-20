@@ -87,7 +87,6 @@ const useStyles = createUseStyles((theme: Theme) => ({
       fontWeight: 'bold'
     },
     '& $iconWrapper': {
-      // backgroundColor: theme.medicalRed
       backgroundColor: 'white',
       color: 'red'
     }
