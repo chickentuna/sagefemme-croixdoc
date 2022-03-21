@@ -32,30 +32,37 @@ export function Header () {
 
   const selectedTab = tabs.find(tab => tab.to === pathname) ?? tabs[0]
 
+  function handleClick () {
+    if (window.matchMedia('(max-width: 991px)').matches) {
+      // eslint-disable-next-line @typescript-eslint/no-explicit-any
+      (window as any).toggleNavBarMobile()
+    }
+  }
+
   return (
     <header id='header'>
       <div className='header-container container'>
 
         <div className='header-left'>
-          <div className='site-name'>
+          <Link className='site-name' to='/'>
             <h1 className='title'>
               Sage-femme libérale
             </h1>
             <h2 className='subtitle'>
               Fanchon RIVOIRE
             </h2>
-          </div>
+          </Link>
 
           <Logo className='logo' />
 
           <nav id='navbar' className='navbar order-last order-lg-0'>
             <ul>
               {tabs.map(({ label, to, tabs }) => (
-
                 <li className={classNames({ dropdown: tabs != null })} key={to}>
                   <Link
                     to={to}
                     className={classNames(['nav-link', { active: to === selectedTab.to }])}
+                    onClick={tabs == null ? handleClick : undefined}
                   >
                     {label}
                     {tabs != null && <i className='bi bi-chevron-down' />}
@@ -64,18 +71,16 @@ export function Header () {
                     <ul>
                       {tabs.map(({ label, to }) => (
                         <li key={to}>
-                          <Link to={to}>
+                          <Link to={to} onClick={handleClick}>
                             {label}
                           </Link>
                         </li>
                       ))}
-
                     </ul>
                   )}
                 </li>
               ))}
             </ul>
-            {/* TODO: why is this an i ? */}
             <i className='bi bi-list mobile-nav-toggle' />
           </nav>
         </div>

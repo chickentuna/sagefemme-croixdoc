@@ -12,8 +12,7 @@ const useStyles = createUseStyles({
   },
   content: {
     fontSize: 20,
-    maxWidth: '95.1%',
-    minWidth: 500,
+    maxWidth: '100%',
     display: 'flex'
   },
   list: {
