@@ -2,7 +2,7 @@ import React, { useEffect } from 'react'
 import { Link, useLocation } from 'react-router-dom'
 import classNames from 'classnames'
 import { createUseStyles } from 'react-jss'
-import { ReactComponent as Logo } from '../logo.svg'
+import { ReactComponent as Logo } from '../svg/logo.svg'
 
 interface Tab {
   label: string,

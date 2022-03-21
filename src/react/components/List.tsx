@@ -7,7 +7,11 @@ import { createUseStyles } from 'react-jss'
 const useStyle = createUseStyles({
   list: {
     paddingLeft: 0,
-    listStyleType: 'none'
+    listStyleType: 'none',
+    lineHeight: 'normal',
+    gap: 10,
+    display: 'flex',
+    flexFlow: 'column'
   },
   listItem: {
     display: 'flex',

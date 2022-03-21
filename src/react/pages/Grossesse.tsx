@@ -17,17 +17,49 @@ const useStyles = createUseStyles({
   }
 })
 
-const dataTipGrossesse = `Effectuée dès le projet de grossesse, son but est de faire le point avec vous sur&nbsp;:
-<ul>
-  <li>Votre état de santé actuel</li>
-  <li>Les complications possibles de la grossesse à venir en fonction de vos facteurs de risque</li>
-  <li>De proposer des mesures pour les éviter ou les minimiser</li>
-  <li>Vos questions, vos éventuelles inquiétudes</li>
-</ul>`
-const dataTipPhysio = 'S’il exclut le temps de l’accouchement, le suivi semi-global permet cependant de proposer un suivi très personnalisé, au plus proche des attentes des femmes et des couples. La durée de cet accompagnement semi global, débuté tôt dans la grossesse – voire avant par une consultation préconceptionnelle – et se terminant quelques mois après la naissance, permet d’établir une réelle relation de confiance et d’écoute.'
-const dataTipBilan = 'Il s’agit d’un bilan de santé générale, effectué en début de grossesse, s’accompagnant de conseils concernant l’hygiène de vie durant la grossesse&nbsp;: alimentation, sexualité, pratique sportive, orientation vers un examen bucco-dentaire, tabacologie&nbsp;…'
-const dataTipEPP = 'Si le bilan prénatal fait état de votre santé physique, l’entretien prénatal précoce fait état de votre santé psychique. Il permet de connaître vos souhaits, vos spécificités, et de répondre à vos questions et éventuelles inquiétudes. L’EPP permet de préparer ensembles un plan de préparation à la naissance et d’élaborer ensembles votre projet de naissance.'
-const dataTipSortie = 'Visite à domicile avec consultation mère-enfant, dans les 24h suivant votre sortie. Renouvelable autant de fois que nécessaire.'
+const dataTipGrossesse = (
+  <>
+    Effectuée dès le projet de grossesse, son but est de faire le point avec vous sur&nbsp;:
+    <ul>
+      <li>Votre état de santé actuel</li>
+      <li>Les complications possibles de la grossesse à venir en fonction de vos facteurs de risque</li>
+      <li>De proposer des mesures pour les éviter ou les minimiser</li>
+      <li>Vos questions, vos éventuelles inquiétudes</li>
+    </ul>
+  </>
+)
+const dataTipPhysio = (
+  <>
+    <p>
+      S’il exclut le temps de l’accouchement, le suivi semi-global permet cependant de proposer un suivi très personnalisé,
+      au plus proche des attentes des femmes et des couples.
+    </p>
+    La durée de cet accompagnement semi global,
+    débuté tôt dans la grossesse – voire avant par une consultation préconceptionnelle – et se terminant quelques mois après la naissance,
+    permet d’établir une réelle relation de confiance et d’écoute.
+  </>
+)
+const dataTipBilan = (
+  <>
+
+    Il s’agit d’un bilan de santé générale, effectué en début de grossesse,
+    s’accompagnant de conseils concernant l’hygiène de vie durant la grossesse&nbsp;: alimentation, sexualité, pratique sportive, orientation vers un examen bucco-dentaire, tabacologie&nbsp;…
+  </>
+)
+const dataTipEPP = (
+  <>
+    <p>
+      Si le bilan prénatal fait état de votre santé physique, l’entretien prénatal précoce fait état de votre santé psychique.
+      Il permet de connaître vos souhaits, vos spécificités, et de répondre à vos questions et éventuelles inquiétudes.
+    </p>
+    L’EPP permet de préparer ensembles un plan de préparation à la naissance et d’élaborer ensembles votre projet de naissance.
+  </>
+)
+const dataTipSortie = (
+  <>
+    Visite à domicile avec consultation mère-enfant, dans les 24h suivant votre sortie. Renouvelable autant de fois que nécessaire.
+  </>
+)
 
 function Grossesse () {
   const classes = useStyles()

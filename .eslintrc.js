@@ -26,6 +26,8 @@ module.exports = {
     'promise', 'import'
   ],
   'rules': {
+    "comma-dangle": "off",
+    "@typescript-eslint/comma-dangle": "off",
     'react-hooks/rules-of-hooks': 'error',
     'react-hooks/exhaustive-deps': 'error',
     'react/self-closing-comp': 'off',

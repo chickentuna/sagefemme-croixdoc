@@ -1,7 +1,8 @@
 import { faInfoCircle } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import React from 'react'
+import React, { ReactElement, ReactNode } from 'react'
 import { createUseStyles } from 'react-jss'
+import ReactDOMServer from 'react-dom/server'
 import { Theme } from '../theme'
 
 const useStyles = createUseStyles((theme: Theme) => ({
@@ -21,10 +22,10 @@ const useStyles = createUseStyles((theme: Theme) => ({
 }))
 
 interface Props {
-  text: string
+  text: ReactElement
 }
 
-function InfoBubble (text: Props) {
+function InfoBubble ({ text }: Props) {
   const classes = useStyles()
   return (
     <FontAwesomeIcon
@@ -32,7 +33,7 @@ function InfoBubble (text: Props) {
       data-class={classes.tooltip}
       data-html
       data-place='right'
-      data-tip={text}
+      data-tip={ReactDOMServer.renderToString(text)}
       data-type='light'
       data-effect='solid'
       data-border
