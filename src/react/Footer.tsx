@@ -9,7 +9,10 @@ const useStyle = createUseStyles({
     display: 'flex',
     width: '100%',
     justifyContent: 'space-between',
-    alignItems: 'center'
+    alignItems: 'center',
+    '@media (max-width: 560px)': {
+      flexDirection: 'column'
+    }
   },
   adress: {
     fontWeight: 'bold',
