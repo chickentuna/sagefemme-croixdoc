@@ -68,11 +68,12 @@ function Grossesse () {
     <PageWrapper
       title='Grossesse et post-partum'
     >
+      <ReactTooltip />
       <div className={classes.content}>
         <ContentBlock
           imageUrl='https://images.pexels.com/photos/8342884/pexels-photo-8342884.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940'
         >
-          <List>
+          <List noPad>
             <li>Consultation pré-conceptionnelle <InfoBubble text={dataTipGrossesse} /></li>
             <li>Suivi de grossesse physiologique - suivi semi-global <InfoBubble text={dataTipPhysio} /></li>
             <li>Bilan prénatal <InfoBubble text={dataTipBilan} /></li>
@@ -90,7 +91,7 @@ function Grossesse () {
           landscape
           flip
         >
-          <List>
+          <List noPad>
             <li>Visite à domicile - retour de maternité</li>
             <li>Accompagnement sortie précoce <InfoBubble text={dataTipSortie} /></li>
             <li>Consultation du nouveau-né</li>

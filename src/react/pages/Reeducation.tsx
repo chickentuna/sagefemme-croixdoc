@@ -17,7 +17,7 @@ const useStyles = createUseStyles({
     gap: 60
   },
   intro: {
-    textAlign: 'center',
+    textAlign: 'justify',
     marginBottom: 60
   }
 })

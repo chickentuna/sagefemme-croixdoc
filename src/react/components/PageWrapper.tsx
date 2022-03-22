@@ -31,25 +31,38 @@ const useStyle = createUseStyles({
     marginBottom: '30px',
     borderTop: '4px solid #4867d6',
     width: '100%',
-    maxWidth: 1390
+    maxWidth: 1390,
+    backgroundRepeat: 'no-repeat',
+    backgroundSize: 'contain'
   }
 })
 
 interface PageWrapperProps extends Omit<HTMLProps<Element>, 'title'> {
   title?: ReactNode
-  whiteTitle?: boolean
+  titleDecorationUrl?: string
+  titleColor?: string
 }
 
-function PageWrapper ({ children, style, title, whiteTitle = false }:PageWrapperProps) {
+function PageWrapper ({ children, style, title, titleDecorationUrl, titleColor }:PageWrapperProps) {
   const classes = useStyle()
 
   return (
-    <div className={classes.wrapper} style={style}>
+    <div
+      className={classes.wrapper}
+      style={style}
+    >
       {title != null && (
-        <div className={classes.titleContainer} style={{ background: whiteTitle ? 'white' : undefined }}>
+        <div
+          className={classes.titleContainer}
+          style={{
+            backgroundColor: titleColor,
+            backgroundImage: titleDecorationUrl != null ? `url(${titleDecorationUrl})` : undefined,
+            borderColor: titleDecorationUrl != null ? theme.sfBlack : undefined,
+          }}
+        >
+          {titleDecorationUrl != null}
           <h3>{title}</h3>
         </div>
-
       )}
       {children}
     </div>

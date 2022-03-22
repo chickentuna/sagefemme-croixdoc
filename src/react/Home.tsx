@@ -64,7 +64,7 @@ export default function Home () {
           justifyContent: 'center'
         }}
         title='Mon cabinet'
-        whiteTitle
+        titleColor='white'
       >
         <div className={classes.content}>
           <div className={classes.buttons}>

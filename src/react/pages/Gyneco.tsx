@@ -26,7 +26,7 @@ function Gyneco () {
       <div className={classes.content}>
         <div className={classes.blocks}>
           <ContentBlock
-            imageUrl='https://placekitten.com/640/480'
+            imageUrl='https://image.shutterstock.com/image-vector/abstract-image-vagina-outer-space-600w-2060162975.jpg'
             landscape
           >
             <h4>Suivi gynécologique de prévention</h4>
@@ -42,8 +42,7 @@ function Gyneco () {
           </ContentBlock>
 
           <ContentBlock
-            imageUrl='https://placekitten.com/640/480'
-            landscape
+            imageUrl='https://image.shutterstock.com/z/stock-vector-set-different-types-of-contraception-birth-control-methods-and-options-girl-choosing-a-method-of-1728522166.jpg'
             flip
           >
             <h4>Contraception</h4>
@@ -56,7 +55,8 @@ function Gyneco () {
           </ContentBlock>
 
           <ContentBlock
-            imageUrl='https://placekitten.com/480/640'
+            imageUrl='https://image.shutterstock.com/image-illustration/illustration-woman-enduring-pain-vaginal-600w-1774381937.jpg'
+            landscape
           >
             <h4>Rééducation périnéale</h4>
             <List>
@@ -68,7 +68,7 @@ function Gyneco () {
           </ContentBlock>
 
           <ContentBlock
-            imageUrl='https://placekitten.com/480/640'
+            imageUrl='https://image.shutterstock.com/image-vector/young-beautiful-woman-practicing-yoga-600w-1862378104.jpg'
             flip
           >
             <h4>Jeunes filles</h4>

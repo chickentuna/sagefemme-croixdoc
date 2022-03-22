@@ -6,12 +6,15 @@ import { createUseStyles } from 'react-jss'
 
 const useStyle = createUseStyles({
   list: {
-    paddingLeft: 0,
     listStyleType: 'none',
     lineHeight: 'normal',
     gap: 10,
     display: 'flex',
-    flexFlow: 'column'
+    flexFlow: 'column',
+    paddingLeft: 20
+  },
+  noPadding: {
+    paddingLeft: 0
   },
   listItem: {
     display: 'flex',
@@ -21,20 +24,21 @@ const useStyle = createUseStyles({
   listIcon: {
     fontSize: 12,
     paddingTop: 7,
-    margin: [0, 10]
+    marginRight: 10
   }
 })
 
 interface ListProps {
   icon?: IconDefinition
   children: ReactNode[]
+  noPad?: boolean
 }
 
-function List ({ icon = faLeaf, children }: ListProps) {
-  const { list, listItem, listIcon } = useStyle()
+function List ({ icon = faLeaf, children, noPad = false }: ListProps) {
+  const { list, listItem, listIcon, noPadding } = useStyle()
 
   return (
-    <ul className={list}>
+    <ul className={classNames([list, { [noPadding]: noPad }])}>
       {React.Children.map(children, (node, idx) => (
         <div key={idx} className={listItem}>
           <div className={listIcon}>

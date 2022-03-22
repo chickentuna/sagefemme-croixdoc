@@ -1,9 +1,9 @@
 import classNames from 'classnames'
-import { relative } from 'node:path/win32'
 import React, { ReactNode } from 'react'
 import { createUseStyles } from 'react-jss'
+import { Theme } from '../theme'
 
-const useStyles = createUseStyles({
+const useStyles = createUseStyles((theme: Theme) => ({
   container: {
     display: 'flex',
     flexWrap: 'nowrap',
@@ -13,6 +13,7 @@ const useStyles = createUseStyles({
     gap: 30,
     '@media (max-width: 992px)': {
       flexDirection: 'column',
+      // textAlign: center
 
       '&$landscape': {
         '& $imageBlock': {
@@ -82,9 +83,9 @@ const useStyles = createUseStyles({
     zIndex: 2,
     width: '100%',
     height: '100%',
-    objectFit: 'cover'
+    outline: `1px solid ${theme.sfBlack}`
   }
-})
+}))
 
 interface ContentBlockProps {
   imageUrl: string

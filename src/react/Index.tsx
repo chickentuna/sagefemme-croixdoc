@@ -8,7 +8,9 @@ import App from './App'
 import Home from './Home'
 import Grossesse from './pages/Grossesse'
 import Gyneco from './pages/Gyneco'
+import Pnp from './pages/Pnp'
 import Reeducation from './pages/Reeducation'
+import Urgences from './pages/Urgences'
 
 export function Index () {
   useEffect(() => {
@@ -24,6 +26,8 @@ export function Index () {
           <Route path='/gynecologie' element={<Gyneco />} />
           <Route path='/grossesse-et-post-partum' element={<Grossesse />} />
           <Route path='/reeducation-perineale' element={<Reeducation />} />
+          <Route path='/pnp' element={<Pnp />} />
+          <Route path='/urgence' element={<Urgences />} />
           <Route
             path='*'
             element={
