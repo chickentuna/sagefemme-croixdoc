@@ -12,6 +12,7 @@ import Gyneco from './pages/Gyneco'
 import Pnp from './pages/Pnp'
 import Pricing from './pages/Pricing'
 import Reeducation from './pages/Reeducation'
+import Resources from './pages/Resources'
 import Urgences from './pages/Urgences'
 
 export function Index () {
@@ -32,6 +33,7 @@ export function Index () {
           <Route path='/urgence' element={<Urgences />} />
           <Route path='/a-propos' element={<About />} />
           <Route path='/infos-pratiques' element={<Pricing />} />
+          <Route path='/documents' element={<Resources />} />
           <Route
             path='*'
             element={
