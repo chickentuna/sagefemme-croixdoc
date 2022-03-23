@@ -6,6 +6,7 @@ import {
 } from 'react-router-dom'
 import App from './App'
 import Home from './Home'
+import About from './pages/About'
 import Grossesse from './pages/Grossesse'
 import Gyneco from './pages/Gyneco'
 import Pnp from './pages/Pnp'
@@ -28,6 +29,7 @@ export function Index () {
           <Route path='/reeducation-perineale' element={<Reeducation />} />
           <Route path='/pnp' element={<Pnp />} />
           <Route path='/urgence' element={<Urgences />} />
+          <Route path='/a-propos' element={<About />} />
           <Route
             path='*'
             element={
