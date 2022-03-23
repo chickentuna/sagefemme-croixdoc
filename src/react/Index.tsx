@@ -10,6 +10,7 @@ import About from './pages/About'
 import Grossesse from './pages/Grossesse'
 import Gyneco from './pages/Gyneco'
 import Pnp from './pages/Pnp'
+import Pricing from './pages/Pricing'
 import Reeducation from './pages/Reeducation'
 import Urgences from './pages/Urgences'
 
@@ -30,6 +31,7 @@ export function Index () {
           <Route path='/pnp' element={<Pnp />} />
           <Route path='/urgence' element={<Urgences />} />
           <Route path='/a-propos' element={<About />} />
+          <Route path='/infos-pratiques' element={<Pricing />} />
           <Route
             path='*'
             element={

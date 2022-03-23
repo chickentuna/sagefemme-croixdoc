@@ -1,10 +1,12 @@
 import React from 'react'
 import { createUseStyles } from 'react-jss'
 import ContentBlock from '../components/ContentBlock'
+import Dash from '../components/Dash'
 import List from '../components/List'
 import PageWrapper from '../components/PageWrapper'
+import { Theme } from '../theme'
 
-const useStyles = createUseStyles({
+const useStyles = createUseStyles((theme: Theme) => ({
   content: {
     fontSize: 20,
     maxWidth: 1090
@@ -17,8 +19,19 @@ const useStyles = createUseStyles({
   intro: {
     textAlign: 'justify',
     marginBottom: 60
+  },
+  qualifications: {
+    width: '100%',
+    display: 'flex',
+    gap: 5,
+    textAlign: 'center',
+    justifyContent: 'space-between',
+    alignItems: 'center',
+    [`@media (max-width: ${theme.verticalModeThreshold}px)`]: {
+      flexDirection: 'column'
+    }
   }
-})
+}))
 
 function About () {
   const classes = useStyles()
@@ -29,17 +42,21 @@ function About () {
       <div className={classes.content}>
 
         <div className={classes.blocks}>
+          <div className={classes.qualifications}>
+            <div>Conventionnée secteur 1</div>
+            <Dash />
+            <div>Diplôme d’Etat de Sage-Femme&nbsp;-&nbsp;2015</div>
+            <Dash />
+            <div>Diplôme d’Etat d’Infirmier&nbsp;-&nbsp;2019</div>
+          </div>
           <ContentBlock
             imageUrl='https://placekitten.com/649/489'
             landscape
           >
-            <h4>Conventionnée secteur 1</h4>
             <List>
               <li>Evaluation du plancher pelvien, de la ceinture abdominale et du rachis</li>
               <li>Exploration d’éventuels troubles (incontinence, douleurs) permettant de déterminer la stratégie thérapeutique pour les prochaines séances si celles-ci sont indiquées</li>
             </List>
-            <h4>Diplôme d’Etat de Sage-Femme - 2015</h4>
-            <h4>Diplôme d’Etat d’Infirmier - 2019</h4>
 
           </ContentBlock>
           <ContentBlock
