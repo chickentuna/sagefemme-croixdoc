@@ -1,10 +1,9 @@
 import React from 'react'
 import { createUseStyles } from 'react-jss'
-import CustomMuiAccordion from '../components/CustomMuiAccordion'
+import Insurance from './sections/Insurance'
 import PageWrapper from '../components/PageWrapper'
 import { Theme } from '../theme'
-import PriceTable from '../components/PriceTable'
-import PriceTable2 from '../components/PriceTable2'
+import PriceTable from './sections/PriceTable'
 
 const useStyles = createUseStyles((theme: Theme) => ({
   content: {
@@ -26,9 +25,8 @@ function Pricing () {
     >
       <div className={classes.content}>
         <div className={classes.blocks}>
-          <CustomMuiAccordion />
+          <Insurance />
           <PriceTable />
-          <PriceTable2 />
         </div>
       </div>
     </PageWrapper>

@@ -11,7 +11,6 @@ const useStyles = createUseStyles((theme: Theme) => ({
 
   }
 }))
-// `http://poulton.fun:3000/img?type=waifu&id=${Math.random() * 548 | 0}&folder=3`
 
 function Dash () {
   const { dash } = useStyles()

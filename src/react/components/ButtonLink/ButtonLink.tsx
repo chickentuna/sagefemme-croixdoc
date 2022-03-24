@@ -5,7 +5,7 @@ import './ButtonLink.scss'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { IconDefinition } from '@fortawesome/free-solid-svg-icons'
 import classNames from 'classnames'
-import { Theme } from '../theme'
+import { Theme } from '../../theme'
 
 const useStyles = createUseStyles((theme: Theme) => ({
   link: {

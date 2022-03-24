@@ -1,7 +1,7 @@
 import React from 'react'
 
 import { createUseStyles } from 'react-jss'
-import ButtonLink from './components/ButtonLink'
+import ButtonLink from './components/ButtonLink/ButtonLink'
 import PageWrapper from './components/PageWrapper'
 import { faStethoscope, faHandHoldingMedical, faDroplet, faBandage, faBaby, faPersonBreastfeeding, faBandAid, faHeartbeat, faHeartPulse, faAmbulance, faBriefcase, faBriefcaseMedical } from '@fortawesome/free-solid-svg-icons'
 

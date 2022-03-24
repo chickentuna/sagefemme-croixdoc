@@ -24,6 +24,8 @@ const useStyles = createUseStyles((theme: Theme) => ({
     width: '100%',
     display: 'flex',
     gap: 5,
+    fontWeight: 'bold',
+    fontSize: '16px',
     textAlign: 'center',
     justifyContent: 'space-between',
     alignItems: 'center',
@@ -54,13 +56,17 @@ function About () {
             landscape
           >
             <List>
-              <li>Evaluation du plancher pelvien, de la ceinture abdominale et du rachis</li>
-              <li>Exploration d’éventuels troubles (incontinence, douleurs) permettant de déterminer la stratégie thérapeutique pour les prochaines séances si celles-ci sont indiquées</li>
+              <li>Collège National des Sages-Femmes (CNSF)</li>
+              <li>Réseau Périnatalité d’Occitanie (RPO)</li>
+              <li>Naître et Grandir en Languedoc Roussillon (NGLR)</li>
+              <li>L’Aube des Naissances (ADN) - Maison de Naissance en Occitanie</li>
+              <li>Association Nationale des Sages-Femmes Libérales (ANSFL)</li>
+              <li>Collectif Maisons de Naissances (CMDN)</li>
             </List>
 
           </ContentBlock>
           <ContentBlock
-            imageUrl='http://poulton.fun:3000/audit/boy/img?type=waifu&id=10&folder=1'
+            imageUrl='https://poulton.fun/waifu-husbando/img?type=waifu&id=10&folder=1'
             flip
           >
             <h4>Expérience sage-femme</h4>

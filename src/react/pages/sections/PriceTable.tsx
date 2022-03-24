@@ -7,7 +7,7 @@ import TableHead from '@mui/material/TableHead'
 import TableRow from '@mui/material/TableRow'
 import Paper from '@mui/material/Paper'
 import { createUseStyles } from 'react-jss'
-import { theme, Theme } from '../theme'
+import { theme, Theme } from '../../theme'
 
 function createData (
   acte: string,
@@ -78,7 +78,7 @@ const categories = [
   }
 ]
 
-function PriceTable2 () {
+function PriceTable () {
   return (
     <>
       <TableContainer component={Paper}>
@@ -154,4 +154,4 @@ function PriceTable2 () {
   )
 }
 
-export default React.memo(PriceTable2)
+export default React.memo(PriceTable)

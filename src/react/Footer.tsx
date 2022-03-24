@@ -1,7 +1,7 @@
 import React from 'react'
 import { createUseStyles } from 'react-jss'
 import { Link } from 'react-router-dom'
-import ButtonLink from './components/ButtonLink'
+import ButtonLink from './components/ButtonLink/ButtonLink'
 
 const useStyle = createUseStyles({
   resources: {
