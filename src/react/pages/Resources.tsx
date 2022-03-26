@@ -1,4 +1,6 @@
 
+import { faDownload } from '@fortawesome/free-solid-svg-icons'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import classNames from 'classnames'
 import React from 'react'
 import { createUseStyles } from 'react-jss'
@@ -23,23 +25,27 @@ const useStyles = createUseStyles((theme: Theme) => ({
 
 function Resources () {
   const classes = useStyles()
+
+  const files = [{
+    text: 'Valises pour la maternité'
+  },
+  { text: 'Démarches administratives et RDVs en post-partum' },
+  { text: 'Préparation fratries : coloriage à imprimer' },
+  { text: 'Préparation fratries : Histoire audio (format mp3)' },
+  { text: 'Coordonnées utiles et numéros verts' }
+  ]
+
   return (
     <>
       <PageWrapper
         title='Ressources'
       >
         <div className={classes.content}>
-          Valises pour la maternité
-
-          Matériel et fournitures de puériculture
-
-          Démarches administratives et RDVs en post-partum
-
-          Préparation fratries : coloriage à imprimer
-
-          Préparation fratries : Histoire audio (format mp3)
-
-          Coordonnées utiles et numéros verts
+          {files.map(file => (
+            <p key={file.text}>
+              <a> <FontAwesomeIcon icon={faDownload} /></a>
+            </p>
+          ))}
         </div>
       </PageWrapper>
 
