@@ -1,11 +1,15 @@
 import classNames from 'classnames'
-import React from 'react'
+import React, { useState } from 'react'
 import { createUseStyles } from 'react-jss'
 import ContentBlock from '../components/ContentBlock'
 import Disclaimer from '../components/Disclaimer'
 import List from '../components/List'
 import PageWrapper from '../components/PageWrapper'
 import { Theme } from '../theme'
+import DialogTitle from '@mui/material/DialogTitle'
+import Dialog from '@mui/material/Dialog'
+import Calculator from './interactive/Calculator'
+import { Button, DialogActions, DialogContent } from '@mui/material'
 
 const useStyles = createUseStyles((theme: Theme) => ({
   content: {
@@ -81,6 +85,9 @@ const useStyles = createUseStyles((theme: Theme) => ({
 
 function Urgences () {
   const classes = useStyles()
+
+  const [showPopup, setShowPopup] = useState(false)
+
   return (
     <>
       <PageWrapper
@@ -139,10 +146,21 @@ function Urgences () {
         </div>
         <div className={classes.buttons}>
           <button className={classes.buttonA}>Grossesse : Quand aller consulter en urgence ?</button>
-          <button className={classes.buttonB}>Suis-je à terme ?</button>
+          <button onClick={() => (setShowPopup(true))} className={classes.buttonB}>Suis-je à terme ?</button>
         </div>
 
       </div>
+      <Dialog onClose={() => (setShowPopup(false))} open={showPopup}>
+        <DialogTitle>Suis-je à terme ?</DialogTitle>
+        <DialogContent>
+          <Calculator />
+        </DialogContent>
+        <DialogActions>
+          <Button autoFocus onClick={() => setShowPopup(false)}>
+            Fermer
+          </Button>
+        </DialogActions>
+      </Dialog>
     </>
   )
 }

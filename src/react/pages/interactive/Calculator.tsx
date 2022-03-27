@@ -1,41 +1,64 @@
-import { FormControl, FormControlLabel, TextField } from '@mui/material'
-import React from 'react'
+import DatePicker from '@mui/lab/DatePicker'
+import { Box, Button, FormControl, FormControlLabel, FormLabel, TextField } from '@mui/material'
+import React, { useState } from 'react'
+import { createUseStyles } from 'react-jss'
 import PageWrapper from '../../components/PageWrapper'
 
+const useStyles = createUseStyles({
+  container: {
+    padding: 0,
+    display: 'flex',
+    alignItems: 'center',
+    flexDirection: 'column',
+    backgroundColor: 'white'
+  }
+})
+
 const SFTextField = ({ label }: { label: string }) => (
-  <DateTimePicker
-    renderInput={(props) => <TextField {...props} />}
+  <TextField
+    fullWidth
     label={label}
-    value={value}
-    onChange={(newValue) => {
-      setValue(newValue)
-    }}
+    variant='outlined'
   />
 )
 
 function Calculator () {
+  const [value, setValue] = useState(null)
+  const classes = useStyles()
+
   return (
-    <PageWrapper title='Suis-je à terme&nbsp;?'>
-
+    <div className={classes.container}>
       <FormControl>
-
-        <SFTextField
-          label='Entrez la date prévue d’accouchement&nbsp;:'
+        <FormLabel>
+          Entrez la date prévue d’accouchement&nbsp;:
+        </FormLabel>
+        <DatePicker
+          renderInput={(props) => <TextField hiddenLabel fullWidth variant='outlined' {...props} />}
+          value={value}
+          onChange={(newValue) => {
+            setValue(newValue)
+          }}
         />
-        <SFTextField
-          label='Ou la date de début de grossesse&nbsp;:'
+        <FormLabel>
+          Ou la date de début de grossesse&nbsp;:
+        </FormLabel>
+        <DatePicker
+          renderInput={(props) => <TextField hiddenLabel fullWidth variant='outlined' {...props} />}
+          value={value}
+          onChange={(newValue) => {
+            setValue(newValue)
+          }}
         />
       </FormControl>
 
-      Go
+      <Button variant='contained'>
+        Go
+      </Button>
 
-      Oui, je suis à terme. (ajouter des confettis :)
+      <p>Oui, je suis à terme. (ajouter des confettis :)</p>
 
-      ou
-
-      Non, je ne suis pas encore à terme. En cas de contractions anormales, rendez-vous directement aux urgences afin d’être vue par un médecin.
-
-    </PageWrapper>
+      <p>Non, je ne suis pas encore à terme. En cas de contractions anormales, rendez-vous directement aux urgences afin d’être vue par un médecin.</p>
+    </div>
   )
 }
 
