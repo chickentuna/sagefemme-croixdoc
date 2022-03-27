@@ -2,7 +2,7 @@
 import { faDownload } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import classNames from 'classnames'
-import React from 'react'
+import React, { useState } from 'react'
 import { createUseStyles } from 'react-jss'
 import { Link } from 'react-router-dom'
 import ContentBlock from '../components/ContentBlock'
@@ -17,38 +17,50 @@ const useStyles = createUseStyles((theme: Theme) => ({
     fontSize: 20,
     maxWidth: 1090
   },
-  blocks: {
-    display: 'flex',
-    flexFlow: 'column',
-    gap: 60
+  link: {
+    '&$visited:hover': {
+      opacity: 0.65,
+      color: 'purple'
+    }
   },
-
+  visited: {
+    color: 'purple'
+  }
 }))
 
 function Resources () {
   const classes = useStyles()
+  const [visited, setvisited] = useState(new Set())
 
   const files = [{
     text: 'Valises pour la maternité',
-    url: waifu()
+    url: 'images/background.jpg'
   },
   {
     text: 'Démarches administratives et RDVs en post-partum',
-    url: '/'
+    url: 'images/background.jpg'
   },
   {
     text: 'Préparation fratries : coloriage à imprimer',
-    url: '/'
+    url: 'images/background.jpg'
   },
   {
     text: 'Préparation fratries : Histoire audio (format mp3)',
-    url: '/'
+    url: 'images/background.jpg'
   },
   {
     text: 'Coordonnées utiles et numéros verts',
-    url: '/'
+    url: 'images/background.jpg'
   }
   ]
+
+  function handleClick (idx:number):void {
+    if (!visited.has(idx)) {
+      const newVisited = new Set(visited)
+      newVisited.add(idx)
+      setvisited(newVisited)
+    }
+  }
 
   return (
     <>
@@ -56,9 +68,15 @@ function Resources () {
         title='Ressources'
       >
         <div className={classes.content}>
-          {files.map(file => (
+          {files.map((file, idx) => (
             <p key={file.text}>
-              <Link to={file.url} download> {file.text} <FontAwesomeIcon icon={faDownload} /></Link>
+              <a
+                className={classNames([classes.link, { [classes.visited]: visited.has(idx) }])}
+                href={file.url}
+                download
+                onClick={() => handleClick(idx)}
+              > <FontAwesomeIcon icon={faDownload} /> {file.text}
+              </a>
             </p>
           ))}
         </div>
