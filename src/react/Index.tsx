@@ -7,6 +7,7 @@ import {
 import App from './App'
 import Home from './Home'
 import About from './pages/About'
+import Contact from './pages/Contact'
 import Details from './pages/Details'
 import Grossesse from './pages/Grossesse'
 import Gyneco from './pages/Gyneco'
@@ -36,6 +37,7 @@ export function Index () {
           <Route path='/infos-pratiques' element={<Details />} />
           <Route path='/tarifs' element={<Pricing />} />
           <Route path='/documents' element={<Resources />} />
+          <Route path='/contact' element={<Contact />} />
           <Route
             path='*'
             element={

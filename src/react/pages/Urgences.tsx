@@ -125,7 +125,6 @@ function Urgences () {
                 Disponibilité variable, du fait de gardes en maternité ou d’impératif personnel, merci de vous référer au tableau <span style={{ background: 'red' }}>à droite</span> de cette page
               </Disclaimer>
             </ContentBlock>
-
           </div>
         </div>
       </PageWrapper>
