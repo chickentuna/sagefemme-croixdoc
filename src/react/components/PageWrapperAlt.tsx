@@ -1,6 +1,7 @@
 import React, { HTMLProps, ReactNode } from 'react'
 import { createUseStyles } from 'react-jss'
 import { theme } from '../theme'
+import Dash from './Dash'
 
 const useStyle = createUseStyles({
   wrapper: {
@@ -25,12 +26,13 @@ const useStyle = createUseStyles({
     paddingRight: 20,
     paddingLeft: 20,
     textAlign: 'center',
-    background: '#adcce9',
-    paddingTop: '30px',
-    paddingBottom: '22px',
+    // background: '#adcce9',
+    marginTop: '30px',
+    // paddingBottom: '22px',
     marginBottom: '30px',
-    borderTop: '4px solid #4867d6',
-    width: '100%',
+    // borderBottom: '4px solid #4867d6',
+    // width: '100%',
+    // maxWidth: 1090,
     backgroundRepeat: 'no-repeat',
     backgroundSize: 'contain'
   }
@@ -40,10 +42,9 @@ interface PageWrapperProps extends Omit<HTMLProps<Element>, 'title'> {
   title?: ReactNode
   titleDecorationUrl?: string
   titleColor?: string
-  maxWidth?: number
 }
 
-function PageWrapper ({ children, style, title, titleDecorationUrl, titleColor, maxWidth = 1090 }:PageWrapperProps) {
+function PageWrapperAlt ({ children, style, title, titleDecorationUrl, titleColor }:PageWrapperProps) {
   const classes = useStyle()
 
   return (
@@ -55,14 +56,13 @@ function PageWrapper ({ children, style, title, titleDecorationUrl, titleColor, 
         <div
           className={classes.titleContainer}
           style={{
-            backgroundColor: titleColor,
-            maxWidth: maxWidth,
+            // backgroundColor: titleColor,
             backgroundImage: titleDecorationUrl != null ? `url(${titleDecorationUrl})` : undefined,
-            borderColor: titleDecorationUrl != null ? theme.sfBlack : undefined,
+            // borderColor: titleDecorationUrl != null ? theme.sfBlack : undefined,
           }}
         >
-          {titleDecorationUrl != null}
-          <h3>{title}</h3>
+          <h1>{title}</h1>
+          <Dash title color={titleDecorationUrl != null ? theme.sfBlack : undefined} />
         </div>
       )}
       {children}
@@ -70,4 +70,4 @@ function PageWrapper ({ children, style, title, titleDecorationUrl, titleColor, 
   )
 }
 
-export default React.memo(PageWrapper)
+export default React.memo(PageWrapperAlt)

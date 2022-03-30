@@ -65,6 +65,7 @@ export default function Home () {
         }}
         title='Mon cabinet'
         titleColor='white'
+        maxWidth={1390}
       >
         <div className={classes.content}>
           <div className={classes.buttons}>

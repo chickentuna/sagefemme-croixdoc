@@ -26,7 +26,13 @@ export function Header () {
       ]
     },
     { label: 'Votre sage-femme', to: '/a-propos' },
-    { label: 'Infos pratiques', to: '/infos-pratiques' },
+    {
+      label: 'Infos pratiques',
+      to: '/infos-pratiques',
+      tabs: [
+        { label: 'Tarifs', to: '/tarifs' }
+      ]
+    },
     { label: 'Contact', to: '/contact' }
   ]
 

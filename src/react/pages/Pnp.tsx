@@ -19,13 +19,16 @@ const useStyles = createUseStyles({
     flexDirection: 'column',
     gap: 10,
   },
+  preview: {
+    marginTop: 50
+  },
   accordionBlocks: {
     display: 'flex',
     flexDirection: 'column',
     alignItems: 'center',
     gap: 10,
     '& h3': {
-      marginTop: 80,
+      marginTop: 30,
       marginBottom: 0
     },
     '& ul': {
@@ -58,9 +61,9 @@ function Pnp () {
           </Disclaimer>
 
           <div className={classes.accordionBlocks}>
+            <div className={classes.preview}> Individuel ou en groupe, 7 séances remboursées à 100% par la sécurité sociale </div>
             <h3>Séances classiques</h3>
             <Dash />
-            <div> Individuel ou en groupe, 7 séances remboursées à 100% par la sécurité sociale </div>
             <CustomAccordion
               selectedColor={theme.medicalBlue}
               hoverColor={theme.medicalBlueHover}

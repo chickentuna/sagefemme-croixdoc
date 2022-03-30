@@ -3,6 +3,9 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import React from 'react'
 import { createUseStyles } from 'react-jss'
 import { Link } from 'react-router-dom'
+import { Timetable } from '../../components/Timetable'
+import ContactInfo from '../components/ContactInfo'
+import InfoBox from '../components/InfoBox'
 import PageWrapper from '../components/PageWrapper'
 import { Theme } from '../theme'
 import OfficeMap from './interactive/OfficeMap'
@@ -87,17 +90,6 @@ const useStyles = createUseStyles((theme: Theme) => ({
     display: 'flex',
     justifyContent: 'center'
   },
-  grid: {
-    textAlign: 'left',
-    display: 'flex',
-    justifyContent: 'center',
-    '& td': {
-      padding: [2, 20],
-      whiteSpace: 'nowrap',
-      lineHeight: '24px',
-      fontSize: 14
-    }
-  },
   extra: {
     display: 'flex',
     alignItems: 'center',
@@ -123,7 +115,7 @@ function Details () {
           <OfficeMap className={classes.iframe} />
         </div>
         <div className={classes.contactBox}>
-          <div className={classes.infoBox}>
+          <InfoBox>
             <FontAwesomeIcon icon={faLocationDot} />
             <h3>Adresse&nbsp;:</h3>
             <div className={classes.text}>
@@ -134,37 +126,12 @@ function Details () {
               </p>
             </div>
             <h3>Horaires d’ouverture&nbsp;:</h3>
-            <div className={classes.grid}>
-              <table>
-                <tbody>
-                  <tr>
-                    <td>Lundi</td>
-                    <td>9h - 16h30</td>
-                  </tr>
-                  <tr>
-                    <td>Mardi</td>
-                    <td>13h30 - 21h</td>
-                  </tr>
-                  <tr>
-                    <td>Jeudi</td>
-                    <td>9h - 18h</td>
-                  </tr>
-                  <tr>
-                    <td>Vendredi</td>
-                    <td>9h - 16h30</td>
-                  </tr>
-                  <tr>
-                    <td>Samedi</td>
-                    <td>10h - 15h</td>
-                  </tr>
-                </tbody>
-              </table>
-            </div>
-          </div>
+            <Timetable />
+          </InfoBox>
         </div>
       </div>
       <div className={classes.content}>
-        <div className={classes.hiddenBox}>
+        <InfoBox solid={false}>
           <h3>
             <Link to='www.doctolib.fr'>Prendre RDV</Link>
           </h3>
@@ -174,15 +141,14 @@ function Details () {
           <p>
             <em>Moyens de réglement&nbsp;: CB, chèque, espèces.</em>
           </p>
-        </div>
-        <div className={classes.hiddenBox}>
+        </InfoBox>
+        <InfoBox solid={false}>
           <img src='https://www.institutsandra.pro/public/img/big/carte%20bleue%20200303-zoom-logo-cb.png'></img>
           <img src='https://abc-signaletique.fr/267-thickbox_default/panneau-acces-handicapes.jpg'></img>
           <p className={classes.miniText}>
-            mail&nbsp;: cabsagefemme-croix@gmail.com <br />
-            tél&nbsp;: 06.06.06.06.60
+            <ContactInfo />
           </p>
-        </div>
+        </InfoBox>
       </div>
     </PageWrapper>
   )
