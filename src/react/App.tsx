@@ -3,7 +3,6 @@ import LocalizationProvider from '@mui/lab/LocalizationProvider'
 import React from 'react'
 import { createUseStyles, ThemeProvider } from 'react-jss'
 import { Outlet } from 'react-router-dom'
-import Footer from './Footer'
 import Header from './Header'
 import { theme } from './theme'
 
@@ -27,7 +26,6 @@ export default function App () {
         <div className={classes.box}>
           <Header />
           <Outlet />
-          <Footer />
         </div>
       </ThemeProvider>
     </LocalizationProvider>
