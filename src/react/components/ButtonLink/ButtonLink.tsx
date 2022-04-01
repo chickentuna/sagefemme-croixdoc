@@ -11,6 +11,7 @@ const useStyles = createUseStyles((theme: Theme) => ({
   link: {
     display: 'flex',
     flex: '1 0 250px',
+    justifyContent: 'center',
     backgroundColor: 'white',
     cursor: 'pointer',
     userSelect: 'none',

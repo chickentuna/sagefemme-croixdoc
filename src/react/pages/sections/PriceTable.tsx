@@ -98,7 +98,7 @@ function PriceTable () {
                       borderBottom: '1px solid rgb(224, 224, 224)',
                       textAlign: 'center',
                       padding: '16px',
-                      backgroundColor: theme.sfBlack,
+                      backgroundColor: theme.medicalBlue,
                       color: 'white'
                     }} colSpan={4}
                   >{category.title}

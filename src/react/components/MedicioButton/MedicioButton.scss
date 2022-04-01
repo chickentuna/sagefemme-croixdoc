@@ -1,0 +1,19 @@
+.medicio-button {
+    background: #4867d6;
+    color: #fff;
+    border-radius: 4px;
+    padding: 8px 25px;
+    transition: 0.3s;
+    font-size: 18px;
+    line-height: 20px;
+    display: inline-block;
+    max-width: 300px;
+    width: 100%;
+    text-align: center;
+    border: none;
+    
+    &:hover {
+        background: #728BE4;
+        color: #fff;
+    }
+}

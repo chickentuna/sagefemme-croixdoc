@@ -4,6 +4,7 @@ import { createUseStyles } from 'react-jss'
 import ButtonLink from './components/ButtonLink/ButtonLink'
 import PageWrapper from './components/PageWrapper'
 import { faStethoscope, faHandHoldingMedical, faDroplet, faBandage, faBaby, faPersonBreastfeeding, faBandAid, faHeartbeat, faHeartPulse, faAmbulance, faBriefcase, faBriefcaseMedical } from '@fortawesome/free-solid-svg-icons'
+import PageTitle from './components/PageTitle'
 
 const useStyle = createUseStyles({
   emergencyBanner: {
@@ -30,7 +31,7 @@ const links = [
     label: 'Grossesse et post-partum',
     to: 'grossesse-et-post-partum',
     icon: faPersonBreastfeeding,
-    description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit nullam nunc justo sagittis suscipit ultrices.'
+    description: 'Lorem ipsum.'
   },
   {
     label: 'Rééducation périnéale',
@@ -63,11 +64,12 @@ export default function Home () {
           backgroundPosition: '25% 25%',
           justifyContent: 'center'
         }}
-        title='Mon cabinet'
-        titleColor='white'
-        maxWidth={1390}
       >
         <div className={classes.content}>
+          <PageTitle
+            text='Mon cabinet'
+            color='white'
+          />
           <div className={classes.buttons}>
             {links.map(({ label, to, icon, description }) => (
               <ButtonLink

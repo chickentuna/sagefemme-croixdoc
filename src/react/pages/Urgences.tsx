@@ -10,6 +10,7 @@ import DialogTitle from '@mui/material/DialogTitle'
 import Dialog from '@mui/material/Dialog'
 import Calculator from './interactive/Calculator'
 import { Button, DialogActions, DialogContent } from '@mui/material'
+import MedicioButton from '../components/MedicioButton/MedicioButton'
 
 const useStyles = createUseStyles((theme: Theme) => ({
   content: {
@@ -68,6 +69,7 @@ const useStyles = createUseStyles((theme: Theme) => ({
     maxWidth: 300,
     width: '100%',
     minHeight: 80,
+    borderRadius: 10,
     '&:hover': {
       opacity: 0.80
     }
@@ -77,6 +79,7 @@ const useStyles = createUseStyles((theme: Theme) => ({
     maxWidth: 300,
     width: '100%',
     minHeight: 80,
+    borderRadius: 10,
     '&:hover': {
       opacity: 0.80
     }
@@ -144,8 +147,24 @@ function Urgences () {
           un dépassement d’honoraires sous la forme d’un forfait de 30 euros <u>non remboursables</u> par la sécurité sociale sera appliqué.
         </div>
         <div className={classes.buttons}>
-          <button className={classes.buttonA}>Grossesse : Quand aller consulter en urgence ?</button>
-          <button onClick={() => (setShowPopup(true))} className={classes.buttonB}>Suis-je à terme ?</button>
+          <button
+            className={classes.buttonA}
+          >
+            Grossesse : Quand aller consulter en urgence ?
+          </button>
+          <button
+            className={classes.buttonB}
+            onClick={() => (setShowPopup(true))}
+          >
+            Suis-je à terme ?
+          </button>
+
+          <MedicioButton to='quand-aller-aux-urgences'>
+            Grossesse&nbsp;: Quand aller consulter en urgence&nbsp;?
+          </MedicioButton>
+          <MedicioButton>
+            Suis-je à terme&nbsp;?
+          </MedicioButton>
         </div>
 
       </div>

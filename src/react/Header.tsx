@@ -3,6 +3,7 @@ import { Link, useLocation } from 'react-router-dom'
 import classNames from 'classnames'
 import { createUseStyles } from 'react-jss'
 import { ReactComponent as Logo } from '../svg/logo.svg'
+import MedicioButton from './components/MedicioButton/MedicioButton'
 
 interface Tab {
   label: string,
@@ -51,9 +52,9 @@ export function Header () {
 
         <div className='header-left'>
           <Link className='site-name' to='/'>
-            <h1 className='title'>
+            <h2 className='title'>
               Sage-femme libérale
-            </h1>
+            </h2>
             <h2 className='subtitle'>
               Fanchon RIVOIRE
             </h2>
@@ -92,7 +93,7 @@ export function Header () {
         </div>
 
         <div className='header-right'>
-          <a href='#appointment' className='appointment-btn scrollto'><span className='d-none d-md-inline'>Make an</span> Appointment</a>
+          <MedicioButton to='404' fontSize={14}>Make an Appointment</MedicioButton>
         </div>
 
       </div>

@@ -1,5 +1,6 @@
 import { faLocationDot } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import classNames from 'classnames'
 import React from 'react'
 import { createUseStyles } from 'react-jss'
 import { Link } from 'react-router-dom'
@@ -13,50 +14,13 @@ import OfficeMap from './interactive/OfficeMap'
 const useStyles = createUseStyles((theme: Theme) => ({
   contactBox: {
     display: 'flex',
-    flex: 1
-  },
-  hiddenBox: {
-    width: '100%',
-    color: '#444444',
-    textAlign: 'center',
-    padding: '20px 0 30px 0',
-    '& h3': {
-      color: '#777',
-      fontSize: '20px',
-      fontWeight: 700,
-      margin: '10px 0'
-    },
-    '& p': {
-      fontSize: 14,
-      lineHeight: '24px',
-      marginBottom: 0,
-      padding: 0
-    },
+    flex: 1,
+
     '& img': {
-      width: 60
-    }
-  },
-  infoBox: {
-    minHeight: 400,
-    width: '100%',
-    color: '#444444',
-    textAlign: 'center',
-    boxShadow: '0 0 20px rgb(214 215 216 / 50%)',
-    padding: '20px 0 30px 0',
-    '& h3': {
-      color: '#777',
-      fontSize: '20px',
-      fontWeight: 700,
-      margin: '10px 0'
-    },
-    '& p': {
-      fontSize: 14,
-      lineHeight: '24px',
-      marginBottom: 0,
-      padding: 0
-    },
-    '& img': {
-      width: 60
+      width: 72,
+      position: 'absolute',
+      top: 10,
+      right: 0
     }
   },
   content: {
@@ -69,12 +33,6 @@ const useStyles = createUseStyles((theme: Theme) => ({
     [`@media (max-width: ${theme.verticalModeThreshold}px)`]: {
       flexDirection: 'column'
     }
-  },
-  miniText: {
-    padding: [2, 20],
-    whiteSpace: 'nowrap',
-    lineHeight: '24px',
-    fontSize: 14
   },
   map: {
     flex: 1
@@ -90,17 +48,21 @@ const useStyles = createUseStyles((theme: Theme) => ({
     display: 'flex',
     justifyContent: 'center'
   },
-  extra: {
+  tarifBox: {
+    '& img': {
+      width: 90,
+      marginTop: 20,
+      marginBottom: 10
+    }
+  },
+  subBox: {
     display: 'flex',
-    alignItems: 'center',
+    padding: 20,
+    marginTop: 20,
     justifyContent: 'center',
-    marginTop: 30
-  },
-  extraA: {
-    flex: 1
-  },
-  extraB: {
-    flex: 1
+    flexDirection: 'column',
+    flex: 1,
+    alignItems: 'center'
   }
 }))
 
@@ -117,6 +79,7 @@ function Details () {
         <div className={classes.contactBox}>
           <InfoBox>
             <FontAwesomeIcon icon={faLocationDot} />
+            <img src='https://abc-signaletique.fr/267-thickbox_default/panneau-acces-handicapes.jpg'></img>
             <h3>Adresse&nbsp;:</h3>
             <div className={classes.text}>
               <p>2 rue Paul Valéry
@@ -130,25 +93,19 @@ function Details () {
           </InfoBox>
         </div>
       </div>
-      <div className={classes.content}>
-        <InfoBox solid={false}>
-          <h3>
-            <Link to='www.doctolib.fr'>Prendre RDV</Link>
-          </h3>
-          <h3>
-            <Link to='/tarifs'>Tarifs pratiqués </Link>
-          </h3>
+      <div className={classNames([classes.content, classes.tarifBox])}>
+        <div className={classes.subBox}>
+          <Link to='/tarifs'>Tarifs pratiqués </Link>
+          <img src='https://www.institutsandra.pro/public/img/big/carte%20bleue%20200303-zoom-logo-cb.png'></img>
           <p>
             <em>Moyens de réglement&nbsp;: CB, chèque, espèces.</em>
           </p>
-        </InfoBox>
-        <InfoBox solid={false}>
-          <img src='https://www.institutsandra.pro/public/img/big/carte%20bleue%20200303-zoom-logo-cb.png'></img>
-          <img src='https://abc-signaletique.fr/267-thickbox_default/panneau-acces-handicapes.jpg'></img>
-          <p className={classes.miniText}>
+        </div>
+        <div className={classes.subBox}>
+          <p>
             <ContactInfo />
           </p>
-        </InfoBox>
+        </div>
       </div>
     </PageWrapper>
   )

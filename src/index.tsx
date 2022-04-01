@@ -1,7 +1,7 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
 import './index.css'
-import './bootstrap/style.scss'
+import './medicio/style.scss'
 import { Index } from './react/Index'
 import reportWebVitals from './reportWebVitals'
 
