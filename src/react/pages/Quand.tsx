@@ -34,7 +34,7 @@ function Quand () {
   return (
     <>
       <PageWrapper
-        title='Grossesse&nbsp;: Quand aller consulter en urgence&nbsp;?'
+        title='Grossesse&nbsp;: quand aller consulter en urgence&nbsp;?'
       >
         <div className={classes.content}>
           <section>

@@ -34,7 +34,7 @@ export function Index () {
           <Route path='/grossesse-et-post-partum' element={<Grossesse />} />
           <Route path='/reeducation-perineale' element={<Reeducation />} />
           <Route path='/pnp' element={<Pnp />} />
-          <Route path='/urgence' element={<Urgences />} />
+          <Route path='/urgences' element={<Urgences />} />
           <Route path='/a-propos' element={<About />} />
           <Route path='/infos-pratiques' element={<Details />} />
           <Route path='/tarifs' element={<Pricing />} />

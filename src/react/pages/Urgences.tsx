@@ -11,6 +11,10 @@ import Dialog from '@mui/material/Dialog'
 import Calculator from './interactive/Calculator'
 import { Button, DialogActions, DialogContent } from '@mui/material'
 import MedicioButton from '../components/MedicioButton/MedicioButton'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faCarSide, faCircle, faHouseMedical, faHouseUser } from '@fortawesome/free-solid-svg-icons'
+import { Link } from 'react-router-dom'
+import ShowCalculatorButton from './interactive/ShowCalculatorButton'
 
 const useStyles = createUseStyles((theme: Theme) => ({
   content: {
@@ -36,53 +40,64 @@ const useStyles = createUseStyles((theme: Theme) => ({
       textAlign: 'left',
     },
     '& strong': {
-      color: '#f00000',
-      fontWeight: 900
+      color: 'white',
+      fontWeight: 900,
+      paddingRight: 10
     },
     maxWidth: 1090,
     margin: 'auto'
   },
   theBitAtTheBottom: {
+    alignItems: 'center',
     padding: [20, 30, 50, 30],
     maxWidth: 1090,
     margin: 'auto',
     fontSize: 20,
     display: 'flex',
-    flexFlow: 'row wrap',
+    flexFlow: 'column',
     gap: 30
   },
   price: {
-    flex: 1,
-    minWidth: 540
+    textAlign: 'justify'
   },
   buttons: {
     display: 'flex',
-    flexFlow: 'column',
+    flexFlow: 'row',
     gap: 30,
     justifyContent: 'center',
-    alignItems: 'center',
-    flex: 1,
-    minWidth: 300
+    alignItems: 'stretch',
+    minWidth: 300,
+    marginTop: 30
+  },
+  button: {
+    borderStyle: 'solid',
+    maxWidth: 300,
+    width: '100%',
+    padding: 10,
+    fontSize: 16,
+    lineHeight: 1.2,
+    borderRadius: 10,
+    color: 'black',
+    borderColor: theme.sfBlack,
+    borderWidth: 2,
+    '&:hover': {
+      opacity: 0.80,
+      color: 'black'
+    }
   },
   buttonA: {
     backgroundColor: theme.pink,
-    maxWidth: 300,
-    width: '100%',
-    minHeight: 80,
-    borderRadius: 10,
-    '&:hover': {
-      opacity: 0.80
-    }
   },
   buttonB: {
     backgroundColor: theme.babyBlue,
-    maxWidth: 300,
+  },
+  decoration: {
+    display: 'flex',
+    alignItems: 'center',
+    justifyContent: 'space-around',
+    gap: 20,
     width: '100%',
-    minHeight: 80,
-    borderRadius: 10,
-    '&:hover': {
-      opacity: 0.80
-    }
+    maxWidth: 600
   }
 }))
 
@@ -127,6 +142,17 @@ function Urgences () {
               <Disclaimer>
                 Disponibilité variable, du fait de gardes en maternité ou d’impératif personnel, merci de vous référer au tableau <span style={{ background: 'red' }}>à droite</span> de cette page
               </Disclaimer>
+              <div className={classes.buttons}>
+                <a
+                  href='/quand-aller-aux-urgences'
+                  className={classes.button + ' ' + classes.buttonA}
+                >
+                  Grossesse&nbsp;: quand aller consulter en urgence&nbsp;?
+                </a>
+                <ShowCalculatorButton
+                  className={classes.button + ' ' + classes.buttonB}
+                />
+              </div>
             </ContentBlock>
           </div>
         </div>
@@ -146,39 +172,17 @@ function Urgences () {
           notamment sur les villes de Nîmes, Montpellier, Castelnau-Le-Lez,
           un dépassement d’honoraires sous la forme d’un forfait de 30 euros <u>non remboursables</u> par la sécurité sociale sera appliqué.
         </div>
-        <div className={classes.buttons}>
-          <button
-            className={classes.buttonA}
-          >
-            Grossesse : Quand aller consulter en urgence ?
-          </button>
-          <button
-            className={classes.buttonB}
-            onClick={() => (setShowPopup(true))}
-          >
-            Suis-je à terme ?
-          </button>
 
-          <MedicioButton to='quand-aller-aux-urgences'>
-            Grossesse&nbsp;: Quand aller consulter en urgence&nbsp;?
-          </MedicioButton>
-          <MedicioButton>
-            Suis-je à terme&nbsp;?
-          </MedicioButton>
+        <div className={classes.decoration}>
+          <FontAwesomeIcon icon={faHouseMedical} />
+          <FontAwesomeIcon style={{ fontSize: 8 }} icon={faCircle} />
+          <FontAwesomeIcon style={{ fontSize: 8 }} icon={faCircle} />
+          <FontAwesomeIcon icon={faCarSide} />
+          <FontAwesomeIcon style={{ fontSize: 8 }} icon={faCircle} />
+          <FontAwesomeIcon style={{ fontSize: 8 }} icon={faCircle} />
+          <FontAwesomeIcon icon={faHouseUser} />
         </div>
-
       </div>
-      <Dialog onClose={() => (setShowPopup(false))} open={showPopup}>
-        <DialogTitle>Suis-je à terme ?</DialogTitle>
-        <DialogContent>
-          <Calculator />
-        </DialogContent>
-        <DialogActions>
-          <Button autoFocus onClick={() => setShowPopup(false)}>
-            Fermer
-          </Button>
-        </DialogActions>
-      </Dialog>
     </>
   )
 }

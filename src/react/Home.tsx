@@ -87,7 +87,7 @@ export default function Home () {
       </PageWrapper>
       <div className={classes.emergencyBanner}>
         <ButtonLink
-          to='/urgence'
+          to='/urgences'
           inline
           icon={faBriefcaseMedical}
           title={<>Une urgence&nbsp;?</>}

@@ -19,25 +19,22 @@ export function Header () {
       label: 'Accueil',
       to: '/',
       tabs: [
-        { label: 'Grossesse et post-partum', to: 'grossesse-et-post-partum' },
-        { label: 'Rééducation périnéale', to: 'reeducation-perineale' },
-        { label: 'Gynécologie', to: 'gynecologie' },
-        { label: 'Préparation à la naissance', to: 'pnp' },
-        { label: 'Urgences', to: 'urgence' }
+        { label: 'Grossesse et post-partum', to: '/grossesse-et-post-partum' },
+        { label: 'Rééducation périnéale', to: '/reeducation-perineale' },
+        { label: 'Gynécologie', to: '/gynecologie' },
+        { label: 'Préparation à la naissance', to: '/pnp' }
       ]
     },
     { label: 'Votre sage-femme', to: '/a-propos' },
-    {
-      label: 'Infos pratiques',
-      to: '/infos-pratiques',
-      tabs: [
-        { label: 'Tarifs', to: '/tarifs' }
-      ]
-    },
+    { label: 'Urgences', to: '/urgences' },
+    { label: 'Infos pratiques', to: '/infos-pratiques' },
     { label: 'Contact', to: '/contact' }
   ]
 
-  const selectedTab = tabs.find(tab => tab.to === pathname) ?? tabs[0]
+  const selectedTab = {
+    '/quand-aller-aux-urgences': '/urgences',
+    '/tarifs': '/infos-pratiques'
+  }[pathname] ?? (tabs.find(tab => tab.to === pathname) ?? tabs[0]).to
 
   function handleClick () {
     if (window.matchMedia('(max-width: 991px)').matches) {
@@ -64,19 +61,24 @@ export function Header () {
 
           <nav id='navbar' className='navbar order-last order-lg-0'>
             <ul>
-              {tabs.map(({ label, to, tabs }) => (
-                <li className={classNames({ dropdown: tabs != null })} key={to}>
+              {tabs.map(({ label, to, tabs: subtabs }) => (
+                <li className={classNames({ dropdown: subtabs != null })} key={to}>
                   <Link
                     to={to}
-                    className={classNames(['nav-link', { active: to === selectedTab.to }])}
-                    onClick={tabs == null ? handleClick : undefined}
+                    className={classNames(['nav-link', { active: to === selectedTab }])}
+                    onClick={subtabs == null ? handleClick : undefined}
                   >
                     {label}
-                    {tabs != null && <i className='bi bi-chevron-down' />}
+                    {subtabs != null && <i className='bi bi-chevron-down' />}
                   </Link>
-                  {tabs != null && (
+                  {subtabs != null && (
                     <ul>
-                      {tabs.map(({ label, to }) => (
+                      <li className='tab-as-subtab'>
+                        <Link to={to} onClick={handleClick}>
+                          {label}
+                        </Link>
+                      </li>
+                      {subtabs.map(({ label, to }) => (
                         <li key={to}>
                           <Link to={to} onClick={handleClick}>
                             {label}

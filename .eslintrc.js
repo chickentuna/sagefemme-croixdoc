@@ -29,7 +29,7 @@ module.exports = {
     "comma-dangle": "off",
     "@typescript-eslint/comma-dangle": "off",
     "no-empty-function": "off",
-    "@typescript-eslint/no-empty-function": ["error"],
+    "@typescript-eslint/no-empty-function": ["off"],
     'react/jsx-no-undef': 'off',
     'react-hooks/rules-of-hooks': 'error',
     'react-hooks/exhaustive-deps': 'error',
