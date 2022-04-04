@@ -15,6 +15,8 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faCarSide, faCircle, faHouseMedical, faHouseUser } from '@fortawesome/free-solid-svg-icons'
 import { Link } from 'react-router-dom'
 import ShowCalculatorButton from './interactive/ShowCalculatorButton'
+import NumbersTable from './sections/NumbersTable'
+import Dash from '../components/Dash'
 
 const useStyles = createUseStyles((theme: Theme) => ({
   content: {
@@ -55,7 +57,10 @@ const useStyles = createUseStyles((theme: Theme) => ({
     fontSize: 20,
     display: 'flex',
     flexFlow: 'column',
-    gap: 30
+    gap: 30,
+    '& h4': {
+      marginTop: 60
+    }
   },
   price: {
     textAlign: 'justify'
@@ -98,6 +103,13 @@ const useStyles = createUseStyles((theme: Theme) => ({
     gap: 20,
     width: '100%',
     maxWidth: 600
+  },
+  phoneNumbers: {
+    display: 'flex',
+    alignItems: 'center',
+    justifyContent: 'center',
+    flexDirection: 'column',
+    width: '100%'
   }
 }))
 
@@ -181,6 +193,11 @@ function Urgences () {
           <FontAwesomeIcon style={{ fontSize: 8 }} icon={faCircle} />
           <FontAwesomeIcon style={{ fontSize: 8 }} icon={faCircle} />
           <FontAwesomeIcon icon={faHouseUser} />
+        </div>
+        <div className={classes.phoneNumbers}>
+          <h4>Numéros d'urgences</h4>
+          <Dash />
+          <NumbersTable />
         </div>
       </div>
     </>
