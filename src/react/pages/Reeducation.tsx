@@ -52,7 +52,7 @@ function Reeducation () {
             flip
           >
             <h4>Premières séances</h4>
-            Dans un premier temps, méthodes de rééducation “sur table”&nbsp;:
+            Méthodes de rééducation “sur table”, selon vos besoins évalués lors de du bilan périnéal&nbsp;:
             <List>
               <li>rééducation manuelle</li>
               <li>électrostimulation</li>

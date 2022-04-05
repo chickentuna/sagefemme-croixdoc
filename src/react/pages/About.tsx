@@ -39,7 +39,7 @@ function About () {
   const classes = useStyles()
   return (
     <PageWrapper
-      title='Votre sage-femme'
+      title='Votre Sage-femme'
     >
       <div className={classes.content}>
 

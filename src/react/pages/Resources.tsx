@@ -10,7 +10,7 @@ import Disclaimer from '../components/Disclaimer'
 import List from '../components/List'
 import PageWrapper from '../components/PageWrapper'
 import { Theme } from '../theme'
-import { waifu } from '../utils/placeholder'
+import { waifu, husbando } from '../utils/placeholder'
 
 const useStyles = createUseStyles((theme: Theme) => ({
   content: {
@@ -65,21 +65,27 @@ function Resources () {
   return (
     <>
       <PageWrapper
-        title='Ressources'
+        title='Documents Utiles'
       >
-        <div className={classes.content}>
-          {files.map((file, idx) => (
-            <p key={file.text}>
-              <a
-                className={classNames([classes.link, { [classes.visited]: visited.has(idx) }])}
-                href={file.url}
-                download
-                onClick={() => handleClick(idx)}
-              > <FontAwesomeIcon icon={faDownload} /> {file.text}
-              </a>
-            </p>
-          ))}
-        </div>
+        <ContentBlock
+          imageUrl={husbando()}
+          flip
+        >
+
+          <div className={classes.content}>
+            {files.map((file, idx) => (
+              <p key={file.text}>
+                <a
+                  className={classNames([classes.link, { [classes.visited]: visited.has(idx) }])}
+                  href={file.url}
+                  download
+                  onClick={() => handleClick(idx)}
+                > <FontAwesomeIcon icon={faDownload} /> {file.text}
+                </a>
+              </p>
+            ))}
+          </div>
+        </ContentBlock>
       </PageWrapper>
 
     </>

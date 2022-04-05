@@ -31,25 +31,25 @@ const links = [
     label: 'Grossesse et post-partum',
     to: 'grossesse-et-post-partum',
     icon: faPersonBreastfeeding,
-    description: 'Lorem ipsum.'
+    description: 'Du projet de grossesse jusqu\'à plusieurs plusieurs mois après l\'accouchement.'
   },
   {
     label: 'Rééducation périnéale',
     to: 'reeducation-perineale',
     icon: faHandHoldingMedical,
-    description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit nullam nunc justo sagittis suscipit ultrices.'
+    description: 'À tout âge, retrouver un tonus musculaire afin de prévenir ou corriger les troubles périnéaux comme les fuites urinaires, les descentes d\'organes, les douleurs lors des rapports sexuels etc.'
   },
   {
     label: 'Gynécologie',
     to: 'gynecologie',
     icon: faStethoscope,
-    description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit nullam nunc justo sagittis suscipit ultrices.'
+    description: 'Suivi gynécologique, contraception, frottis,  première consultation de l\'adolescente, vaccinations, dépistage des IST, contraception d\'urgence.'
   },
   {
     label: 'Préparation à la naissance',
     to: 'pnp',
     icon: faBaby,
-    description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit nullam nunc justo sagittis suscipit ultrices.'
+    description: 'Individuelle ou en couple, avec possibilité de séances de Yoga prénatal - préparation des fratries - préparation à l\'accouchement naturel.'
   }
 ]
 

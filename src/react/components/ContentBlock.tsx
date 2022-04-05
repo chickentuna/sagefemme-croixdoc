@@ -11,6 +11,7 @@ const useStyles = createUseStyles((theme: Theme) => ({
     alignItems: 'center',
     position: 'relative',
     gap: 30,
+    width: '100%',
     '@media (max-width: 992px)': {
       flexDirection: 'column',
       // textAlign: center

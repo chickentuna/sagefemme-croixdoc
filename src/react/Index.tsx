@@ -11,12 +11,14 @@ import Contact from './pages/Contact'
 import Details from './pages/Details'
 import Grossesse from './pages/Grossesse'
 import Gyneco from './pages/Gyneco'
+import Legal from './pages/Legal'
 import PageNotFound from './pages/PageNotFound'
 import Pnp from './pages/Pnp'
 import Pricing from './pages/Pricing'
 import Quand from './pages/Quand'
 import Reeducation from './pages/Reeducation'
 import Resources from './pages/Resources'
+import SiteMap from './pages/SiteMap'
 import Urgences from './pages/Urgences'
 
 export function Index () {
@@ -38,9 +40,11 @@ export function Index () {
           <Route path='/a-propos' element={<About />} />
           <Route path='/infos-pratiques' element={<Details />} />
           <Route path='/tarifs' element={<Pricing />} />
-          <Route path='/documents' element={<Resources />} />
+          <Route path='/documents-utiles' element={<Resources />} />
           <Route path='/contact' element={<Contact />} />
           <Route path='/quand-aller-aux-urgences' element={<Quand />} />
+          <Route path='/mentions-legales' element={<Legal />} />
+          <Route path='/sitemap' element={<SiteMap />} />
           <Route path='*' element={<PageNotFound />} />
         </Route>
       </Routes>

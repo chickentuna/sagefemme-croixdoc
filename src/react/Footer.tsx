@@ -8,19 +8,35 @@ const useStyle = createUseStyles((theme: Theme) => ({
     flex: '0 1 60px',
     display: 'flex',
     width: '100%',
+    backgroundColor: theme.sfBlack,
+    justifyContent: 'center',
+    '@media (max-width: 560px)': {
+      '& $wrapper': {
+        flexDirection: 'column',
+      }
+    },
+  },
+  wrapper: {
+    display: 'flex',
+    width: '100%',
+    maxWidth: 560,
     justifyContent: 'space-around',
     gap: 60,
     alignItems: 'center',
-    '@media (max-width: 560px)': {
-      flexDirection: 'column'
-    },
-    backgroundColor: 'lightGrey',
-    padding: 20,
-    marginTop: 20,
-    borderTop: `4px solid ${theme.medicalBlue}`
+    padding: 20
   },
   resource: {
-    fontSize: 18
+
+  },
+  legal: {
+    fontSize: 18,
+    '& a': {
+      color: 'white',
+      '&:hover': {
+        color: 'white',
+        opacity: 0.8
+      }
+    }
   }
 }))
 
@@ -28,21 +44,23 @@ export default function Footer () {
   const classes = useStyle()
   return (
     <div className={classes.container}>
-      <div className={classes.resource}>
-        <Link className='button-39' to='/documents'>
-          Documents utiles
-        </Link>
-      </div>
-      <div className={classes.resource}>
-        <div>
-          <Link to='/plan-du-site'>
-            Plan du site
+      <div className={classes.wrapper}>
+        <div className={classes.resource}>
+          <Link className='button-39' to='/documents-utiles'>
+            Documents utiles
           </Link>
         </div>
-        <div>
-          <Link to='/mentions-legales'>
-            Mentions légales
-          </Link>
+        <div className={classes.legal}>
+          <div>
+            <Link to='/sitemap'>
+              Plan du site
+            </Link>
+          </div>
+          <div>
+            <Link to='/mentions-legales'>
+              Mentions légales
+            </Link>
+          </div>
         </div>
       </div>
 

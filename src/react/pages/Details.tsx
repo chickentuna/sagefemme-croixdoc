@@ -70,7 +70,7 @@ function Details () {
   const classes = useStyles()
   return (
     <PageWrapper
-      title='Infos pratiques'
+      title='Infos Pratiques'
     >
       <div className={classes.content}>
         <div className={classes.map}>

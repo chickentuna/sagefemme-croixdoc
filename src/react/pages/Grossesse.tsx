@@ -66,7 +66,7 @@ function Grossesse () {
 
   return (
     <PageWrapper
-      title='Grossesse et post-partum'
+      title='Grossesse et Post-partum'
     >
       <ReactTooltip />
       <div className={classes.content}>
