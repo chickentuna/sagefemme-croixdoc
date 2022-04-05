@@ -46,6 +46,7 @@ module.exports = {
     'quotes': [
       'error',
       'single'
-    ]
+    ],
+    'space-before-function-paren': 'warn'
   }
 }

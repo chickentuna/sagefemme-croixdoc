@@ -33,8 +33,8 @@ export function Header () {
 
   const selectedTab = {
     '/quand-aller-aux-urgences': '/urgences',
-    '/tarifs': '/infos-pratiques'
-  }[pathname] ?? (tabs.find(tab => tab.to === pathname) ?? tabs[0]).to
+    '/tarifs': '/infos-pratiques',
+  }[pathname] ?? tabs.find(tab => tab.to === pathname || tab.tabs?.find(subtab => subtab.to === pathname) != null)?.to
 
   function handleClick () {
     if (window.matchMedia('(max-width: 991px)').matches) {
