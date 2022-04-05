@@ -1,13 +1,8 @@
-import { faLongArrowRight, faMinus } from '@fortawesome/free-solid-svg-icons'
+import { faLongArrowRight } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { fontWeight } from '@mui/system'
 import React from 'react'
 import { createUseStyles } from 'react-jss'
-import CustomAccordion from '../components/CustomAccordion'
-import Dash from '../components/Dash'
-import Disclaimer from '../components/Disclaimer'
 import PageWrapper from '../components/PageWrapper'
-import { theme } from '../theme'
 
 const useStyles = createUseStyles({
   content: {

@@ -7,7 +7,7 @@ import TableHead from '@mui/material/TableHead'
 import TableRow from '@mui/material/TableRow'
 import Paper from '@mui/material/Paper'
 import { createUseStyles } from 'react-jss'
-import { theme, Theme } from '../../theme'
+import { theme, Theme } from '../theme'
 
 function createData (
   acte: string,

@@ -1,9 +1,9 @@
 import React from 'react'
 import { createUseStyles } from 'react-jss'
-import Insurance from './sections/Insurance'
 import PageWrapper from '../components/PageWrapper'
 import { Theme } from '../theme'
-import PriceTable from './sections/PriceTable'
+import Insurance from '../sections/Insurance'
+import PriceTable from '../sections/PriceTable'
 
 const useStyles = createUseStyles((theme: Theme) => ({
   content: {

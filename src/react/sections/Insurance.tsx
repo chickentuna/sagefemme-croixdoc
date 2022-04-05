@@ -1,5 +1,5 @@
 import React, { ReactNode } from 'react'
-import CustomAccordion from '../../components/CustomAccordion'
+import CustomAccordion from '../components/CustomAccordion'
 
 function Insurance () {
   return (

@@ -1,20 +1,13 @@
 
-import { faDownload, faEnvelope, faPhoneFlip } from '@fortawesome/free-solid-svg-icons'
+import { faEnvelope, faPhoneFlip } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import classNames from 'classnames'
-import React, { useState } from 'react'
+import { Button, TextField } from '@mui/material'
+import React from 'react'
 import { createUseStyles } from 'react-jss'
-import { Link } from 'react-router-dom'
-import ContactInfo from '../components/ContactInfo'
-import ContentBlock from '../components/ContentBlock'
+import { Timetable } from '../sections/Timetable'
 import Disclaimer from '../components/Disclaimer'
-import { Timetable } from '../../components/Timetable'
-import List from '../components/List'
-import PageWrapper from '../components/PageWrapper'
-import { Theme } from '../theme'
-import { waifu } from '../utils/placeholder'
-import { Button, FormControl, FormLabel, Paper, TextField } from '@mui/material'
 import InfoBox from '../components/InfoBox'
+import PageWrapper from '../components/PageWrapper'
 
 const useStyles = createUseStyles({
   content: {

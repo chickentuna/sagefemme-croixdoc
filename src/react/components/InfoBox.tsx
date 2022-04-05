@@ -1,12 +1,6 @@
-import { faLocationDot } from '@fortawesome/free-solid-svg-icons'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import classNames from 'classnames'
 import React, { ReactNode } from 'react'
 import { createUseStyles } from 'react-jss'
-import { Link } from 'react-router-dom'
-import { Timetable } from '../../components/Timetable'
-import ContactInfo from '../components/ContactInfo'
-import PageWrapper from '../components/PageWrapper'
 import { Theme } from '../theme'
 
 const useStyles = createUseStyles((theme: Theme) => ({

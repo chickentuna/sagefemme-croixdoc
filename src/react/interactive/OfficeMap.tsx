@@ -1,5 +1,5 @@
 
-import React, { HTMLProps, ReactNode } from 'react'
+import React from 'react'
 
 function OfficeMap (props: React.IframeHTMLAttributes<HTMLIFrameElement>) {
   return (

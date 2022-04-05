@@ -1,7 +1,7 @@
 import { faLeaf, IconDefinition } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import classNames from 'classnames'
-import React, { HTMLProps, ReactNode } from 'react'
+import React, { ReactNode } from 'react'
 import { createUseStyles } from 'react-jss'
 
 const useStyle = createUseStyles({

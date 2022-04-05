@@ -4,12 +4,12 @@ import classNames from 'classnames'
 import React from 'react'
 import { createUseStyles } from 'react-jss'
 import { Link } from 'react-router-dom'
-import { Timetable } from '../../components/Timetable'
+import { Timetable } from '../sections/Timetable'
 import ContactInfo from '../components/ContactInfo'
 import InfoBox from '../components/InfoBox'
 import PageWrapper from '../components/PageWrapper'
 import { Theme } from '../theme'
-import OfficeMap from './interactive/OfficeMap'
+import OfficeMap from '../interactive/OfficeMap'
 
 const useStyles = createUseStyles((theme: Theme) => ({
   contactBox: {

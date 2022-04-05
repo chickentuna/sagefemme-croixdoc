@@ -1,10 +1,8 @@
-import { faMinus } from '@fortawesome/free-solid-svg-icons'
 import React from 'react'
 import { createUseStyles } from 'react-jss'
 import CustomAccordion from '../components/CustomAccordion'
 import Dash from '../components/Dash'
 import Disclaimer from '../components/Disclaimer'
-import List from '../components/List'
 import PageWrapper from '../components/PageWrapper'
 import { theme } from '../theme'
 

@@ -1,11 +1,11 @@
-import React, { ReactChildren, ReactNode } from 'react'
+import { IconDefinition } from '@fortawesome/free-solid-svg-icons'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import classNames from 'classnames'
+import React, { ReactNode } from 'react'
 import { createUseStyles } from 'react-jss'
 import { Link } from 'react-router-dom'
-import './ButtonLink.scss'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { IconDefinition } from '@fortawesome/free-solid-svg-icons'
-import classNames from 'classnames'
 import { Theme } from '../../theme'
+import './ButtonLink.scss'
 
 const useStyles = createUseStyles((theme: Theme) => ({
   link: {

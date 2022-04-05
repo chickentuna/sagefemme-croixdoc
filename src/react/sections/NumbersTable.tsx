@@ -1,6 +1,6 @@
 import React from 'react'
 import { createUseStyles } from 'react-jss'
-import { Theme } from '../../theme'
+import { Theme } from '../theme'
 
 const useStyles = createUseStyles((theme:Theme) => ({
   table: {

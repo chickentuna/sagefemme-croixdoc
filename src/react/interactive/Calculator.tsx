@@ -3,7 +3,7 @@ import { addWeeks, formatISO, isAfter, parseISO } from 'date-fns'
 import React, { ChangeEvent, useState } from 'react'
 import { createUseStyles } from 'react-jss'
 import Confetti from 'react-confetti'
-import { theme } from '../../theme'
+import { theme } from '../theme'
 
 const useStyles = createUseStyles({
   container: {
