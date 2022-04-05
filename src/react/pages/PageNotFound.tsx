@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import { createUseStyles } from 'react-jss'
+import PageWrapper from '../components/PageWrapper'
 
 const useStyles = createUseStyles({
   content: {
@@ -13,7 +14,6 @@ const useStyles = createUseStyles({
     justifyContent: 'center',
     '& img': {
       maxWidth: '100%',
-      cursor: 'pointer'
     }
   },
   message: {
@@ -26,16 +26,9 @@ const useStyles = createUseStyles({
 
 function PageNotFound () {
   const classes = useStyles()
-  // const [bunny, setBunny] = useState('images/bunny.png')
-  // const [bunnyIdx, setBunnyIdx] = useState(0)
-
-  // function handleClick () {
-  //   setBunny(`https://loremflickr.com/450/300/rabbit,cute/all?q=${bunnyIdx}`)
-  //   setBunnyIdx(bunnyIdx + 1)
-  // }
 
   return (
-    <>
+    <PageWrapper>
       <div className={classes.content}>
         <h1>404</h1>
         <div className={classes.message}>
@@ -44,7 +37,7 @@ function PageNotFound () {
         </div>
         <img src='images/bunny.png' />
       </div>
-    </>
+    </PageWrapper>
   )
 }
 

@@ -1,58 +1,49 @@
 import React from 'react'
 import { createUseStyles } from 'react-jss'
 import { Link } from 'react-router-dom'
-import ButtonLink from './components/ButtonLink/ButtonLink'
+import { Theme } from './theme'
 
-const useStyle = createUseStyles({
-  resources: {
+const useStyle = createUseStyles((theme: Theme) => ({
+  container: {
     flex: '0 1 60px',
     display: 'flex',
     width: '100%',
-    justifyContent: 'space-between',
+    justifyContent: 'space-around',
+    gap: 60,
     alignItems: 'center',
     '@media (max-width: 560px)': {
       flexDirection: 'column'
-    }
+    },
+    backgroundColor: 'lightGrey',
+    padding: 20,
+    marginTop: 20,
+    borderTop: `4px solid ${theme.medicalBlue}`
   },
-  adress: {
-    fontWeight: 'bold',
-    color: 'black'
-  },
-  documents: {
-
-  },
-  doctolib: {
-
-  },
-  cards: {
-
-  },
-  cardsImg: {
-    width: 100
+  resource: {
+    fontSize: 18
   }
-})
+}))
 
 export default function Footer () {
   const classes = useStyle()
   return (
-    <div className={classes.resources}>
-      <div className={classes.adress}>
-        <div>7 croix d'occitanie</div>
-        <div>34400 Restinclières</div>
-      </div>
-      <div className={classes.documents}>
-        <Link className='button-39' to='documents'>
+    <div className={classes.container}>
+      <div className={classes.resource}>
+        <Link className='button-39' to='/documents'>
           Documents utiles
         </Link>
       </div>
-      <div className={classes.doctolib}>
-        <Link className='button-39' to='doctolib'>
-          Doctolib
-        </Link>
-      </div>
-
-      <div className={classes.cards}>
-        <img className={classes.cardsImg} src='https://www.institutsandra.pro/public/img/big/carte%20bleue%20200303-zoom-logo-cb.png' />
+      <div className={classes.resource}>
+        <div>
+          <Link to='/plan-du-site'>
+            Plan du site
+          </Link>
+        </div>
+        <div>
+          <Link to='/mentions-legales'>
+            Mentions légales
+          </Link>
+        </div>
       </div>
 
     </div>

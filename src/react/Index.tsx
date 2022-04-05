@@ -41,14 +41,7 @@ export function Index () {
           <Route path='/documents' element={<Resources />} />
           <Route path='/contact' element={<Contact />} />
           <Route path='/quand-aller-aux-urgences' element={<Quand />} />
-          <Route
-            path='*'
-            element={
-              <main style={{ padding: '1rem' }}>
-                <PageNotFound />
-              </main>
-            }
-          />
+          <Route path='*' element={<PageNotFound />} />
         </Route>
       </Routes>
     </Router>
