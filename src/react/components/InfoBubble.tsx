@@ -32,7 +32,7 @@ function InfoBubble ({ text }: Props) {
       className={classes.info}
       data-class={classes.tooltip}
       data-html
-      data-place='right'
+      data-place='right' // TODO: bottom if mobile mode
       data-tip={ReactDOMServer.renderToString(text)}
       data-type='light'
       data-effect='solid'

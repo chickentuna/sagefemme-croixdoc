@@ -11,12 +11,6 @@ const useStyles = createUseStyles({
     fontSize: 20,
     maxWidth: 1090
   },
-  faqBlocks: {
-    opacity: 0.5,
-    display: 'flex',
-    flexDirection: 'column',
-    gap: 10,
-  },
   preview: {
     marginTop: 50
   },
