@@ -95,7 +95,7 @@ export function Header () {
         </div>
 
         <div className='header-right'>
-          <MedicioButton to='404' fontSize={14}>Make an Appointment</MedicioButton>
+          <MedicioButton to='404' fontSize={14}>Prendre Rendez-vous</MedicioButton>
         </div>
 
       </div>

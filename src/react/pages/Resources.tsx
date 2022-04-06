@@ -68,7 +68,7 @@ function Resources () {
         title='Documents Utiles'
       >
         <ContentBlock
-          imageUrl={husbando()}
+          imageUrl='https://placekitten.com/649/790'
           flip
         >
 

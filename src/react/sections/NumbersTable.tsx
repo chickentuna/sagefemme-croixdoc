@@ -14,7 +14,7 @@ const useStyles = createUseStyles((theme:Theme) => ({
       backgroundColor: theme.medicalBlue,
       '& th': {
         border: 'none',
-        padding: 30,
+        padding: 15,
         fontSize: 14,
         textTransform: 'uppercase'
       }
@@ -74,8 +74,8 @@ function NumbersTable () {
           <tr>
             <th>urgences sociales</th>
             <th>pharmacie de garde - montpellier</th>
-            <th>urgences pédiatriques chu-montpellier</th>
-            <th>urgences gynécologiques et obstétricales chu montpellier</th>
+            <th>urgences pédiatriques chu&#8209;montpellier</th>
+            <th>urgences gynécologiques et obstétricales chu&#8209;montpellier</th>
           </tr>
         </thead>
         <tbody>

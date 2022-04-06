@@ -1,11 +1,13 @@
 import React from 'react'
 import { createUseStyles } from 'react-jss'
 import { Link } from 'react-router-dom'
+import ContactInfo from './components/ContactInfo'
 import { Theme } from './theme'
 
 const useStyle = createUseStyles((theme: Theme) => ({
   container: {
     flex: '0 1 60px',
+    color: 'white',
     display: 'flex',
     width: '100%',
     backgroundColor: theme.sfBlack,
@@ -19,18 +21,16 @@ const useStyle = createUseStyles((theme: Theme) => ({
   wrapper: {
     display: 'flex',
     width: '100%',
-    maxWidth: 560,
+    // maxWidth: 660,
     justifyContent: 'space-around',
     gap: 60,
     alignItems: 'center',
     padding: 20
   },
-  resource: {
-
-  },
   legal: {
     fontSize: 18,
     '& a': {
+      textDecoration: 'underline',
       color: 'white',
       '&:hover': {
         color: 'white',
@@ -45,22 +45,18 @@ export default function Footer () {
   return (
     <div className={classes.container}>
       <div className={classes.wrapper}>
-        <div className={classes.resource}>
+        <div>
           <Link className='button-39' to='/documents-utiles'>
             Documents utiles
           </Link>
         </div>
         <div className={classes.legal}>
-          <div>
-            <Link to='/sitemap'>
-              Plan du site
-            </Link>
-          </div>
-          <div>
-            <Link to='/mentions-legales'>
-              Mentions légales
-            </Link>
-          </div>
+          <Link to='/mentions-legales'>
+            Mentions légales
+          </Link>
+        </div>
+        <div>
+          <ContactInfo />
         </div>
       </div>
 

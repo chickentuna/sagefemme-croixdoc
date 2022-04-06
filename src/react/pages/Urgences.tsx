@@ -10,6 +10,7 @@ import PageWrapper from '../components/PageWrapper'
 import { Theme } from '../theme'
 import ShowCalculatorButton from '../interactive/ShowCalculatorButton'
 import NumbersTable from '../sections/NumbersTable'
+import AbsenceTable from '../sections/AbsenceTable'
 
 const useStyles = createUseStyles((theme: Theme) => ({
   content: {
@@ -55,8 +56,16 @@ const useStyles = createUseStyles((theme: Theme) => ({
       marginTop: 60
     }
   },
+  visits: {
+    display: 'flex',
+    gap: 60
+  },
   price: {
-    textAlign: 'justify'
+    textAlign: 'justify',
+    flex: 2
+  },
+  table: {
+    flex: 1
   },
   buttons: {
     display: 'flex',
@@ -133,32 +142,6 @@ function Urgences () {
                 Merci de téléphoner avant afin de vous assurer de ma présence (absence possible du cabinet lors de visites à domicile)
               </Disclaimer>
             </ContentBlock>
-
-            <ContentBlock
-              imageUrl='https://image.shutterstock.com/z/stock-photo-pregnant-african-american-woman-having-prenatal-contractions-worried-husband-calling-doctor-on-1851371650.jpg'
-              landscape
-              flip
-            >
-              <h4>Consultations de nuit à domicile, entre 21h et 6h pour&nbsp;:</h4>
-              <List>
-                <li>Un diagnostic de début de travail <u>à terme</u> (au delà de 37 SA)</li>
-                <li>Une suspicion de rupture de la poche des eaux</li>
-              </List>
-              <Disclaimer>
-                Disponibilité variable, du fait de gardes en maternité ou d’impératif personnel, merci de vous référer au tableau <span style={{ background: 'red' }}>à droite</span> de cette page
-              </Disclaimer>
-              <div className={classes.buttons}>
-                <a
-                  href='/quand-aller-aux-urgences'
-                  className={classes.button + ' ' + classes.buttonA}
-                >
-                  Grossesse&nbsp;: quand aller consulter en urgence&nbsp;?
-                </a>
-                <ShowCalculatorButton
-                  className={classes.button + ' ' + classes.buttonB}
-                />
-              </div>
-            </ContentBlock>
           </div>
         </div>
       </PageWrapper>
@@ -170,12 +153,51 @@ function Urgences () {
           Merci de vous rendre <b>DIRECTEMENT AUX URGENCES</b> ou <b>contactez le 15.</b>
         </div>
       </div>
+      <PageWrapper>
+        <div className={classes.content}>
+          <div className={classes.blocks}>
+
+            <ContentBlock
+              imageUrl='https://image.shutterstock.com/z/stock-photo-pregnant-african-american-woman-having-prenatal-contractions-worried-husband-calling-doctor-on-1851371650.jpg'
+              landscape
+              flip
+            >
+              <h4>Consultations de nuit à domicile, entre 21h et 6h pour&nbsp;:</h4>
+              <List>
+                <li>Un diagnostic de début de travail <u>à terme</u> (au delà de 37 SA)</li>
+                <li>Une suspicion de rupture de la poche des eaux</li>
+              </List>
+
+              <div className={classes.buttons}>
+                <a
+                  href='/quand-aller-aux-urgences'
+                  className={classes.button + ' ' + classes.buttonA}
+                >
+                  Grossesse&nbsp;: quand aller consulter en urgence&nbsp;?
+                </a>
+                <ShowCalculatorButton
+                  className={classes.button + ' ' + classes.buttonB}
+                />
+              </div>
+              <Disclaimer>
+                Disponibilité variable, du fait de gardes en maternité ou d’impératif personnel,
+                merci de vous référer au tableau ci-dessous
+              </Disclaimer>
+            </ContentBlock>
+          </div>
+        </div>
+      </PageWrapper>
       <div className={classes.theBitAtTheBottom}>
-        <div className={classes.price}>
-          Ces visites sont prises en charge à 100% par la sécurité sociale.
-          Cependant, en cas de déplacement de nuit en zone éloignée du cabinet (supérieur à 15 km),
-          notamment sur les villes de Nîmes, Montpellier, Castelnau-Le-Lez,
-          un dépassement d’honoraires sous la forme d’un forfait de 30 euros <u>non remboursables</u> par la sécurité sociale sera appliqué.
+        <div className={classes.visits}>
+          <div className={classes.price}>
+            Ces visites sont prises en charge à 100% par la sécurité sociale.
+            Cependant, en cas de déplacement de nuit en zone éloignée du cabinet (supérieur à 15 km),
+            notamment sur les villes de Nîmes, Montpellier, Castelnau-Le-Lez,
+            un dépassement d’honoraires sous la forme d’un forfait de 30 euros <u>non remboursables</u> par la sécurité sociale sera appliqué.
+          </div>
+          <div className={classes.table}>
+            <AbsenceTable />
+          </div>
         </div>
 
         <div className={classes.decoration}>
