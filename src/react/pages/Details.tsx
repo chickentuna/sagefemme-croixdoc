@@ -83,9 +83,8 @@ function Details () {
             <h3>Adresse&nbsp;:</h3>
             <div className={classes.text}>
               <p>2 rue Paul Valéry
-                <br />Zac des Plans
                 <br />34160 - RESTINCLIÈRES
-                <br />Bus ligne 612 ou 31 - arrêt
+                <br />Bus ligne 612 ou 31
               </p>
             </div>
             <h3>Horaires d’ouverture&nbsp;:</h3>
@@ -99,11 +98,6 @@ function Details () {
           <img src='https://www.institutsandra.pro/public/img/big/carte%20bleue%20200303-zoom-logo-cb.png'></img>
           <p>
             <em>Moyens de réglement&nbsp;: CB, chèque, espèces.</em>
-          </p>
-        </div>
-        <div className={classes.subBox}>
-          <p>
-            <ContactInfo />
           </p>
         </div>
       </div>

@@ -45,11 +45,11 @@ export default function Footer () {
   return (
     <div className={classes.container}>
       <div className={classes.wrapper}>
-        <div>
+        {/* <div>
           <Link className='button-39' to='/documents-utiles'>
             Documents utiles
           </Link>
-        </div>
+        </div> */}
         <div className={classes.legal}>
           <Link to='/mentions-legales'>
             Mentions légales

@@ -35,8 +35,6 @@ function Pnp () {
     <>
       <PageWrapper
         title='Préparation à la Naissance et à la Parentalité'
-        titleColor={theme.pink}
-        titleDecorationUrl='https://image.shutterstock.com/image-illustration/pregnant-woman-hugs-her-stomach-260nw-1890465955.jpg'
       >
         <div className={classes.content}>
           <h4>

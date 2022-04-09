@@ -75,7 +75,7 @@ const useStyles = createUseStyles((theme: Theme) => ({
       gap: 20,
       padding: 15,
       justifyContent: 'center',
-      '@media (max-width: 1150px)': {
+      '@media (max-width: 1230px)': {
         justifyContent: 'center'
       }
     },

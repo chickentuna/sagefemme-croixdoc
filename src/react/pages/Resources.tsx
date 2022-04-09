@@ -4,20 +4,23 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import classNames from 'classnames'
 import React, { useState } from 'react'
 import { createUseStyles } from 'react-jss'
-import { Link } from 'react-router-dom'
 import ContentBlock from '../components/ContentBlock'
-import Disclaimer from '../components/Disclaimer'
-import List from '../components/List'
 import PageWrapper from '../components/PageWrapper'
 import { Theme } from '../theme'
-import { waifu, husbando } from '../utils/placeholder'
 
 const useStyles = createUseStyles((theme: Theme) => ({
   content: {
     fontSize: 20,
-    maxWidth: 1090
+    maxWidth: 1090,
+    '& p': {
+      marginBottom: 0
+    },
+  },
+  download: {
+    marginBottom: 15
   },
   link: {
+    fontSize: 18,
     '&$visited:hover': {
       opacity: 0.65,
       color: 'purple'
@@ -34,23 +37,23 @@ function Resources () {
 
   const files = [{
     text: 'Valises pour la maternité',
-    url: 'images/background.jpg'
+    url: 'docs/Valises pour la maternité.pdf'
   },
   {
     text: 'Démarches administratives et RDVs en post-partum',
-    url: 'images/background.jpg'
+    url: 'docs/Rendez-vous à prévoir en post-partum.pdf'
   },
   {
     text: 'Préparation fratries : coloriage à imprimer',
-    url: 'images/background.jpg'
+    url: 'docs/Fratrie coloriage.png'
   },
   {
-    text: 'Préparation fratries : Histoire audio (format mp3)',
-    url: 'images/background.jpg'
+    text: 'Préparation fratries : Histoire audio',
+    url: 'docs/histoire fratrie.mp3'
   },
   {
     text: 'Coordonnées utiles et numéros verts',
-    url: 'images/background.jpg'
+    url: 'docs/Coordonnées utiles et numéros verts.pdf'
   }
   ]
 
@@ -67,22 +70,27 @@ function Resources () {
       <PageWrapper
         title='Documents Utiles'
       >
+        {/* https://www.shutterstock.com/fr/image-vector/document-icon-concept-3d-web-vector-2059818359 */}
         <ContentBlock
-          imageUrl='https://placekitten.com/649/790'
+          imageUrl='https://image.shutterstock.com/image-vector/document-icon-concept-3d-web-600w-2059818359.jpg'
+          landscape
           flip
         >
 
           <div className={classes.content}>
             {files.map((file, idx) => (
-              <p key={file.text}>
+              <div className={classes.download} key={file.text}>
+                <p>
+                  {file.text}
+                </p>
                 <a
                   className={classNames([classes.link, { [classes.visited]: visited.has(idx) }])}
                   href={file.url}
                   download
                   onClick={() => handleClick(idx)}
-                > <FontAwesomeIcon icon={faDownload} /> {file.text}
+                > <FontAwesomeIcon icon={faDownload} /> {file.url}
                 </a>
-              </p>
+              </div>
             ))}
           </div>
         </ContentBlock>

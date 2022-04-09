@@ -17,8 +17,11 @@ const useStyles = createUseStyles({
     flexDirection: 'column',
     alignItems: 'center'
   },
+  icon: {
+    marginBottom: 30
+  },
   block: {
-    maxWidth: 990,
+    maxWidth: 810,
     padding: [20, 60],
     margin: 15,
     width: '100%',
@@ -27,6 +30,7 @@ const useStyles = createUseStyles({
   },
   duoBlock: {
     display: 'flex',
+    flexDirection: 'column',
     '&>div': {
       flex: 1
     }
@@ -43,7 +47,8 @@ function Resources () {
         <div className={classes.content}>
           <div className={classes.duoBlock}>
             <InfoBox className={classes.block}>
-              <FontAwesomeIcon icon={faPhoneFlip} />
+              <FontAwesomeIcon className={classes.icon} icon={faPhoneFlip} />
+              <strong>06 23 15 23 44</strong>
               <h3>Horaires d’ouverture du cabinet&nbsp;:</h3>
               <Timetable />
               <div>
@@ -56,8 +61,10 @@ function Resources () {
             </InfoBox>
 
             <InfoBox className={classes.block}>
-              <FontAwesomeIcon icon={faEnvelope} />
-              <a href='mailto:cabsagefemme-croix@gmail.com'> cabsagefemme-croix@gmail.com</a>
+              <FontAwesomeIcon className={classes.icon} icon={faEnvelope} />
+              <a href='mailto:contact@sfrivoire-restinclieres.com'>contact@sfrivoire-restinclieres.com</a>
+              {
+              /*
               <h3>Formulaire de contact</h3>
               <form>
                 <TextField fullWidth required margin='normal' variant='outlined' label='Votre nom' />
@@ -67,6 +74,8 @@ function Resources () {
                   Envoyer
                 </Button>
               </form>
+              */
+              }
             </InfoBox>
           </div>
         </div>

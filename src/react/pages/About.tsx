@@ -52,9 +52,9 @@ function About () {
             <div>Diplôme d’Etat d’Infirmier&nbsp;-&nbsp;2019</div>
           </div>
           <ContentBlock
-            imageUrl='https://placekitten.com/649/489'
-            landscape
+            imageUrl='images/portrait.jpeg'
           >
+            <h4>Engagements associatifs & réseaux</h4>
             <List>
               <li>Collège National des Sages-Femmes (CNSF)</li>
               <li>Réseau Périnatalité d’Occitanie (RPO)</li>
@@ -66,8 +66,9 @@ function About () {
 
           </ContentBlock>
           <ContentBlock
-            imageUrl='https://poulton.fun/waifu-husbando/img?type=waifu&id=10&folder=1'
+            imageUrl='images/chu-nimes.jpg'
             flip
+            landscape
           >
             <h4>Expérience sage-femme</h4>
             <List>
@@ -80,10 +81,9 @@ function About () {
               <li>Clinique Clémentville - Montpellier</li>
             </List>
           </ContentBlock>
-
+          {/* https://image.shutterstock.com/z/stock-photo-books-on-wooden-table-under-lamp-light-144613493.jpg */}
           <ContentBlock
-            imageUrl='https://placekitten.com/649/488'
-            landscape
+            imageUrl='https://image.shutterstock.com/z/stock-photo-books-on-wooden-table-under-lamp-light-144613493.jpg'
           >
             <h4>Formations complémentaires</h4>
             <List>

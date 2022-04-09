@@ -2,8 +2,9 @@ import React from 'react'
 
 function ContactInfo () {
   return (
-    <>mail&nbsp;: cabsagefemme-croix@gmail.com <br />
-      tél&nbsp;: 06.06.06.06.60
+    <>
+      tél&nbsp;: 06 23 15 23 44<br />
+      mail&nbsp;: contact@sfrivoire-restinclieres.com
     </>
   )
 }

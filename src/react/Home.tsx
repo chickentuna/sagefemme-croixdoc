@@ -18,7 +18,7 @@ const useStyle = createUseStyles({
     flexWrap: 'nowrap',
     gap: 30
   },
-  '@media (max-width: 1150px)': {
+  '@media (max-width: 1230px)': {
     buttons: {
       flexDirection: 'column',
       gap: 30

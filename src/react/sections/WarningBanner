@@ -22,20 +22,23 @@ const useStyles = createUseStyles((theme: Theme) => ({
     flexFlow: 'column',
     gap: 60
   },
+
   warningBanner: {
+    background: '#3fbbc0',
+    color: '#fff',
     backgroundSize: 'cover',
-    padding: '35px 30px',
-    border: `5px solid ${theme.medicalBlue}`
+    padding: '60px 30px'
   },
   warningBannerContent: {
     fontSize: 18,
-    textAlign: 'justify',
+    textAlign: 'center',
     '& p': {
       textAlign: 'left',
     },
     '& strong': {
+      color: 'white',
       fontWeight: 900,
-      paddingRight: 5
+      paddingRight: 10
     },
     maxWidth: 1090,
     margin: 'auto'
@@ -115,16 +118,7 @@ const useStyles = createUseStyles((theme: Theme) => ({
 function Urgences () {
   const classes = useStyles()
 
-  const WarningBanner = () => (
-    <div className={classes.warningBanner}>
-      <div className={classes.warningBannerContent}>
-        <p><strong>ATTENTION&nbsp;:</strong> pour les autres motifs (saignements, diminution des mouvements de bébé, contractions avant terme, fièvre&nbsp;…),
-          vous avez besoin d’être vue par un <u>médecin</u> et de faire des <u>examens complémentaires pour lesquels je ne suis pas équipée</u>.
-        </p>
-        Merci de vous rendre <b>DIRECTEMENT AUX URGENCES</b> ou <b>contactez le 15.</b>
-      </div>
-    </div>
-  )
+  const [showPopup, setShowPopup] = useState(false)
 
   return (
     <>
@@ -148,8 +142,14 @@ function Urgences () {
                 Merci de téléphoner avant afin de vous assurer de ma présence (absence possible du cabinet lors de visites à domicile)
               </Disclaimer>
             </ContentBlock>
+          </div>
+        </div>
+      </PageWrapper>
+      <WarningBanner />
+      <PageWrapper>
+        <div className={classes.content}>
+          <div className={classes.blocks}>
 
-            <WarningBanner />
             <ContentBlock
               imageUrl='https://image.shutterstock.com/z/stock-photo-pregnant-african-american-woman-having-prenatal-contractions-worried-husband-calling-doctor-on-1851371650.jpg'
               landscape

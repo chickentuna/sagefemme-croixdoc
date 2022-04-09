@@ -28,8 +28,11 @@ export function Header () {
     { label: 'Votre sage-femme', to: '/a-propos' },
     { label: 'Urgences', to: '/urgences' },
     { label: 'Infos pratiques', to: '/infos-pratiques' },
-    { label: 'Contact', to: '/contact' }
+    { label: 'Contact', to: '/contact' },
+    { label: 'Documents utiles', to: '/documents-utiles' }
   ]
+
+  // TODO: SEO stuff like sitemap?
 
   const selectedTab = {
     '/quand-aller-aux-urgences': '/urgences',

@@ -8,15 +8,16 @@ import { Theme } from '../theme'
 const useStyles = createUseStyles((theme: Theme) => ({
   content: {
     maxWidth: 1090,
+    width: '100%',
     '& section': {
     },
     '& h4': {
       fontSize: 20,
-      marginBottom: 10
+      marginBottom: 5
     },
     '& p': {
       fontSize: 18,
-      marginBottom: 40
+      marginBottom: 20
     }
   }
 }))
@@ -40,18 +41,29 @@ function Legal () {
       <div className={classes.content}>
         <LegalBlock title='Propriétaire du site'>
           Fanchon RIVOIRE
-          <br /> 2 rue Paul Valéry, Zac des Plans
+          <br /> 2 rue Paul Valéry
           <br />34160 - Restinclières
-        </LegalBlock>
-        <LegalBlock title='Numéro d’immatriculation au RCS ou au répertoire des métiers'>
-          #########
         </LegalBlock>
         <LegalBlock title='Contact'>
           <ContactInfo />
         </LegalBlock>
-        <LegalBlock title='Numéro d’identification à la TVA'>
-          ############
+
+        <LegalBlock title='N° RPPS'>
+          10100771079
         </LegalBlock>
+        <LegalBlock title='N° Praticien'>
+          34501307
+        </LegalBlock>
+        <LegalBlock title='N° d’identification pro de santé'>
+          345013072
+        </LegalBlock>
+        <LegalBlock title='N° national'>
+          39145
+        </LegalBlock>
+        <LegalBlock title='N° départemental'>
+          34 5 01307 2 00 1 20 1 21
+        </LegalBlock>
+
         <LegalBlock title='Hébergeur du site'>
           CloudFlare Inc.
           <br />101 Townsend St
@@ -59,9 +71,6 @@ function Legal () {
           <br />États-Unis
           <br /> +33 7 57 90 52 73
 
-        </LegalBlock>
-        <LegalBlock title='Si vous exercez une activité réglementée et soumise à autorisation (pharmacie ou débit de boissons, par exemple)'>
-          nom et adresse de l’autorité qui a délivré l’autorisation.
         </LegalBlock>
 
       </div>
