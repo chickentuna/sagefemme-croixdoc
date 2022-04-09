@@ -81,9 +81,8 @@ function About () {
               <li>Clinique Clémentville - Montpellier</li>
             </List>
           </ContentBlock>
-          {/* https://image.shutterstock.com/z/stock-photo-books-on-wooden-table-under-lamp-light-144613493.jpg */}
           <ContentBlock
-            imageUrl='https://image.shutterstock.com/z/stock-photo-books-on-wooden-table-under-lamp-light-144613493.jpg'
+            imageUrl='images/etudes.jpg'
           >
             <h4>Formations complémentaires</h4>
             <List>

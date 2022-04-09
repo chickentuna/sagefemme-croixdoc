@@ -70,9 +70,8 @@ function Resources () {
       <PageWrapper
         title='Documents Utiles'
       >
-        {/* https://www.shutterstock.com/fr/image-vector/document-icon-concept-3d-web-vector-2059818359 */}
         <ContentBlock
-          imageUrl='https://image.shutterstock.com/image-vector/document-icon-concept-3d-web-600w-2059818359.jpg'
+          imageUrl='images/docs.jpg'
           landscape
           flip
         >

@@ -87,7 +87,7 @@ function Grossesse () {
         </ContentBlock>
 
         <ContentBlock
-          imageUrl='https://image.shutterstock.com/z/stock-photo-portrait-of-a-young-family-mom-dad-and-newborn-baby-resting-at-home-473972065.jpg'
+          imageUrl='images/family.jpg'
           landscape
           flip
         >

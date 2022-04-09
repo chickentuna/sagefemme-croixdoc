@@ -134,7 +134,7 @@ function Urgences () {
         <div className={classes.content}>
           <div className={classes.blocks}>
             <ContentBlock
-              imageUrl='https://image.shutterstock.com/z/stock-photo-newborn-yellow-chicken-hatching-from-egg-330216119.jpg'
+              imageUrl='images/egg.jpg'
               landscape
             >
               <h4>Votre sage-femme libérale peut vous recevoir en urgence sur les horaires d’ouverture du cabinet, notamment pour&nbsp;:</h4>
@@ -151,7 +151,7 @@ function Urgences () {
 
             <WarningBanner />
             <ContentBlock
-              imageUrl='https://image.shutterstock.com/z/stock-photo-pregnant-african-american-woman-having-prenatal-contractions-worried-husband-calling-doctor-on-1851371650.jpg'
+              imageUrl='images/time_to_go.jpg'
               landscape
               flip
             >

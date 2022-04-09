@@ -37,7 +37,7 @@ function Reeducation () {
 
         <div className={classes.blocks}>
           <ContentBlock
-            imageUrl='https://image.shutterstock.com/z/stock-photo-woman-with-incontinence-problem-with-help-on-paper-urinary-incontinence-concept-1820144498.jpg'
+            imageUrl='images/help.jpg'
             landscape
           >
             <h4>Première consultation&nbsp;: le bilan périnéal</h4>
@@ -47,7 +47,7 @@ function Reeducation () {
           </ContentBlock>
 
           <ContentBlock
-            imageUrl='https://image.shutterstock.com/z/stock-photo-physiotherapist-checking-patients-pelvis-alignment-in-bright-office-156707939.jpg'
+            imageUrl='images/massage.jpg'
             landscape
             flip
           >
@@ -62,7 +62,7 @@ function Reeducation () {
           </ContentBlock>
 
           <ContentBlock
-            imageUrl='https://image.shutterstock.com/image-photo/woman-doing-pilates-exercises-fit-600w-342677159.jpg'
+            imageUrl='images/Pilates.jpg'
             landscape
           >
             <h4>Dans un second temps</h4>
