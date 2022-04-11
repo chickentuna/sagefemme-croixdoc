@@ -74,11 +74,11 @@ function Pnp () {
                 }, {
                   summary: 'Travail et accouchement',
                   content: (
-                    <span style={{ background: 'red' }}>
+                    <>
                       Accueil à la maternité, déroulement du travail, concilier projet de naissance et contraintes médicales,
-                      s’approprier son accouchement, péridurale&nbsp;… Césarienne en cours de travail. Gestion du stress et de la douleur. Comment préparer un accouchement naturel&nbsp;?
+                      s’approprier son accouchement, péridurale, césarienne en cours de travail&nbsp;…<br /> Gestion du stress et de la douleur. Comment préparer un accouchement naturel&nbsp;?
                       - Exercices de respiration&nbsp;/&nbsp;relaxation, notions de massage&nbsp;/&nbsp;postures, exercices de Yoga prénatal.
-                    </span>
+                    </>
                   )
                 }, {
                   summary: 'La poussée et l’accueil de bébé ',
