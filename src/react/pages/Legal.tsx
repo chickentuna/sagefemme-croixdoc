@@ -47,23 +47,12 @@ function Legal () {
         <LegalBlock title='Contact'>
           <ContactInfo />
         </LegalBlock>
-
         <LegalBlock title='N° RPPS'>
           10100771079
         </LegalBlock>
         <LegalBlock title='N° Praticien'>
           34501307
         </LegalBlock>
-        <LegalBlock title='N° d’identification pro de santé'>
-          345013072
-        </LegalBlock>
-        <LegalBlock title='N° national'>
-          39145
-        </LegalBlock>
-        <LegalBlock title='N° départemental'>
-          34 5 01307 2 00 1 20 1 21
-        </LegalBlock>
-
         <LegalBlock title='Hébergeur du site'>
           CloudFlare Inc.
           <br />101 Townsend St
