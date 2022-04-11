@@ -1,7 +1,6 @@
-import React, { useEffect } from 'react'
-import { Link, useLocation } from 'react-router-dom'
 import classNames from 'classnames'
-import { createUseStyles } from 'react-jss'
+import React from 'react'
+import { Link, useLocation } from 'react-router-dom'
 import { ReactComponent as Logo } from '../svg/logo.svg'
 import MedicioButton from './components/MedicioButton/MedicioButton'
 
@@ -13,6 +12,7 @@ interface Tab {
 
 export function Header () {
   const { pathname } = useLocation()
+  const showRDVButton = false
 
   const tabs: Tab[] = [
     {
@@ -97,9 +97,11 @@ export function Header () {
           </nav>
         </div>
 
-        <div className='header-right'>
-          <MedicioButton to='404' fontSize={14}>Prendre Rendez-vous</MedicioButton>
-        </div>
+        {showRDVButton && (
+          <div className='header-right'>
+            <MedicioButton to='404' fontSize={14}>Prendre Rendez-vous</MedicioButton>
+          </div>
+        )}
 
       </div>
     </header>

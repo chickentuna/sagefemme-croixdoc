@@ -31,12 +31,13 @@ const dataTipGrossesse = (
 const dataTipPhysio = (
   <>
     <p>
-      S’il exclut le temps de l’accouchement, le suivi semi-global permet cependant de proposer un suivi très personnalisé,
-      au plus proche des attentes des femmes et des couples.
+      On appelle suivi semi-global un suivi rapproché par une même sage-femme tout au long de la grossesse,
+      de ses tous débuts - voire avant par une consultation préconceptionnelle - jusqu'à plusieurs mois après la naissance,
+      dans le but créer un climat d'écoute et de confiance sur lequel vous reposer.
     </p>
-    La durée de cet accompagnement semi global,
-    débuté tôt dans la grossesse – voire avant par une consultation préconceptionnelle – et se terminant quelques mois après la naissance,
-    permet d’établir une réelle relation de confiance et d’écoute.
+
+    S'il exclut le temps de l'accouchement en lui-même, il permet à cette sage-femme de bien vous connaitre et de vous apporter un soutien adapté à chaque étape,
+    et notamment dès le retour de la maternité par des visites à domicile.
   </>
 )
 const dataTipBilan = (
@@ -50,7 +51,8 @@ const dataTipEPP = (
   <>
     <p>
       Si le bilan prénatal fait état de votre santé physique, l’entretien prénatal précoce fait état de votre santé psychique.
-      Il permet de connaître vos souhaits, vos spécificités, et de répondre à vos questions et éventuelles inquiétudes.
+      Il permet de connaître vos souhaits, vos spécificités, en fonction de votre vécu et de vos représentations personnelles,
+      et de répondre à vos questions et éventuelles inquiétudes.
     </p>
     L’EPP permet de préparer ensembles un plan de préparation à la naissance et d’élaborer ensembles votre projet de naissance.
   </>

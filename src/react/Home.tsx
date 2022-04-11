@@ -37,7 +37,7 @@ const links = [
     label: 'Rééducation périnéale',
     to: 'reeducation-perineale',
     icon: faHandHoldingMedical,
-    description: 'À tout âge, retrouver un tonus musculaire afin de prévenir ou corriger les troubles périnéaux comme les fuites urinaires, les descentes d\'organes, les douleurs lors des rapports sexuels etc.'
+    description: 'Fuites urinaires, descente d\'organes, douleurs lors des rapports sexuels... La rééducation permet de retrouver un tonus musculaire. Pour les femmes de tout âge, sans ordonnance.'
   },
   {
     label: 'Gynécologie',

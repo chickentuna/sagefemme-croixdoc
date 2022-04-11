@@ -1,3 +1,5 @@
+import { faRightLong } from '@fortawesome/free-solid-svg-icons'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import classNames from 'classnames'
 import React from 'react'
 import { createUseStyles } from 'react-jss'
@@ -52,11 +54,11 @@ function Reeducation () {
             flip
           >
             <h4>Premières séances</h4>
-            Méthodes de rééducation “sur table”, selon vos besoins évalués lors de du bilan périnéal&nbsp;:
+            Méthodes de rééducation “sur table”, chosies selon le schéma thérapeutique déterminé lors de du bilan périnéal&nbsp;:
             <List>
               <li>rééducation manuelle</li>
               <li>électrostimulation</li>
-              <li>pas de biofeedback par conviction professionnelle</li>
+              <li>pas de biofeedback, par conviction professionnelle</li>
             </List>
             Ces séances permettent d’intégrer la connaissance et conscience du périnée et d’apprendre les exercices de rééducation périnéale.
           </ContentBlock>
@@ -66,8 +68,10 @@ function Reeducation () {
             landscape
           >
             <h4>Dans un second temps</h4>
-            Une fois ces exercices et mouvements maîtrisés, la suite de la rééducation se fait sur tapis et/ou sur ballon,
-            éventuellement couplés à des exercices de Yoga post-natal, afin d’apprendre à les intégrer dans la vie quotidienne.
+            <p>Une fois les exercices de contraction du plancer pelvien maîtrisés, la suite de la rééducation se fait sur tapis et&nbsp;/&nbsp;ou sur ballon,
+              éventuellement couplés à des exercices de Yoga post-natal, afin d’apprendre à les intégrer dans la vie quotidienne.
+            </p>
+            <FontAwesomeIcon icon={faRightLong} />{' '}Éducation à l’auto-rééducation à domicile pour le maintien du tonus périnéal dans le temps, intégration des exercices à une routine.
           </ContentBlock>
         </div>
       </div>
