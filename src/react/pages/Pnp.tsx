@@ -41,7 +41,7 @@ function Pnp () {
             Entretien Prénatal Précoce (EPP)
           </h4>
           <p>
-            Individuel en en couple,
+            Individuelle en en couple,
             il permet de mieux vous connaître et de déterminer vos souhaits et besoins au cours de cette grossesse,
             et de vous orienter vers des soins et une préparation à la naissance appropriée.
           </p>
@@ -51,8 +51,8 @@ function Pnp () {
           </Disclaimer>
 
           <div className={classes.accordionBlocks}>
-            <div className={classes.preview}> Individuel ou en groupe, 7 séances remboursées à 100% par la sécurité sociale </div>
-            <h3>Séances classiques</h3>
+            <div className={classes.preview}> Individuelle ou en groupe, 7 séances remboursées à 100% par la sécurité sociale </div>
+            <h3>Parcours classiques</h3>
             <Dash />
             <CustomAccordion
               selectedColor={theme.medicalBlue}
@@ -74,11 +74,11 @@ function Pnp () {
                 }, {
                   summary: 'Travail et accouchement',
                   content: (
-                    <>
+                    <span style={{ background: 'red' }}>
                       Accueil à la maternité, déroulement du travail, concilier projet de naissance et contraintes médicales,
-                      s’approprier son accouchement, APD… Césarienne. Gestion du stress et de la douleur. Comment préparer un accouchement naturel&nbsp;?
-                      - Exercices de respiration&nbsp;/&nbsp;relaxation, notions de massage&nbsp;/&nbsp;postures, exercices de  Yoga prénatal.
-                    </>
+                      s’approprier son accouchement, péridurale&nbsp;… Césarienne en cours de travail. Gestion du stress et de la douleur. Comment préparer un accouchement naturel&nbsp;?
+                      - Exercices de respiration&nbsp;/&nbsp;relaxation, notions de massage&nbsp;/&nbsp;postures, exercices de Yoga prénatal.
+                    </span>
                   )
                 }, {
                   summary: 'La poussée et l’accueil de bébé ',
@@ -90,7 +90,7 @@ function Pnp () {
                     </>
                   )
                 }, {
-                  summary: 'Le “4ème trimestre de la grossesse” ',
+                  summary: 'Et après ? Le post-partum, aspects pratiques',
                   content: (
                     <>
                       Et après&nbsp;? Séjour à la maternité, puis quotidien, organisation, sources de soutien, prévention des accidents domestiques,
@@ -99,7 +99,7 @@ function Pnp () {
                     </>
                   )
                 }, {
-                  summary: 'Cultiver le lien parent-enfant',
+                  summary: 'Aspects psychiques et émotionnels en post-partum - cultiver le lien parent-enfant',
                   content: (
                     <>
                       Que sait faire un foetus&nbsp;? Un nouveau-né&nbsp;? Comment perçoit-il le monde&nbsp;? Développement sensoriel&nbsp;:
@@ -133,7 +133,7 @@ function Pnp () {
               ]}
             />
 
-            <h3>Autres séances</h3>
+            <h3>Séances spécifiques</h3>
             <Dash />
             <CustomAccordion
               selectedColor={theme.medicalBlue}
@@ -151,11 +151,21 @@ function Pnp () {
                     </>
                   )
                 },
+
                 {
                   summary: 'Yoga prénatal',
                   content: (
                     <>
                       Association d’Asanas (postures), de Pranayama (exercices de respiration), de Pratyahara (relaxation) et de Dhyana (méditation), adaptés à la femme enceinte.
+                    </>
+                  )
+                },
+                {
+                  summary: 'Césarienne programmée',
+                  content: (
+                    <>
+                      Si votre état de santé ou celui de votre bébé impose une césarienne programmée, alors les trois premières séances du parcours classique ne sont pas adaptées.
+                      Cette séance vous apporte des éléments sur les spécificités des césariennes programmées&nbsp;: s'y préparer, le jour J, l'après.
                     </>
                   )
                 },

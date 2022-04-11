@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { ReactNode } from 'react'
 import { createUseStyles } from 'react-jss'
 import { Theme } from '../theme'
 
@@ -46,6 +46,11 @@ const useStyles = createUseStyles((theme:Theme) => ({
 function AbsenceTable () {
   const classes = useStyles()
 
+  const indispo: ReactNode[] = [
+    'Nuit du 1er au 2 Juin',
+    'Journée du 2 Juin'
+  ]
+
   return (
     <div className={classes.wrapper}>
       <table className={classes.table}>
@@ -55,15 +60,19 @@ function AbsenceTable () {
           </tr>
         </thead>
         <tbody>
-          <tr>
-            <td>Aucune de prévue</td>
-          </tr>
-          {/* <tr>
-            <td>Du 06 au 16 Janvier 2022</td>
-          </tr>
-          <tr>
-            <td>Le 07/07/2027</td>
-          </tr> */}
+          {indispo.length === 0 && (
+            <tr>
+              <td>Aucune de prévue</td>
+            </tr>
+          )}
+          {indispo.length > 0 && (
+            indispo.map((line, idx) => (
+              <tr key={idx}>
+                <td>{line}</td>
+              </tr>
+            ))
+          )}
+
         </tbody>
       </table>
     </div>

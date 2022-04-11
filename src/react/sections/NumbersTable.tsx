@@ -2,6 +2,8 @@ import React from 'react'
 import { createUseStyles } from 'react-jss'
 import { Theme } from '../theme'
 
+// TODO: this in mobil mode
+
 const useStyles = createUseStyles((theme:Theme) => ({
   table: {
     textAlign: 'center',

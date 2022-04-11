@@ -26,6 +26,10 @@ const useStyle = createUseStyles({
   }
 })
 
+// TODO: Rajouts utltérieurs
+// - deux onglets : IVG et échographie
+// - probablement une ou deux fichiers mp3
+
 const links = [
   {
     label: 'Grossesse et post-partum',
