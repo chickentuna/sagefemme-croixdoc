@@ -76,8 +76,9 @@ function Pnp () {
                   content: (
                     <>
                       Accueil à la maternité, déroulement du travail, concilier projet de naissance et contraintes médicales,
-                      s’approprier son accouchement, péridurale, césarienne en cours de travail&nbsp;…<br /> Gestion du stress et de la douleur. Comment préparer un accouchement naturel&nbsp;?
-                      - Exercices de respiration&nbsp;/&nbsp;relaxation, notions de massage&nbsp;/&nbsp;postures, exercices de Yoga prénatal.
+                      s’approprier son accouchement, péridurale, césarienne en cours de travail&nbsp;…
+                      <br /> Gestion du stress et de la douleur. Comment préparer un accouchement naturel&nbsp;?
+                      <br />+ Exercices de respiration&nbsp;/&nbsp;relaxation, notions de massage&nbsp;/&nbsp;postures, exercices de Yoga prénatal.
                     </>
                   )
                 }, {

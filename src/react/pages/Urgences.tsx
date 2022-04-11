@@ -11,6 +11,7 @@ import { Theme } from '../theme'
 import ShowCalculatorButton from '../interactive/ShowCalculatorButton'
 import NumbersTable from '../sections/NumbersTable'
 import AbsenceTable from '../sections/AbsenceTable'
+import { Link } from 'react-router-dom'
 
 const useStyles = createUseStyles((theme: Theme) => ({
   content: {
@@ -162,12 +163,13 @@ function Urgences () {
               </List>
 
               <div className={classes.buttons}>
-                <a
-                  href='/quand-aller-aux-urgences'
+                <Link
+                  onClick={() => window.scrollTo(0, 0)}
+                  to='/quand-aller-aux-urgences'
                   className={classes.button + ' ' + classes.buttonA}
                 >
                   Grossesse&nbsp;: quand aller consulter en urgence&nbsp;?
-                </a>
+                </Link>
                 <ShowCalculatorButton
                   className={classes.button + ' ' + classes.buttonB}
                 />

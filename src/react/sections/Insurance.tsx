@@ -5,7 +5,6 @@ function Insurance () {
   return (
     <div>
       <CustomAccordion
-        defaultExpanded={0}
         items={[{
           summary: 'Remboursements',
           content: (
