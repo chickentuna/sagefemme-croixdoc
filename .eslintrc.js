@@ -31,6 +31,7 @@ module.exports = {
     "no-empty-function": "off",
     "@typescript-eslint/no-empty-function": ["off"],
     'react/jsx-no-undef': 'off',
+    'react/jsx-tag-spacing': 'warn',
     'react-hooks/rules-of-hooks': 'error',
     'react-hooks/exhaustive-deps': 'error',
     'react/self-closing-comp': 'off',

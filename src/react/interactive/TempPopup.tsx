@@ -1,5 +1,7 @@
-import { Button, Dialog, DialogActions, DialogContent, DialogTitle } from '@mui/material'
-import React, { useState } from 'react'
+import { faClose, faWarning } from '@fortawesome/free-solid-svg-icons'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { Button, Dialog, DialogActions, DialogContent, DialogTitle, IconButton } from '@mui/material'
+import React, { useCallback, useState } from 'react'
 import { createUseStyles } from 'react-jss'
 import { theme } from '../theme'
 
@@ -7,18 +9,15 @@ const useStyle = createUseStyles({
   popupContent: {
     display: 'flex',
     alignItems: 'center',
-    [`@media (max-width: ${theme.verticalModeThreshold}px)`]: {
-      flexDirection: 'column'
-    }
+    flexDirection: 'column'
+
   },
-  contentA: {
-    flex: 3,
-    fontSize: 22,
-    padding: 12,
+  mainContent: {
+    fontSize: 20,
+    padding: [30, 6, 0, 6],
     textAlign: 'justify'
   },
-  contentB: {
-    flex: 2,
+  details: {
     padding: 12,
     display: 'flex',
     flexDirection: 'column',
@@ -26,14 +25,14 @@ const useStyle = createUseStyles({
     alignItems: 'center',
     fontSize: 16
   },
-  contentBSection1: {
+  detailsTitle: {
     color: theme.sfBlack,
     margin: [10, 0],
     fontSize: 20,
     fontWeight: 700,
     lineHeight: 1.2
   },
-  contentBSection2: {
+  detailsTable: {
     display: 'flex',
     textAlign: 'left',
     justifyContent: 'center',
@@ -44,23 +43,39 @@ const useStyle = createUseStyles({
       textAlign: 'center',
       marginBottom: 10,
     },
+    '& em': {
+      textAlign: 'center',
+      marginBottom: 0
+    },
     '& p': {
-      textAlign: 'justify'
+      fontSize: 18
     },
     '& td': {
       textAlign: 'left',
-      padding: [2, 20],
-      fontSize: 14,
+      padding: [5, 22],
+      fontSize: 18,
       lineHeight: '24px',
       whiteSpace: 'nowrap'
     }
   },
-  contentBSection3: {
+  detailsDisclaimer: {
     width: '100%',
-    textAlign: 'right',
+    textAlign: 'left',
     fontSize: 13,
     fontWeight: 'bold'
   },
+  banner: {
+    display: 'flex',
+    flexDirection: 'column',
+    fontSize: 30,
+    color: '#ffe599',
+    '& h2': {
+      color: 'white',
+      margin: [10, 0, 0, 0],
+      fontSize: 26,
+      fontWeight: 'bold'
+    }
+  }
 })
 
 if (location.pathname.length > 1 && location.pathname.endsWith('/')) {
@@ -69,37 +84,54 @@ if (location.pathname.length > 1 && location.pathname.endsWith('/')) {
 
 // TODO: domain & emails
 
-// TODO: https://docs.google.com/presentation/d/1cI5uBzxaHjU12viFa80hgQiZotB-HYundOpxlOctgqY/edit#slide=id.g11d7b2e82e5_0_5
-// temp intro POPuP
 export default function App () {
   const classes = useStyle()
 
   const [showPopup, setShowPopup] = useState(true)
+  const closePopup = useCallback(() => setShowPopup(false), [setShowPopup])
 
   return (
-    <Dialog maxWidth='lg' open={showPopup}>
+    <Dialog
+      maxWidth='md'
+      open={showPopup}
+      onClose={closePopup}
+      PaperProps={{ sx: { maxWidth: 845 } }}
+    >
       <DialogTitle sx={{
-        fontSize: 28,
         textAlign: 'center',
-        color: 'white',
-        background: theme.sfBlack
+        background: theme.medicalBlue
       }}
       >
-        En attendant la fin des travaux dans mon cabinet, je pratique exclusivement des soins à domicile.
+        <div className={classes.banner}>
+          <FontAwesomeIcon icon={faWarning} />
+          <h2>En attendant la fin des travaux dans mon cabinet, je pratique exclusivement des soins à domicile.</h2>
+        </div>
+        <IconButton
+          onClick={closePopup}
+          sx={{
+            position: 'absolute',
+            width: 40,
+            right: 8,
+            top: 8,
+            color: 'white'
+          }}
+        >
+          <FontAwesomeIcon icon={faClose} />
+        </IconButton>
       </DialogTitle>
       <DialogContent>
         <div className={classes.popupContent}>
-          <div className={classes.contentA}>
+          <div className={classes.mainContent}>
             Ces soins comprennent notamment monitorings, consultations de grossesse,
             diagnostic de début de travail, diagnostic de rupture de la poche des eaux,
-            consultations mère&nbsp;/&nbsp;enfant au retour de la maternité, soutien à l’allaitement,
+            consultations mère/enfant au retour de la maternité, soutien à l’allaitement,
             rééducation périnéale&nbsp;…
           </div>
-          <div className={classes.contentB}>
-            <h3 className={classes.contentBSection1}>
+          <div className={classes.details}>
+            <h3 className={classes.detailsTitle}>
               Horaires provisoires
             </h3>
-            <div className={classes.contentBSection2}>
+            <div className={classes.detailsTable}>
               <table>
                 <tbody>
                   <tr>
@@ -108,35 +140,36 @@ export default function App () {
                   </tr>
                   <tr>
                     <td>Jeudi</td>
-                    <td>9h30 - 16h30</td>
+                    <td>9h30 - 18h</td>
                   </tr>
                   <tr>
                     <td>Samedi</td>
-                    <td>10h - 18h</td>
-                  </tr>
-                  <tr>
-                    <td>Vendredi</td>
-                    <td>9h - 16h30</td>
-                  </tr>
-                  <tr>
-                    <td>Samedi</td>
-                    <td>10h - 15h</td>
+                    <td>10h - 17h</td>
                   </tr>
                 </tbody>
               </table>
-              <p>
-                Nuit 7/7 21h - 6h, pour les diagnostics de rupture des membranes,
-                diagnostic de début de travail à terme, et problèmes liés à l’allaitement
-              </p>
+              <em>
+                Pour les diagnostics de rupture des membranes,
+                diagnostic de début de travail à terme, et problèmes liés à l’allaitement:
+              </em>
+              <table>
+                <tbody>
+                  <tr>
+                    <td>Nuit 7/7</td>
+                    <td>21h - 6h</td>
+                  </tr>
+                </tbody>
+              </table>
+              <p> </p>
             </div>
-            <em className={classes.contentBSection3}>
+            <em className={classes.detailsDisclaimer}>
               Indisponibilités exceptionnelles possibles
             </em>
           </div>
         </div>
       </DialogContent>
       <DialogActions>
-        <Button autoFocus onClick={() => setShowPopup(false)}>
+        <Button autoFocus onClick={closePopup}>
           Fermer
         </Button>
       </DialogActions>

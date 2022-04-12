@@ -14,7 +14,7 @@ const useStyles = createUseStyles((theme: Theme) => ({
     position: 'relative',
     color: '#444444',
     textAlign: 'center',
-    boxShadow: '0px 3px 3px -2px rgb(0 0 0 / 20%), 0px 3px 4px 0px rgb(0 0 0 / 14%), 0px 1px 8px 0px rgb(0 0 0 / 12%)',
+    boxShadow: '0px 3px 3px -2px rgb(0 0 0/20%), 0px 3px 4px 0px rgb(0 0 0/14%), 0px 1px 8px 0px rgb(0 0 0/12%)',
     padding: '20px 60px 30px 60px',
     '& h3': {
       color: '#777',

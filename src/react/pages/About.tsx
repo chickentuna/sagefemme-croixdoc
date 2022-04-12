@@ -52,7 +52,7 @@ function About () {
             <div>Diplôme d’Etat d’Infirmier&nbsp;-&nbsp;2019</div>
           </div>
           <ContentBlock
-            imageUrl='images/portrait.jpeg'
+            imageUrl='images/portrait.jpg'
           >
             <h4>Engagements associatifs & réseaux</h4>
             <List>
