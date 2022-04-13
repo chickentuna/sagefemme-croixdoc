@@ -168,11 +168,6 @@ export default function App () {
           </div>
         </div>
       </DialogContent>
-      <DialogActions>
-        <Button autoFocus onClick={closePopup}>
-          Fermer
-        </Button>
-      </DialogActions>
     </Dialog>
   )
 }

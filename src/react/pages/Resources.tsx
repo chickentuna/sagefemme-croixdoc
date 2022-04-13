@@ -49,7 +49,7 @@ function Resources () {
   },
   {
     text: 'Préparation fratries : Histoire audio',
-    url: 'docs/histoire fratrie.mp3'
+    url: 'docs/Histoire fratrie.mp3'
   },
   {
     text: 'Coordonnées utiles et numéros verts',
@@ -87,7 +87,7 @@ function Resources () {
                   href={file.url}
                   download
                   onClick={() => handleClick(idx)}
-                > <FontAwesomeIcon icon={faDownload} /> {file.url}
+                > <FontAwesomeIcon icon={faDownload} /> {file.url.split('docs/')[1]}
                 </a>
               </div>
             ))}

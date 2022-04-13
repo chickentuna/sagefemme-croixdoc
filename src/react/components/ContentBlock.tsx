@@ -14,7 +14,6 @@ const useStyles = createUseStyles((theme: Theme) => ({
     width: '100%',
     '@media (max-width: 992px)': {
       flexDirection: 'column',
-      // textAlign: center
 
       '&$landscape': {
         '& $imageBlock': {

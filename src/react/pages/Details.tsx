@@ -62,7 +62,10 @@ const useStyles = createUseStyles((theme: Theme) => ({
     justifyContent: 'center',
     flexDirection: 'column',
     flex: 1,
-    alignItems: 'center'
+    alignItems: 'center',
+    '& a': {
+      textDecoration: 'underline'
+    }
   }
 }))
 
@@ -79,7 +82,7 @@ function Details () {
         <div className={classes.contactBox}>
           <InfoBox>
             <FontAwesomeIcon icon={faLocationDot} />
-            <img src='https://abc-signaletique.fr/267-thickbox_default/panneau-acces-handicapes.jpg'></img>
+            <img src='images/panneau-acces-handicapes.jpg'></img>
             <h3>Adresse&nbsp;:</h3>
             <div className={classes.text}>
               <p>2 rue Paul Valéry
@@ -95,7 +98,7 @@ function Details () {
       <div className={classNames([classes.content, classes.tarifBox])}>
         <div className={classes.subBox}>
           <Link to='/tarifs'>Tarifs pratiqués </Link>
-          <img src='https://www.institutsandra.pro/public/img/big/carte%20bleue%20200303-zoom-logo-cb.png'></img>
+          <img src='images/carte bleue 200303-zoom-logo-cb.png'></img>
           <p>
             <em>Moyens de réglement&nbsp;: CB, chèque, espèces.</em>
           </p>

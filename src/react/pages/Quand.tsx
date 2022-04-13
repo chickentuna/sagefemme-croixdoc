@@ -18,7 +18,7 @@ const useStyles = createUseStyles({
     display: 'flex',
     alignItems: 'center',
     '& svg': {
-      fontSize: 40,
+      fontSize: 30,
       marginRight: 10
     }
   }
@@ -53,12 +53,12 @@ function Quand () {
             <p className={classes.instruction}><FontAwesomeIcon icon={faLongArrowRight} />&nbsp;Contactez votre sage-femme ou rendez-vous directement à la maternité.</p>
           </section>
           <section>
-            <p>Pour tout ce qui ne concerne pas directement la grossesse (gastroentérite, angine, otite, entorse&nbsp;…)</p>
+            <p>Pour tout ce qui ne concerne pas directement la grossesse (gastroentérite, angine, otite, entorse,&nbsp;…)</p>
 
             <p className={classes.instruction}><FontAwesomeIcon icon={faLongArrowRight} />&nbsp;Rendez-vous aux urgences générales, ou, si ce n’est pas urgent, consultez votre médecin traitant.</p>
           </section>
           <section>
-            <p>Pour les petites affections de la grossesse non urgentes (hémorroïdes, mycose, infection urinaire sans fièvre associée&nbsp;…)</p>
+            <p>Pour les petites affections de la grossesse non urgentes (hémorroïdes, mycose, infection urinaire sans fièvre associée,&nbsp;…)</p>
 
             <p className={classes.instruction}><FontAwesomeIcon icon={faLongArrowRight} />&nbsp;Prenez rendez-vous chez votre sage-femme ou médecin traitant.</p>
           </section>

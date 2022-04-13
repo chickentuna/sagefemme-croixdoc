@@ -35,11 +35,13 @@ const useStyles = createUseStyles((theme: Theme) => ({
       textAlign: 'left',
     },
     '& strong': {
-      fontWeight: 900,
-      paddingRight: 5
     },
     maxWidth: 1090,
     margin: 'auto'
+  },
+  attention: {
+    fontWeight: 900,
+    paddingRight: 5
   },
   theBitAtTheBottom: {
     alignItems: 'center',
@@ -76,18 +78,25 @@ const useStyles = createUseStyles((theme: Theme) => ({
   },
   button: {
     borderStyle: 'solid',
+    textAlign: 'center',
     maxWidth: 300,
     width: '100%',
-    padding: 10,
-    fontSize: 16,
     lineHeight: 1.2,
-    borderRadius: 10,
-    color: 'black',
-    borderColor: theme.sfBlack,
-    borderWidth: 2,
+    color: 'white',
+    borderWidth: 0,
+    borderRadius: '40px',
+    textTransform: 'uppercase',
+    fontSize: 14,
+    padding: [10, 20],
+    fontWeight: 'bold',
+    transition: 'all 150ms ease-out',
+    // backgroundColor: theme.medicalBlue,
+    backgroundColor: 'lightcoral',
+
     '&:hover': {
       opacity: 0.80,
-      color: 'black'
+      color: 'white',
+      // backgroundColor: theme.medicalBlueHover
     }
   },
   buttonA: {
@@ -119,8 +128,8 @@ function Urgences () {
   const WarningBanner = () => (
     <div className={classes.warningBanner}>
       <div className={classes.warningBannerContent}>
-        <p><strong>ATTENTION&nbsp;:</strong> pour les autres motifs (saignements, diminution des mouvements de bébé, contractions avant terme, fièvre&nbsp;…),
-          vous avez besoin d’être vue par un <u>médecin</u> et de faire des <u>examens complémentaires pour lesquels je ne suis pas équipée</u>.
+        <p><strong className={classes.attention}>ATTENTION&nbsp;:</strong> pour les autres motifs (saignements, diminution des mouvements de bébé, contractions avant terme, fièvre&nbsp;…),
+          vous avez besoin d’être vue par un <strong>médecin</strong> et de faire des <strong>examens complémentaires pour lesquels je ne suis pas équipée</strong>.
         </p>
         Merci de vous rendre <b>DIRECTEMENT AUX URGENCES</b> ou <b>contactez le 15.</b>
       </div>
@@ -158,7 +167,7 @@ function Urgences () {
             >
               <h4>Consultations de nuit à domicile, entre 21h et 6h pour&nbsp;:</h4>
               <List>
-                <li>Un diagnostic de début de travail <u>à terme</u> (au delà de 37 SA)</li>
+                <li>Un diagnostic de début de travail <strong>à terme</strong> (au delà de 37 SA)</li>
                 <li>Une suspicion de rupture de la poche des eaux</li>
               </List>
 
@@ -166,14 +175,15 @@ function Urgences () {
                 <Link
                   onClick={() => window.scrollTo(0, 0)}
                   to='/quand-aller-aux-urgences'
-                  className={classes.button + ' ' + classes.buttonA}
+                  className={classes.button}
                 >
                   Grossesse&nbsp;: quand aller consulter en urgence&nbsp;?
                 </Link>
                 <ShowCalculatorButton
-                  className={classes.button + ' ' + classes.buttonB}
+                  className={classes.button}
                 />
               </div>
+
               <Disclaimer>
                 Disponibilité variable, du fait de gardes en maternité ou d’impératif personnel,
                 merci de vous référer au tableau ci-dessous
@@ -188,7 +198,7 @@ function Urgences () {
             Ces visites sont prises en charge à 100% par la sécurité sociale.
             Cependant, en cas de déplacement de nuit en zone éloignée du cabinet (supérieur à 15 km),
             notamment sur les villes de Nîmes, Montpellier, Castelnau-Le-Lez,
-            un dépassement d’honoraires sous la forme d’un forfait de 30 euros <u>non remboursables</u> par la sécurité sociale sera appliqué.
+            un dépassement d’honoraires sous la forme d’un forfait de 30 euros <strong>non remboursables</strong> par la sécurité sociale sera appliqué.
           </div>
           <div className={classes.table}>
             <AbsenceTable />
