@@ -53,13 +53,15 @@ function Legal () {
         <LegalBlock title='N° Praticien'>
           34501307
         </LegalBlock>
+        <LegalBlock title='SIRET'>
+          912 104 684 00010
+        </LegalBlock>
         <LegalBlock title='Hébergeur du site'>
           CloudFlare Inc.
           <br />101 Townsend St
           <br />CA 94107 - San Francisco
           <br />États-Unis
           <br /> +33 7 57 90 52 73
-
         </LegalBlock>
 
       </div>
