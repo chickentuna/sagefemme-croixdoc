@@ -68,7 +68,7 @@ function Reeducation () {
             landscape
           >
             <h4>Dans un second temps</h4>
-            <p>Une fois les exercices de contraction du plancer pelvien maîtrisés, la suite de la rééducation se fait sur tapis et/ou sur ballon,
+            <p>Une fois les exercices de contraction du plancher pelvien maîtrisés, la suite de la rééducation se fait sur tapis et/ou sur ballon,
               éventuellement couplés à des exercices de Yoga post-natal, afin d’apprendre à les intégrer dans la vie quotidienne.
             </p>
             <FontAwesomeIcon icon={faRightLong} />{' '}Éducation à l’auto-rééducation à domicile pour le maintien du tonus périnéal dans le temps, intégration des exercices à une routine.

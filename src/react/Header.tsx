@@ -32,7 +32,7 @@ export function Header () {
     { label: 'Documents utiles', to: '/documents-utiles' }
   ]
 
-  // TODO: SEO stuff like sitemap?
+  // TODO: SEO stuff like sitemap and server side rendering?
 
   const selectedTab = {
     '/quand-aller-aux-urgences': '/urgences',

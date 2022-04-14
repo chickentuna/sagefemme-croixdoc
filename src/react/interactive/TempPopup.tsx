@@ -78,13 +78,7 @@ const useStyle = createUseStyles({
   }
 })
 
-if (location.pathname.length > 1 && location.pathname.endsWith('/')) {
-  location.replace(location.pathname.slice(0, location.pathname.length - 1))
-}
-
-// TODO: domain & emails
-
-export default function App () {
+function TempPopup () {
   const classes = useStyle()
 
   const [showPopup, setShowPopup] = useState(true)
@@ -150,7 +144,7 @@ export default function App () {
               </table>
               <em>
                 Pour les diagnostics de rupture des membranes,
-                diagnostic de début de travail à terme, et problèmes liés à l’allaitement:
+                diagnostic de début de travail à terme, et problèmes liés à l’allaitement&nbps;:
               </em>
               <table>
                 <tbody>
@@ -171,3 +165,5 @@ export default function App () {
     </Dialog>
   )
 }
+
+export default React.memo(TempPopup)

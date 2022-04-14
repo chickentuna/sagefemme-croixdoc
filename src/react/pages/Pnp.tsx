@@ -78,7 +78,7 @@ function Pnp () {
                       Accueil à la maternité, déroulement du travail, concilier projet de naissance et contraintes médicales,
                       s’approprier son accouchement, péridurale, césarienne en cours de travail&nbsp;…
                       <br /> Gestion du stress et de la douleur. Comment préparer un accouchement naturel&nbsp;?
-                      <br />+ Exercices de respiration&nbsp;/&nbsp;relaxation, notions de massage&nbsp;/&nbsp;postures, exercices de Yoga prénatal.
+                      <br />+ Exercices de respiration/relaxation, notions de massage/postures, exercices de Yoga prénatal.
                     </>
                   )
                 }, {
@@ -87,7 +87,7 @@ function Pnp () {
                     <>
                       Circonstances, techniques de poussées, positions physiologiques d’accouchement, chemin parcouru par bébé,
                       déchirures périnéales et épisiotomie, rôle du partenaire, accueil de bébé, peau à peau, tétée d’accueil, post-partum immédiat.
-                      Déroulement d’une césarienne et post partum immédiat en cas de césarienne. Exercices de respiration&nbsp;/&nbsp;relaxation, exercices de Yoga prénatal.
+                      Déroulement d’une césarienne et post partum immédiat en cas de césarienne. Exercices de respiration/relaxation, exercices de Yoga prénatal.
                     </>
                   )
                 }, {
@@ -105,7 +105,7 @@ function Pnp () {
                     <>
                       Que sait faire un foetus&nbsp;? Un nouveau-né&nbsp;? Comment perçoit-il le monde&nbsp;? Développement sensoriel&nbsp;:
                       Que peut-il voir&nbsp;? Entendre&nbsp;? Sentir&nbsp;? Comment interagir avec un nouveau-né&nbsp;?
-                      Quelles activités partager avec lui&nbsp;? Besoins physiques et affectifs du nouveau-né et du nourrisson, rythmes sommeil&nbsp;/&nbsp;éveil,
+                      Quelles activités partager avec lui&nbsp;? Besoins physiques et affectifs du nouveau-né et du nourrisson, rythmes sommeil/éveil,
                       portage, cocooning, bienfaits du massage bébé. Concilier les besoins et le bien-être de bébé avec ceux des parents.
                       Exercices de respiration/relaxation, de Yoga prénatal.
                     </>

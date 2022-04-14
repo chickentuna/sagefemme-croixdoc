@@ -1,3 +1,4 @@
+import { faGraduationCap } from '@fortawesome/free-solid-svg-icons'
 import React from 'react'
 import { createUseStyles } from 'react-jss'
 import ContentBlock from '../components/ContentBlock'
@@ -44,15 +45,28 @@ function About () {
       <div className={classes.content}>
 
         <div className={classes.blocks}>
-          <div className={classes.qualifications}>
+          {/* <div className={classes.qualifications}>
             <div>Conventionnée secteur 1</div>
             <Dash />
             <div>Diplôme d’Etat de Sage-Femme&nbsp;-&nbsp;2015</div>
             <Dash />
             <div>Diplôme d’Etat d’Infirmier&nbsp;-&nbsp;2019</div>
-          </div>
+          </div> */}
           <ContentBlock
             imageUrl='images/portrait.jpg'
+            flip
+          >
+            <h4>Fanchon RIVOIRE</h4>
+            <List icon={faGraduationCap}>
+              <li>Conventionnée secteur 1</li>
+              <li>Diplôme d’Etat de Sage-Femme&nbsp;-&nbsp;2015</li>
+              <li>Diplôme d’Etat d’Infirmier&nbsp;-&nbsp;2019</li>
+            </List>
+
+          </ContentBlock>
+          <ContentBlock
+            imageUrl='images/mother.jpeg'
+            landscape
           >
             <h4>Engagements associatifs & réseaux</h4>
             <List>
