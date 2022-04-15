@@ -20,6 +20,8 @@ import Reeducation from './pages/Reeducation'
 import Resources from './pages/Resources'
 import Urgences from './pages/Urgences'
 
+// TODO: whatsup with the /images/ url?
+
 export function Index () {
   useEffect(() => {
     // eslint-disable-next-line @typescript-eslint/no-explicit-any
