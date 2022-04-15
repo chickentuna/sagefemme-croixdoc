@@ -4,8 +4,9 @@ import './index.css'
 import './medicio/style.scss'
 import { Index } from './react/Index'
 import reportWebVitals from './reportWebVitals'
+import { render } from 'react-snapshot'
 
-ReactDOM.render(
+render(
   <React.StrictMode>
     <Index />
   </React.StrictMode>,

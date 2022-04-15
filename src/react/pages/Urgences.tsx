@@ -1,17 +1,17 @@
 import { faCarSide, faCircle, faHouseMedical, faHouseUser } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import React, { useState } from 'react'
+import React from 'react'
 import { createUseStyles } from 'react-jss'
+import { Link } from 'react-router-dom'
 import ContentBlock from '../components/ContentBlock'
 import Dash from '../components/Dash'
 import Disclaimer from '../components/Disclaimer'
 import List from '../components/List'
 import PageWrapper from '../components/PageWrapper'
-import { Theme } from '../theme'
 import ShowCalculatorButton from '../interactive/ShowCalculatorButton'
-import NumbersTable from '../sections/NumbersTable'
 import AbsenceTable from '../sections/AbsenceTable'
-import { Link } from 'react-router-dom'
+import NumbersTable from '../sections/NumbersTable'
+import { Theme } from '../theme'
 
 const useStyles = createUseStyles((theme: Theme) => ({
   content: {

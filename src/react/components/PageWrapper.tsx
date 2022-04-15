@@ -1,6 +1,7 @@
 import PageTitle from './PageTitle'
 import React, { HTMLProps, ReactNode } from 'react'
 import { createUseStyles } from 'react-jss'
+import { Helmet } from 'react-helmet'
 
 const useStyle = createUseStyles({
   wrapper: {
@@ -18,13 +19,19 @@ interface PageWrapperProps extends Omit<HTMLProps<Element>, 'title'> {
   titleDecorationUrl?: string
   titleColor?: string
   maxWidth?: number
+  helmet?: string
 }
 
-function PageWrapper ({ children, style, title, titleDecorationUrl, titleColor }:PageWrapperProps) {
+function PageWrapper ({ children, helmet, style, title, titleDecorationUrl, titleColor }:PageWrapperProps) {
   const classes = useStyle()
 
   return (
     <>
+      {(helmet ?? title) != null && (
+        <Helmet
+          title={`Sage-femme RIVOIRE - ${helmet ?? title}`}
+        />
+      )}
       {title != null && (
         <PageTitle
           titleDecorationUrl={titleDecorationUrl}

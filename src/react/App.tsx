@@ -18,8 +18,6 @@ if (location.pathname.length > 1 && location.pathname.endsWith('/')) {
   location.replace(location.pathname.slice(0, location.pathname.length - 1))
 }
 
-// TODO: domain & emails
-
 export default function App () {
   const classes = useStyle()
 

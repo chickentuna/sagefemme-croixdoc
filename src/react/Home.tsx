@@ -5,6 +5,7 @@ import ButtonLink from './components/ButtonLink/ButtonLink'
 import PageWrapper from './components/PageWrapper'
 import { faStethoscope, faHandHoldingMedical, faDroplet, faBandage, faBaby, faPersonBreastfeeding, faBandAid, faHeartbeat, faHeartPulse, faAmbulance, faBriefcase, faBriefcaseMedical } from '@fortawesome/free-solid-svg-icons'
 import PageTitle from './components/PageTitle'
+import Helmet from 'react-helmet'
 
 const useStyle = createUseStyles({
   emergencyBanner: {
@@ -62,6 +63,7 @@ export default function Home () {
   return (
     <>
       <PageWrapper
+        helmet='Soins'
         style={{
           backgroundImage: 'linear-gradient(rgba(0, 0, 0, 0.05), rgba(0, 0, 0, 0.15)), url(\'images/background.jpg\')',
           backgroundSize: 'cover',
