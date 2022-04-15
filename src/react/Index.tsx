@@ -18,7 +18,6 @@ import Pricing from './pages/Pricing'
 import Quand from './pages/Quand'
 import Reeducation from './pages/Reeducation'
 import Resources from './pages/Resources'
-import SiteMap from './pages/SiteMap'
 import Urgences from './pages/Urgences'
 
 export function Index () {
@@ -44,7 +43,7 @@ export function Index () {
           <Route path='/contact' element={<Contact />} />
           <Route path='/quand-aller-aux-urgences' element={<Quand />} />
           <Route path='/mentions-legales' element={<Legal />} />
-          <Route path='/sitemap' element={<SiteMap />} />
+          {/* <Route path='/sitemap' element={<SiteMap />} /> */}
           <Route path='*' element={<PageNotFound />} />
         </Route>
       </Routes>
