@@ -15,13 +15,13 @@ const useStyle = createUseStyles((theme: Theme) => ({
     '@media (max-width: 560px)': {
       '& $wrapper': {
         flexDirection: 'column',
+        gap: 20
       }
     },
   },
   wrapper: {
     display: 'flex',
     width: '100%',
-    // maxWidth: 660,
     justifyContent: 'space-around',
     gap: 60,
     alignItems: 'center',

@@ -79,6 +79,8 @@ const categories = [
 ]
 
 function PriceTable () {
+  const small = window.innerWidth < 500
+
   return (
     <>
       <TableContainer component={Paper}>
@@ -106,13 +108,14 @@ function PriceTable () {
                 </TableRow>
                 <TableRow>
                   <TableCell sx={{
-                    fontWeight: 500,
+                    fontSize: small ? '0.6rem' : '0.875rem'
                   }}
                   >Acte
                   </TableCell>
                   <TableCell
                     sx={{
                       fontWeight: 500,
+                      fontSize: small ? '0.6rem' : '0.875rem'
                     }}
                     align='right'
                   >Montant
@@ -120,6 +123,7 @@ function PriceTable () {
                   <TableCell
                     sx={{
                       fontWeight: 500,
+                      fontSize: small ? '0.6rem' : '0.875rem'
                     }}
                     align='right'
                   >Prise en charge SS
@@ -127,6 +131,7 @@ function PriceTable () {
                   <TableCell
                     sx={{
                       fontWeight: 500,
+                      fontSize: small ? '0.6rem' : '0.875rem'
                     }}
                     align='right'
                   >Reste à charge /&nbsp;PEC mutuelle
@@ -137,12 +142,31 @@ function PriceTable () {
                     key={row.acte}
                     sx={{ '&:last-child td, &:last-child th': { border: 0 } }}
                   >
-                    <TableCell component='th' scope='row'>
+                    <TableCell
+                      sx={{
+                        fontSize: small ? '0.6rem' : '0.875rem'
+                      }} component='th' scope='row'
+                    >
                       {row.acte}
                     </TableCell>
-                    <TableCell align='right'>{row.montant}</TableCell>
-                    <TableCell align='right'>{row.prise}</TableCell>
-                    <TableCell align='right'>{row.reste}</TableCell>
+                    <TableCell
+                      sx={{
+                        fontSize: small ? '0.6rem' : '0.875rem'
+                      }} align='right'
+                    >{row.montant}
+                    </TableCell>
+                    <TableCell
+                      sx={{
+                        fontSize: small ? '0.6rem' : '0.875rem'
+                      }} align='right'
+                    >{row.prise}
+                    </TableCell>
+                    <TableCell
+                      sx={{
+                        fontSize: small ? '0.6rem' : '0.875rem'
+                      }} align='right'
+                    >{row.reste}
+                    </TableCell>
                   </TableRow>
                 ))}
               </React.Fragment>
