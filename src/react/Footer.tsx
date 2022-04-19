@@ -29,6 +29,8 @@ const useStyle = createUseStyles((theme: Theme) => ({
   },
   legal: {
     fontSize: 18,
+    display: 'flex',
+    flexDirection: 'column',
     '& a': {
       textDecoration: 'underline',
       color: 'white',
@@ -53,6 +55,9 @@ export default function Footer () {
         <div className={classes.legal}>
           <Link to='/mentions-legales'>
             Mentions légales
+          </Link>
+          <Link to='/tarifs'>
+            Tarifs
           </Link>
         </div>
         <div>
