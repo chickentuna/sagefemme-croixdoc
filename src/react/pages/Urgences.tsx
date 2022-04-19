@@ -14,6 +14,27 @@ import NumbersTable from '../sections/NumbersTable'
 import { Theme } from '../theme'
 
 const useStyles = createUseStyles((theme: Theme) => ({
+  '@media (max-width: 603px)': {
+    button: {
+      '&&': {
+        height: 50
+      }
+    },
+    buttons: {
+      '&&': {
+        flexDirection: 'column',
+        gap: 20,
+        alignItems: 'center'
+      }
+    },
+    visits: {
+      '&&': {
+        flexDirection: 'column',
+        gap: 20,
+        alignItems: 'center'
+      }
+    }
+  },
   content: {
     fontSize: 20,
     maxWidth: 1090
@@ -53,7 +74,7 @@ const useStyles = createUseStyles((theme: Theme) => ({
     flexFlow: 'column',
     gap: 30,
     '& h4': {
-      marginTop: 60
+      marginTop: 60,
     }
   },
   visits: {
@@ -119,6 +140,9 @@ const useStyles = createUseStyles((theme: Theme) => ({
     justifyContent: 'center',
     flexDirection: 'column',
     width: '100%'
+  },
+  tableContainer: {
+    marginTop: 30
   }
 }))
 
@@ -217,7 +241,9 @@ function Urgences () {
         <div className={classes.phoneNumbers}>
           <h4>Numéros d'urgences</h4>
           <Dash />
-          <NumbersTable />
+          <div className={classes.tableContainer}>
+            <NumbersTable />
+          </div>
         </div>
       </div>
     </>

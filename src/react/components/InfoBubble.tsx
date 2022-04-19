@@ -3,7 +3,8 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import React, { ReactElement, ReactNode } from 'react'
 import { createUseStyles } from 'react-jss'
 import ReactDOMServer from 'react-dom/server'
-import { Theme } from '../theme'
+import { theme, Theme } from '../theme'
+import useWindowDimensions from '../utils/useWindowDimensions'
 
 const useStyles = createUseStyles((theme: Theme) => ({
   tooltip: {
@@ -27,12 +28,14 @@ interface Props {
 
 function InfoBubble ({ text }: Props) {
   const classes = useStyles()
+  const { width } = useWindowDimensions()
+  const mobile = width < theme.verticalModeThreshold
   return (
     <FontAwesomeIcon
       className={classes.info}
       data-class={classes.tooltip}
       data-html
-      data-place='right' // TODO: bottom if mobile mode
+      data-place={mobile ? 'bottom' : 'right'}
       data-tip={ReactDOMServer.renderToString(text)}
       data-type='light'
       data-effect='solid'

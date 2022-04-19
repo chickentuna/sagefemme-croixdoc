@@ -73,7 +73,7 @@ function Grossesse () {
       <ReactTooltip />
       <div className={classes.content}>
         <ContentBlock
-          imageUrl='https://images.pexels.com/photos/8342884/pexels-photo-8342884.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940'
+          imageUrl='images/couple.jpeg'
         >
           <List noPad>
             <li>Consultation pré-conceptionnelle <InfoBubble text={dataTipGrossesse} /></li>

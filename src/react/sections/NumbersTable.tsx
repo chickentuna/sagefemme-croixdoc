@@ -1,8 +1,9 @@
+import classNames from 'classnames'
 import React from 'react'
 import { createUseStyles } from 'react-jss'
-import { Theme } from '../theme'
-
-// TODO: this in mobil mode
+import { createRoutesFromChildren } from 'react-router-dom'
+import { theme, Theme } from '../theme'
+import useWindowDimensions from '../utils/useWindowDimensions'
 
 const useStyles = createUseStyles((theme:Theme) => ({
   table: {
@@ -34,7 +35,7 @@ const useStyles = createUseStyles((theme:Theme) => ({
         backgroundColor: '#f4f6fc',
         borderBottom: '2px solid #eceffa'
       }
-    }
+    },
   },
   wrapper: {
     marginTop: 20,
@@ -43,52 +44,60 @@ const useStyles = createUseStyles((theme:Theme) => ({
     flexDirection: 'column',
     alignItems: 'center',
     boxShadow: '0px 3px 3px -2px rgb(0 0 0 / 20%), 0px 3px 4px 0px rgb(0 0 0 / 14%), 0px 1px 8px 0px rgb(0 0 0 / 12%)',
+    '&.mini tbody td': {
+      padding: 10
+    },
+    '&.mini thead th': {
+      padding: 10,
+      fontSize: 12
+    }
   }
 }))
 
+const sections = [
+  [
+    { title: 'SAMU', num: '15' },
+    { title: 'NUMÉRO EUROPÉEN', num: '112' },
+    { title: 'CENTRE ANTI-POISON', num: '05 61 77 74 47' },
+    { title: 'POLICE', num: '17' },
+    { title: 'FEMMES VICTIMES DE VIOLENCES', num: '3919' },
+  ],
+  [
+    { title: 'URGENCES SOCIALES', num: '115' },
+    { title: 'PHARMACIE DE GARDE - MONTPELLIER', num: '32 37' },
+    { title: 'URGENCES PÉDIATRIQUES CHU‑MONTPELLIER', num: '04 67 33 81 74\n04 67 33 81 75' },
+    { title: 'URGENCES GYNÉCOLOGIQUES ET OBSTÉTRICALES CHU‑MONTPELLIER', num: '04 67 33 55 34' }
+  ]
+]
+
+const mobileSections = sections.flat().map(v => [v])
+
 function NumbersTable () {
   const classes = useStyles()
+  const { width } = useWindowDimensions()
+  const mobile = width < theme.verticalModeThreshold
+  const tables = mobile ? mobileSections : sections
 
   return (
-    <div className={classes.wrapper}>
-      <table className={classes.table}>
-        <thead>
-          <tr>
-            <th>SAMU</th>
-            <th>numéro européen</th>
-            <th>centre anti-poison</th>
-            <th>police</th>
-            <th>femmes victimes de violences</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>15</td>
-            <td>112</td>
-            <td>05 61 77 74 47</td>
-            <td>17</td>
-            <td>3919</td>
-          </tr>
-        </tbody>
-      </table>
-      <table className={classes.table}>
-        <thead>
-          <tr>
-            <th>urgences sociales</th>
-            <th>pharmacie de garde - montpellier</th>
-            <th>urgences pédiatriques chu&#8209;montpellier</th>
-            <th>urgences gynécologiques et obstétricales chu&#8209;montpellier</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>115</td>
-            <td>32 37</td>
-            <td>04 67 33 81 74<br />04 67 33 81 75</td>
-            <td>04 67 33 55 34</td>
-          </tr>
-        </tbody>
-      </table>
+    <div className={classNames(classes.wrapper, { mini: mobile })}>
+      {tables.map((elements, idx) => (
+        <table key={idx} className={classes.table}>
+          <thead>
+            <tr>
+              {elements.map((e, idx) => (
+                <th key={idx}>{e.title}</th>
+              ))}
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              {elements.map((e, idx) => (
+                <td key={idx}>{e.num}</td>
+              ))}
+            </tr>
+          </tbody>
+        </table>
+      ))}
     </div>
   )
 }
