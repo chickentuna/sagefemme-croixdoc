@@ -144,7 +144,7 @@ function TempPopup () {
               </table>
               <em>
                 Pour les diagnostics de rupture des membranes,
-                diagnostic de début de travail à terme, et problèmes liés à l’allaitement&nbps;:
+                diagnostic de début de travail à terme, et problèmes liés à l’allaitement&nbsp;:
               </em>
               <table>
                 <tbody>
