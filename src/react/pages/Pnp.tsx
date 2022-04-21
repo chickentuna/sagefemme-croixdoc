@@ -41,7 +41,7 @@ function Pnp () {
             Entretien Prénatal Précoce (EPP)
           </h4>
           <p>
-            Individuelle en en couple,
+            Individuel ou en couple,
             il permet de mieux vous connaître et de déterminer vos souhaits et besoins au cours de cette grossesse,
             et de vous orienter vers des soins et une préparation à la naissance appropriée.
           </p>
@@ -52,7 +52,7 @@ function Pnp () {
 
           <div className={classes.accordionBlocks}>
             <div className={classes.preview}> Individuelle ou en groupe, 7 séances remboursées à 100% par la sécurité sociale </div>
-            <h3>Parcours classiques</h3>
+            <h3>Parcours classique</h3>
             <Dash />
             <CustomAccordion
               selectedColor={theme.medicalBlue}
@@ -62,12 +62,13 @@ function Pnp () {
                   summary: 'Début de travail et départ à la maternité ',
                   content: (
                     <>
-                      Motifs consultation en urgence - Les Contractions&nbsp;:  Qu’est ce qu’une contraction et à quoi servent-elles&nbsp;?
+                      Motifs de consultation en urgence - Les Contractions&nbsp;:  Qu’est ce qu’une contraction et à quoi servent-elles&nbsp;?
                       Comment les reconnaître et les distinguer&nbsp;? Comment les aider à être efficaces&nbsp;? Comment les gérer&nbsp;?
                       <ul>
                         <li>Postures, massage, exercices de respiration</li>
                         <li>Rôles du/de la partenaire</li>
-                        <li>Déclenchement - Initiation au Yoga prénatal</li>
+                        <li>Déclenchement</li>
+                        <li>Initiation au Yoga prénatal</li>
                       </ul>
                     </>
                   )
@@ -105,7 +106,9 @@ function Pnp () {
                     <>
                       Que sait faire un foetus&nbsp;? Un nouveau-né&nbsp;? Comment perçoit-il le monde&nbsp;? Développement sensoriel&nbsp;:
                       Que peut-il voir&nbsp;? Entendre&nbsp;? Sentir&nbsp;? Comment interagir avec un nouveau-né&nbsp;?
-                      Quelles activités partager avec lui&nbsp;? Besoins physiques et affectifs du nouveau-né et du nourrisson, rythmes sommeil/éveil,
+                      Quelles activités partager avec lui&nbsp;?<br />
+                      <br />
+                      Besoins physiques et affectifs du nouveau-né et du nourrisson, rythmes sommeil/éveil,
                       portage, cocooning, bienfaits du massage bébé. Concilier les besoins et le bien-être de bébé avec ceux des parents.
                       Exercices de respiration/relaxation, de Yoga prénatal.
                     </>
@@ -115,9 +118,10 @@ function Pnp () {
                   content: (
                     <>
                       “Un bébé ça pleure.” Vrai, mais peu utile lorsque l’on se trouve seul, au bord de l’épuisement total, à 3h du matin,
-                      avec un bébé qui crie depuis des heures malgré les plus grands efforts de son entourage. Pourquoi bébé crie-t-il&nbsp;?
-                      Comment gérer ses propres émotions afin de mieux accompagner bébé dans la gestion des siennes&nbsp;?
-                      Quelques conseils pour éviter la surcharge émotionnelle, et quelques pistes pour calmer un bébé en crise.
+                      avec un bébé qui crie depuis des heures malgré les plus grands efforts de son entourage. <br />
+                      Pourquoi bébé crie-t-il&nbsp;?<br />
+                      Comment gérer ses propres émotions afin de mieux accompagner bébé dans la gestion des siennes&nbsp;?<br />
+                      Quelques conseils pour éviter la surcharge émotionnelle, et quelques pistes pour calmer un bébé en crise.<br />
                       Notions de postures, massages et phytothérapie pour soulager les maux classiques (douleurs abdominales, reflux&nbsp;…).
                     </>
                   )
@@ -125,7 +129,7 @@ function Pnp () {
                   summary: 'Allaitement maternel',
                   content: (
                     <>
-                      S’approprier son allaitement en posant son propre projet (allaitement maternel exclusif, mixte&nbsp;…).
+                      S’approprier son allaitement en posant son propre projet (allaitement maternel exclusif, mixte&nbsp;…)<br />
                       Bases scientifiques de l’allaitement maternel. Comment gérer tous les sons de cloches qui résonnent autour de vous&nbsp;?
                       Idées reçues, respect de la spécificité de chacun.
                     </>
@@ -144,9 +148,14 @@ function Pnp () {
                   summary: 'Préparation Fratries',
                   content: (
                     <>
-                      Pourquoi Maman doit-elle aller à l’hôpital&nbsp;? Est-ce qu’elle est malade&nbsp;? Pourquoi est-ce que je ne peux pas aller avec elle&nbsp;?
-                      Quand est-ce qu’elle va revenir&nbsp;? C’est quoi un accouchement&nbsp;? Pourquoi est-ce qu’elle est toujours fatiguée&nbsp;?
-                      Et moi, dans tout ça&nbsp;? A quoi est-ce que je vais pouvoir jouer avec mon petit frère ou ma petite soeur&nbsp;?
+                      Pourquoi Maman doit-elle aller à l’hôpital&nbsp;? Est-ce qu’elle est malade&nbsp;? <br />
+                      Pourquoi est-ce que je ne peux pas aller avec elle&nbsp;?
+                      Quand est-ce qu’elle va revenir&nbsp;? <br />
+                      C’est quoi un accouchement&nbsp;? <br />
+                      Pourquoi est-ce qu’elle est toujours fatiguée&nbsp;?
+                      Et moi, dans tout ça&nbsp;? <br />
+                      A quoi est-ce que je vais pouvoir jouer avec mon petit frère ou ma petite soeur&nbsp;?<br />
+                      <br />
                       Séance de préparation pour les 3 à 8 ans, avec présence et participation active d’un/des parents. Alternance discussion/ateliers manuels.
                       Inclut des notions de sécurité. Durée environ 45 min.
                     </>
@@ -165,7 +174,8 @@ function Pnp () {
                   summary: 'Césarienne programmée',
                   content: (
                     <>
-                      Si votre état de santé ou celui de votre bébé impose une césarienne programmée, alors les trois premières séances du parcours classique ne sont pas adaptées.
+                      Si votre état de santé ou celui de votre bébé impose une césarienne programmée, alors les trois premières séances du parcours classique ne sont pas adaptées.<br />
+                      <br />
                       Cette séance vous apporte des éléments sur les spécificités des césariennes programmées&nbsp;: s'y préparer, le jour J, l'après.
                     </>
                   )

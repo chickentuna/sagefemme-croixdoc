@@ -94,10 +94,10 @@ function About () {
             >
               <h4>Formations complémentaires</h4>
               <List>
-                <li>Repérage et prise en charge des vulnérabilités chez la femme enceinte - 2018</li>
-                <li>Suivi gynécologique de prévention - 2018</li>
-                <li>Réanimation néonatale - 2022</li>
-                <li>Yoga pré et post-natal - 2022</li>
+                <li>Repérage et prise en charge des vulnérabilités chez la femme enceinte</li>
+                <li>Suivi gynécologique de prévention</li>
+                <li>Réanimation néonatale</li>
+                <li>Yoga pré et post-natal</li>
                 <li>Echographie gynécologique et obstétricale - en cours</li>
               </List>
 

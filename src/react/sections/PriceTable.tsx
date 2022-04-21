@@ -39,7 +39,7 @@ const categories = [
   {
     title: 'Gynécologie',
     data: [
-
+      createData('Consultation', '25,00 €', '70%', '7,50 €'),
       createData('première consultation de contraception et de prévention pour les jeunes filles de 15 à 17 ans inclus', '46,00 €', '100%', '0,00 €'),
       createData('Suivi de rééducation périnéale', '19,60 €', '70%', '5,88 €'),
       createData('Frottis cervicol-vaginal', '12,46 €', '70%', '3,74 €'),
