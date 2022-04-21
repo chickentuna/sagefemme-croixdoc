@@ -29,7 +29,7 @@ function PageWrapper ({ children, helmet, style, title, titleDecorationUrl, titl
     <>
       {(helmet ?? title) != null && (
         <Helmet
-          title={`Sage-femme RIVOIRE - ${helmet ?? title}`}
+          title={`Sage-femme Restinclières - ${helmet ?? title}`}
         />
       )}
       {title != null && (

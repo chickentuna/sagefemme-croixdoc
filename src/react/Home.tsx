@@ -63,7 +63,7 @@ export default function Home () {
   return (
     <>
       <PageWrapper
-        helmet='Soins'
+        helmet='Fanchon RIVOIRE'
         style={{
           backgroundImage: 'linear-gradient(rgba(0, 0, 0, 0.05), rgba(0, 0, 0, 0.15)), url(\'images/background.jpg\')',
           backgroundSize: 'cover',
