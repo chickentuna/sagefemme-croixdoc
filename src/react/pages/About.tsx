@@ -1,4 +1,4 @@
-import { faGraduationCap } from '@fortawesome/free-solid-svg-icons'
+import { faGraduationCap, faHeart } from '@fortawesome/free-solid-svg-icons'
 import React from 'react'
 import { createUseStyles } from 'react-jss'
 import ContentBlock from '../components/ContentBlock'
@@ -99,6 +99,18 @@ function About () {
                 <li>Réanimation néonatale</li>
                 <li>Yoga pré et post-natal</li>
                 <li>Echographie gynécologique et obstétricale - en cours</li>
+              </List>
+
+            </ContentBlock>
+            <ContentBlock
+              imageUrl='images/fanchon_lucas_alphonse.jpg'
+              landscape
+              flip
+            >
+              <h4>À propos de moi</h4>
+              <List icon={faHeart}>
+                <li>Maman de 2 enfants de 5 et 1 an</li>
+                <li>3 ans d'allaitement</li>
               </List>
 
             </ContentBlock>
