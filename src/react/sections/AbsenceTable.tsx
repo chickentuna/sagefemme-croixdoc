@@ -47,9 +47,9 @@ function AbsenceTable () {
   const classes = useStyles()
 
   const indispo: ReactNode[] = [
-    'Nuit du 1er au 2 Mai',
     'Nuit du 8 au 9 Mai',
     'Nuit du 22 au 23 Mai',
+    'Samedi 28 Mai',
     'Nuit du 1er au 2 Juin',
     'Journée du 2 Juin'
   ]
