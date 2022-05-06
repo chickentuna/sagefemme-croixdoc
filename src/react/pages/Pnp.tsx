@@ -12,6 +12,7 @@ const useStyles = createUseStyles({
     maxWidth: 1090
   },
   preview: {
+    fontSize: 18,
     marginTop: 50
   },
   accordionBlocks: {
@@ -51,7 +52,7 @@ function Pnp () {
           </Disclaimer>
 
           <div className={classes.accordionBlocks}>
-            <div className={classes.preview}> Individuelle ou en groupe, 7 séances remboursées à 100% par la sécurité sociale </div>
+            <div className={classes.preview}> Individuelle ou en groupe, 7 séances remboursées à 100% par la sécurité sociale.</div>
             <h3>Parcours classique</h3>
             <Dash />
             <CustomAccordion
@@ -191,6 +192,11 @@ function Pnp () {
               ]}
             />
           </div>
+          <div className={classes.preview}>
+            Au delà des 7 premières séances, les cours de préparation à la naissance ne sont pas remboursés par la sécurité sociale,
+            et sont facturés 25 euros pour une séance individuelle, et 20 euros pour une séance en groupe.
+          </div>
+
         </div>
       </PageWrapper>
     </>
