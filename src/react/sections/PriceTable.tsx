@@ -29,7 +29,7 @@ const categories = [
       createData('Préparation à la Naissance 2-3 familles', '32,48 €', '100%', '0,00 €'),
       createData('Préparation à la Naissance 4-6 familles', '16,80 €', '100%', '0,00 €'),
       createData('Accompagnement à la périnatalité (au delà des 7 premières séances), individuel', '25,00 €', '0%', '25,00 €'),
-      createData('Accompagnement à la périnatalité (au delà des 7 premières séances), en groupe', '20,00 €', '0%', '20,00 €'),
+      createData('Accompagnement à la périnatalité (au delà des 7 premières séances), en groupe', '22,00 €', '0%', '22,00 €'),
       createData('Accompagnement à la périnatalité (au delà des 7 premières séances), à domicile', '28,00 €', '0%', '28,00 €'),
       createData('observation grossesse pathologique avec ERCF - grossesse unique', '43,68 €', '100%', '0,00 €'),
       createData('observation grossesse pathologique avec ERCF - grossesse multiple', '63,28 €', '100%', '0,00 €'),
@@ -44,7 +44,7 @@ const categories = [
     data: [
       createData('Consultation', '25,00 €', '70%', '7,50 €'),
       createData('première consultation de contraception et de prévention pour les jeunes filles de 15 à 17 ans inclus', '46,00 €', '100%', '0,00 €'),
-      createData('Suivi de rééducation périnéale', '19,60 €', '70%', '5,88 €'),
+      createData('Suivi de rééducation périnéale', '21 €', '70%', '6,30 €'),
       createData('Frottis cervicol-vaginal', '12,46 €', '70%', '3,74 €'),
       createData('Pose d’implant pharmacologique sous-cutané', '17,99 €', '70%', '5,40 €'),
       createData('Ablation ou changement d’implant sous-cutané', '41,80 €', '70%', '12,54 €'),
