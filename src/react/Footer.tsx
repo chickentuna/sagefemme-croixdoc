@@ -27,6 +27,12 @@ const useStyle = createUseStyles((theme: Theme) => ({
     alignItems: 'center',
     padding: 20
   },
+  yoga: {
+    width: '24.47px',
+    height: '27px',
+    marginLeft: 5,
+    marginTop: -1,
+  },
   legal: {
     fontSize: 18,
     display: 'flex',
@@ -59,6 +65,10 @@ export default function Footer () {
           <Link to='/tarifs'>
             Tarifs
           </Link>
+          <a href='https://www.green-yoga.fr/'>
+            Green Yoga
+            <img className={classes.yoga} src='https://www.green-yoga.fr/wp-content/uploads/2021/06/Logo-GY-rbd.png' />
+          </a>
         </div>
         <div>
           <ContactInfo />

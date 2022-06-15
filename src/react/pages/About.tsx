@@ -1,4 +1,5 @@
 import { faGraduationCap, faHeart } from '@fortawesome/free-solid-svg-icons'
+import { differenceInYears, parse } from 'date-fns'
 import React from 'react'
 import { createUseStyles } from 'react-jss'
 import ContentBlock from '../components/ContentBlock'
@@ -35,8 +36,17 @@ const useStyles = createUseStyles((theme: Theme) => ({
   }
 }))
 
+function calculateAge (dob:string):number {
+  const date = parse(dob, 'dd/MM/yyyy', new Date())
+  const age = differenceInYears(new Date(), date)
+  return age
+}
+
 function About () {
   const classes = useStyles()
+  const lucasAge = calculateAge('05/01/2017')
+  const alphonseAge = calculateAge('27/01/2021')
+
   return (
     <>
       <PageWrapper
@@ -97,7 +107,7 @@ function About () {
                 <li>Repérage et prise en charge des vulnérabilités chez la femme enceinte</li>
                 <li>Suivi gynécologique de prévention</li>
                 <li>Réanimation néonatale</li>
-                <li>Yoga pré et post-natal</li>
+                <li>Yoga prénatal et postnatal, professeur diplômée Fédération Française de Green Yoga®</li>
                 <li>Echographie gynécologique et obstétricale - en cours</li>
               </List>
 
@@ -109,7 +119,7 @@ function About () {
             >
               <h4>À propos de moi</h4>
               <List icon={faHeart}>
-                <li>Maman de 2 enfants de 5 et 1 an</li>
+                <li>Maman de 2 enfants de {lucasAge} et {alphonseAge} {alphonseAge === 1 ? 'an' : 'ans'}</li>
                 <li>3 ans d'allaitement</li>
               </List>
 
