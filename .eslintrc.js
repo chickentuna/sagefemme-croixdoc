@@ -32,6 +32,8 @@ module.exports = {
     "@typescript-eslint/no-empty-function": ["off"],
     'react/jsx-no-undef': 'off',
     'react/jsx-tag-spacing': 'warn',
+    'no-trailing-spaces': 'warn',
+    'jsx-quotes': 'warn',
     'react-hooks/rules-of-hooks': 'error',
     'react-hooks/exhaustive-deps': 'error',
     'react/self-closing-comp': 'off',
@@ -45,7 +47,7 @@ module.exports = {
       2
     ],
     'quotes': [
-      'error',
+      'warn',
       'single'
     ],
     'space-before-function-paren': 'warn'
