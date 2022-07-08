@@ -3,7 +3,7 @@ import React from 'react'
 import { createUseStyles } from 'react-jss'
 import ButtonLink from './components/ButtonLink/ButtonLink'
 import PageWrapper from './components/PageWrapper'
-import { faStethoscope, faHandHoldingMedical, faDroplet, faBandage, faBaby, faPersonBreastfeeding, faBandAid, faHeartbeat, faHeartPulse, faAmbulance, faBriefcase, faBriefcaseMedical } from '@fortawesome/free-solid-svg-icons'
+import { faStethoscope, faHandHoldingMedical, faDroplet, faBandage, faBaby, faPersonBreastfeeding, faBandAid, faHeartbeat, faHeartPulse, faAmbulance, faBriefcase, faBriefcaseMedical, faSpa, faDisplay, faLaptopMedical } from '@fortawesome/free-solid-svg-icons'
 import PageTitle from './components/PageTitle'
 import Helmet from 'react-helmet'
 
@@ -15,12 +15,15 @@ const useStyle = createUseStyles({
     maxWidth: 1390
   },
   buttons: {
-    display: 'flex',
-    flexWrap: 'nowrap',
+    display: 'grid',
+    gridTemplateColumns: 'repeat(3, 1fr)',
     gap: 30
+
   },
   '@media (max-width: 1230px)': {
     buttons: {
+      display: 'flex',
+      gridTemplateColumns: 'none',
       flexDirection: 'column',
       gap: 30
     }
@@ -39,10 +42,10 @@ const links = [
     description: 'Du projet de grossesse jusqu\'à plusieurs plusieurs mois après l\'accouchement.'
   },
   {
-    label: 'Rééducation périnéale',
-    to: 'reeducation-perineale',
-    icon: faHandHoldingMedical,
-    description: 'Fuites urinaires, descente d\'organes, douleurs lors des rapports sexuels... La rééducation permet de retrouver un tonus musculaire. Pour les femmes de tout âge, sans ordonnance.'
+    label: 'Préparation à la naissance',
+    to: 'pnp',
+    icon: faBaby,
+    description: 'Individuelle ou en couple, avec possibilité de séances de Yoga prénatal - préparation des fratries - préparation à l\'accouchement naturel.'
   },
   {
     label: 'Gynécologie',
@@ -51,10 +54,20 @@ const links = [
     description: 'Suivi gynécologique, contraception, frottis,  première consultation de l\'adolescente, vaccinations, dépistage des IST, contraception d\'urgence.'
   },
   {
-    label: 'Préparation à la naissance',
-    to: 'pnp',
-    icon: faBaby,
-    description: 'Individuelle ou en couple, avec possibilité de séances de Yoga prénatal - préparation des fratries - préparation à l\'accouchement naturel.'
+    label: 'Rééducation périnéale',
+    to: 'reeducation-perineale',
+    icon: faHandHoldingMedical,
+    description: 'Fuites urinaires, descente d\'organes, douleurs lors des rapports sexuels... La rééducation permet de retrouver un tonus musculaire. Pour les femmes de tout âge, sans ordonnance.'
+  },
+  {
+    label: 'Massages',
+    icon: faSpa,
+    description: 'En construction'
+  },
+  {
+    label: 'Échographie',
+    icon: faLaptopMedical,
+    description: 'À venir'
   }
 ]
 

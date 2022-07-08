@@ -108,6 +108,7 @@ function About () {
                 <li>Suivi gynécologique de prévention</li>
                 <li>Réanimation néonatale</li>
                 <li>Yoga prénatal et postnatal, professeur diplômée Fédération Française de Green Yoga®</li>
+                <li>Garbhvati&nbsp;: Massage ayurvédique de la femme et de la femme enceinte</li>
                 <li>Echographie gynécologique et obstétricale - en cours</li>
               </List>
 

@@ -62,6 +62,10 @@ const useStyles = createUseStyles((theme: Theme) => ({
     fontStyle: 'italic',
     margin: [25, 0, 0, 0]
   },
+  disabled: {
+    pointerEvents: 'none',
+    filter: 'brightness(85%)'
+  },
   inline: {
     flex: 'none',
     background: theme.medicalBlue,
@@ -95,7 +99,7 @@ const useStyles = createUseStyles((theme: Theme) => ({
 }))
 
 interface ButtonLinkProps {
-  to: string
+  to?: string
   icon: IconDefinition
   inline?: boolean
   title: ReactNode
@@ -105,7 +109,7 @@ interface ButtonLinkProps {
 export default function ButtonLink ({ to, children, icon, title, inline = false }: ButtonLinkProps) {
   const classes = useStyles()
   return (
-    <Link to={to} className={classNames([{ [classes.inline]: inline }, classes.link])}>
+    <Link to={to ?? '/'} className={classNames([{ [classes.inline]: inline, [classes.disabled]: to == null }, classes.link])}>
       <div className={classes.block}>
         <span className={classes.iconWrapper}>
           <FontAwesomeIcon icon={icon} />

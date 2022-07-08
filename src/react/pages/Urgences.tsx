@@ -223,6 +223,9 @@ function Urgences () {
             Cependant, en cas de déplacement de nuit en zone éloignée du cabinet (supérieur à 15 km),
             notamment sur les villes de Nîmes, Montpellier, Castelnau-Le-Lez,
             un dépassement d’honoraires sous la forme d’un forfait de 30 euros <strong>non remboursables</strong> par la sécurité sociale sera appliqué.
+            <br />
+            <br /> Si vous êtes suivie par une autre sage-femme, une fiche de liaison à l'attention de celle-ci vous sera remise afin
+            d'optimiser la fluidité des soins.
           </div>
           <div className={classes.table}>
             <AbsenceTable />

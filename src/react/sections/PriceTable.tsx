@@ -28,9 +28,13 @@ const categories = [
       createData('Préparation à la Naissance 1 famille', '33,60 €', '100%', '0,00 €'),
       createData('Préparation à la Naissance 2-3 familles', '32,48 €', '100%', '0,00 €'),
       createData('Préparation à la Naissance 4-6 familles', '16,80 €', '100%', '0,00 €'),
-      createData('Accompagnement à la périnatalité (au delà des 7 premières séances), individuel', '25,00 €', '0%', '25,00 €'),
-      createData('Accompagnement à la périnatalité (au delà des 7 premières séances), en groupe', '22,00 €', '0%', '22,00 €'),
-      createData('Accompagnement à la périnatalité (au delà des 7 premières séances), à domicile', '28,00 €', '0%', '28,00 €'),
+      createData('Accompagnement à la parentalité (au delà des 7 premières séances), individuel', '35,00 €', '0%', '35,00 €'),
+      createData('Accompagnement à la parentalité (au delà des 7 premières séances), en groupe', '20,00 €', '0%', '20,00 €'),
+      createData('Accompagnement à la parentalité (au delà des 7 premières séances), à domicile', '40,00 €', '0%', '40,00 €'),
+      createData('Atelier fratries (hors PNP)', '25,00 €', '0%', '25,00 €'),
+      createData('Séance de Yoga Prénatal collectif, hors préparation à la naissance', '15,00 €', '0%', '15,00 €'),
+      createData('Massage Garbhvati', '45,00 €', '0%', '45,00 €'),
+      createData('Massage drainant pieds et jambes', '35,00 €', '0%', '35,00 €'),
       createData('observation grossesse pathologique avec ERCF - grossesse unique', '43,68 €', '100%', '0,00 €'),
       createData('observation grossesse pathologique avec ERCF - grossesse multiple', '63,28 €', '100%', '0,00 €'),
       createData('ERCF sans prescription grossesse unique', '35,00 €', '100%', '0,00 €'),
@@ -65,6 +69,7 @@ const categories = [
       createData('Surveillance à domicile mère-enfant de J2 à J12, les deux premières fois, naissance multiple', '64,40 €', '100%', '0,00 €'),
       createData('Surveillance à domicile mère-enfant de J2 à J12, vistes suivantes, naissance multiple', '47,60 €', '100%', '0,00 €'),
       createData('Ablation d’agrafes/pansement césarienne', '8,72 €', '100%', '0,00 €'),
+      createData('Supplément domicile pour les massages et le Yoga', '10,00 €', '0%', '10,00 €')
     ]
   },
   {
