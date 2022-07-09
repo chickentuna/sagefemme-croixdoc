@@ -30,10 +30,6 @@ const useStyle = createUseStyles({
   }
 })
 
-// TODO: Rajouts utltérieurs
-// - deux onglets : IVG et échographie
-// - probablement une ou deux fichiers mp3
-
 const links = [
   {
     label: 'Grossesse et post-partum',
@@ -61,8 +57,9 @@ const links = [
   },
   {
     label: 'Massages',
+    to: 'massages',
     icon: faSpa,
-    description: 'En construction'
+    description: 'Massages ayurvédiques de la femme et de la femme enceinte, drainage des œdèmes des jambes.'
   },
   {
     label: 'Échographie',

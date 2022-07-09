@@ -12,6 +12,7 @@ import Details from './pages/Details'
 import Grossesse from './pages/Grossesse'
 import Gyneco from './pages/Gyneco'
 import Legal from './pages/Legal'
+import Massages from './pages/Massages'
 import PageNotFound from './pages/PageNotFound'
 import Pnp from './pages/Pnp'
 import Pricing from './pages/Pricing'
@@ -45,6 +46,7 @@ export function Index () {
           <Route path='/contact' element={<Contact />} />
           <Route path='/quand-aller-aux-urgences' element={<Quand />} />
           <Route path='/mentions-legales' element={<Legal />} />
+          <Route path='/massages' element={<Massages />} />
           {/* <Route path='/sitemap' element={<SiteMap />} /> */}
           <Route path='*' element={<PageNotFound />} />
         </Route>
