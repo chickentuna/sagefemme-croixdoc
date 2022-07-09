@@ -115,7 +115,7 @@ function Pnp () {
                     </>
                   )
                 }, {
-                  summary: 'Comprendre et appréhender des cris du nouveau-né et du nourrisson',
+                  summary: 'Comprendre et appréhender les cris du nouveau-né et du nourrisson',
                   content: (
                     <>
                       “Un bébé ça pleure.” Vrai, mais peu utile lorsque l’on se trouve seul, au bord de l’épuisement total, à 3h du matin,
