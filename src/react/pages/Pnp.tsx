@@ -194,7 +194,10 @@ function Pnp () {
           </div>
           <div className={classes.preview}>
             Au delà des 7 premières séances, les cours de préparation à la naissance ne sont pas remboursés par la sécurité sociale,
-            et sont facturés 25 euros pour une séance individuelle, et 20 euros pour une séance en groupe.
+            et sont facturés 35 euros pour une séance individuelle, et 20 euros pour une séance en groupe.
+            <br />
+            <br />
+            Les ateliers fratries sont au tarif de 25 euros par famille (dans le cas où les 7 séances ont été utilisées).
           </div>
 
         </div>

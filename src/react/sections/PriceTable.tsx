@@ -8,6 +8,7 @@ import TableRow from '@mui/material/TableRow'
 import Paper from '@mui/material/Paper'
 import { createUseStyles } from 'react-jss'
 import { theme, Theme } from '../theme'
+import Disclaimer from '../components/Disclaimer'
 
 function createData (
   acte: string,
@@ -61,14 +62,13 @@ const categories = [
     title: 'Visite à Domicile',
     data: [
 
-      createData('visite à domicile', '25,00 €', '70%', '7,50 €'),
-      createData('Indemnité forfaitaire de déplacement', '4,00 €', '70%', '1,20 €'),
-      createData('Observation et traitement à domicile d’une grossesse nécessitant, sur prescription du médecin, une surveillance intensive', '25,20 €', '100%', '0,00 €'),
-      createData('Surveillance à domicile mère-enfant de J2 à J12, les deux premières fois, un seul enfant', '46,20 €', '100%', '0,00 €'),
-      createData('Surveillance à domicile mère-enfant de J2 à J12, vistes suivantes, un seul enfant', '33,60 €', '100%', '0,00 €'),
-      createData('Surveillance à domicile mère-enfant de J2 à J12, les deux premières fois, naissance multiple', '64,40 €', '100%', '0,00 €'),
-      createData('Surveillance à domicile mère-enfant de J2 à J12, vistes suivantes, naissance multiple', '47,60 €', '100%', '0,00 €'),
-      createData('Ablation d’agrafes/pansement césarienne', '8,72 €', '100%', '0,00 €'),
+      createData('visite à domicile', '29,00 €', '70%', '8,70 €'),
+      createData('Observation et traitement à domicile d’une grossesse nécessitant, sur prescription du médecin, une surveillance intensive', '29,20 €', '100%', '0,00 €'),
+      createData('Surveillance à domicile mère-enfant de J2 à J12, les deux premières fois, un seul enfant', '50,20 €', '100%', '0,00 €'),
+      createData('Surveillance à domicile mère-enfant de J2 à J12, vistes suivantes, un seul enfant', '37,60 €', '100%', '0,00 €'),
+      createData('Surveillance à domicile mère-enfant de J2 à J12, les deux premières fois, naissance multiple', '68,40 €', '100%', '0,00 €'),
+      createData('Surveillance à domicile mère-enfant de J2 à J12, vistes suivantes, naissance multiple', '51,60 €', '100%', '0,00 €'),
+      createData('Ablation d’agrafes/pansement césarienne', '12,72 €', '100%', '0,00 €'),
       createData('Supplément domicile pour les massages et le Yoga', '10,00 €', '0%', '10,00 €')
     ]
   },
@@ -182,6 +182,10 @@ function PriceTable () {
           </TableBody>
         </Table>
       </TableContainer>
+      <Disclaimer>
+        Indemnités kilométriques : 0,45 € par kilomètre
+      </Disclaimer>
+        
     </>
   )
 }

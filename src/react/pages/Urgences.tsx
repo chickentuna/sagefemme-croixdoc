@@ -193,6 +193,7 @@ function Urgences () {
               <List>
                 <li>Un diagnostic de début de travail <strong>à terme</strong> (au delà de 37 SA)</li>
                 <li>Une suspicion de rupture de la poche des eaux</li>
+                <li>Un engorgement mammaire</li>
               </List>
 
               <div className={classes.buttons}>
@@ -213,14 +214,26 @@ function Urgences () {
                 merci de vous référer au tableau ci-dessous
               </Disclaimer>
             </ContentBlock>
+
+            <ContentBlock
+              imageUrl='images/blues.jpg'
+              landscape
+            >
+              <List>
+                <li>Une crise d'angoisse liée à la grossesse</li>
+                <li>Une détresse face aux pleurs incessants du nouveau né et du nourrisson</li>
+                <li>Une détresse psychologique suite à une I.V.G.</li>
+              </List>
+            </ContentBlock>
           </div>
         </div>
       </PageWrapper>
       <div className={classes.theBitAtTheBottom}>
         <div className={classes.visits}>
           <div className={classes.price}>
-            Ces visites sont prises en charge à 100% par la sécurité sociale.
-            Cependant, en cas de déplacement de nuit en zone éloignée du cabinet (supérieur à 15 km),
+            Ces visites sont prises en charge à 100% par la sécurité sociale, durant la grossesse et jusqu'à 12 jours après l'accouchement. En dehors de cette période, elles sont prises en charge à 70%, le reste vous sera alors remboursé par votre mutuelle.
+            <br />
+            <br />Cependant, en cas de déplacement de nuit en zone éloignée du cabinet (supérieur à 15 km),
             notamment sur les villes de Nîmes, Montpellier, Castelnau-Le-Lez,
             un dépassement d’honoraires sous la forme d’un forfait de 30 euros <strong>non remboursables</strong> par la sécurité sociale sera appliqué.
             <br />
