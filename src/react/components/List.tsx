@@ -30,7 +30,7 @@ const useStyle = createUseStyles({
 
 interface ListProps {
   icon?: IconDefinition
-  children: ReactNode[]
+  children: ReactNode[] | ReactNode
   noPad?: boolean
 }
 
