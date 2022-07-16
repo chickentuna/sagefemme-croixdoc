@@ -48,7 +48,8 @@ const useStyles = createUseStyles((theme: Theme) => ({
     flexDirection: 'row-reverse'
   },
   textBlock: {
-    maxWidth: 'calc(100% - 320px)'
+    maxWidth: 'calc(100% - 320px)',
+    margin: '1.5rem 0'
   },
   imageBlock: {
     position: 'relative',
@@ -57,7 +58,11 @@ const useStyles = createUseStyles((theme: Theme) => ({
     alignItems: 'center',
     width: '50%',
     padding: 20,
-    maxWidth: 320
+    maxWidth: 320,
+
+    /* Failsafe */
+    maxHeight: 420,
+    overflow: 'hidden'
   },
   rect: {
     position: 'absolute'
@@ -83,7 +88,7 @@ const useStyles = createUseStyles((theme: Theme) => ({
     zIndex: 2,
     width: '100%',
     height: '100%',
-    outline: `1px solid ${theme.sfBlack}`
+    outline: `1px solid ${theme.sfBlack}`,
   }
 }))
 
