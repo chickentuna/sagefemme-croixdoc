@@ -3,8 +3,11 @@ import { createUseStyles } from 'react-jss'
 import CustomAccordion from '../components/CustomAccordion'
 import Dash from '../components/Dash'
 import Disclaimer from '../components/Disclaimer'
+import PnpFratries from './pnp/PnpFratries'
 import PageWrapper from '../components/PageWrapper'
 import { theme } from '../theme'
+import PnpSeance from './pnp/PnpSeance'
+import PnpYoga from './pnp/PnpYoga'
 
 const useStyles = createUseStyles({
   content: {
@@ -15,18 +18,18 @@ const useStyles = createUseStyles({
     fontSize: 18,
     marginTop: 50
   },
+  accordionList: {
+    listStyle: 'circle'
+  },
+  accordionHeader: {
+    marginTop: 30,
+    marginBottom: 0
+  },
   accordionBlocks: {
     display: 'flex',
     flexDirection: 'column',
     alignItems: 'center',
     gap: 10,
-    '& h3': {
-      marginTop: 10,
-      marginBottom: 0
-    },
-    '& ul': {
-      listStyle: 'circle'
-    }
   }
 })
 
@@ -52,8 +55,13 @@ function Pnp () {
           </Disclaimer>
 
           <div className={classes.accordionBlocks}>
-            <div className={classes.preview}> Individuelle ou en groupe, 7 séances remboursées à 100% par la sécurité sociale.</div>
-            <h3>Parcours classique</h3>
+            <div className={classes.preview}>
+              Individuelle ou en groupe, 7 séances remboursées à 100% par la sécurité sociale.
+            </div>
+
+            <h3 className={classes.accordionHeader}>
+              Parcours classique
+            </h3>
             <Dash />
             <CustomAccordion
               selectedColor={theme.medicalBlue}
@@ -65,7 +73,7 @@ function Pnp () {
                     <>
                       Motifs de consultation en urgence - Les Contractions&nbsp;:  Qu’est ce qu’une contraction et à quoi servent-elles&nbsp;?
                       Comment les reconnaître et les distinguer&nbsp;? Comment les aider à être efficaces&nbsp;? Comment les gérer&nbsp;?
-                      <ul>
+                      <ul className={classes.accordionList}>
                         <li>Postures, massage, exercices de respiration</li>
                         <li>Rôles du/de la partenaire</li>
                         <li>Déclenchement</li>
@@ -139,12 +147,16 @@ function Pnp () {
               ]}
             />
 
-            <h3 style={{ marginTop: 30 }}>Séances spécifiques</h3>
+            <h3 className={classes.accordionHeader}>Séances spécifiques</h3>
             <Dash />
             <CustomAccordion
               selectedColor={theme.medicalBlue}
               hoverColor={theme.medicalBlueHover}
               items={[
+                {
+                  summary: 'WIP - comment se deroule seance',
+                  content: <PnpSeance />
+                },
                 {
                   summary: 'Préparation Fratries',
                   content: (
@@ -159,6 +171,7 @@ function Pnp () {
                       <br />
                       Séance de préparation pour les 3 à 8 ans, avec présence et participation active d’un/des parents. Alternance discussion/ateliers manuels.
                       Inclut des notions de sécurité. Durée environ 45 min.
+                      <PnpFratries />
                     </>
                   )
                 },
@@ -168,6 +181,7 @@ function Pnp () {
                   content: (
                     <>
                       Association d’Asanas (postures), de Pranayama (exercices de respiration), de Pratyahara (relaxation) et de Dhyana (méditation), adaptés à la femme enceinte.
+                      <PnpYoga />
                     </>
                   )
                 },
