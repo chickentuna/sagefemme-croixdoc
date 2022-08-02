@@ -3,6 +3,7 @@ import React from 'react'
 import { Link, useLocation } from 'react-router-dom'
 import { ReactComponent as Logo } from '../svg/logo.svg'
 import MedicioButton from './components/MedicioButton/MedicioButton'
+import Doctolib from './Doctolib'
 
 interface Tab {
   label: string,
@@ -12,7 +13,7 @@ interface Tab {
 
 export function Header () {
   const { pathname } = useLocation()
-  const showRDVButton = false
+  const showRDVButton = true
 
   const tabs: Tab[] = [
     {
@@ -99,7 +100,7 @@ export function Header () {
 
         {showRDVButton && (
           <div className='header-right'>
-            <MedicioButton to='404' fontSize={14}>Prendre Rendez-vous</MedicioButton>
+            <Doctolib />
           </div>
         )}
 
