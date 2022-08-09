@@ -13,7 +13,7 @@ export const theme = {
   medicalBlueHover: '#728BE4',
   medicalRed: 'red',
   sfBlack: '#555555',
-  verticalModeThreshold: 992,
+  verticalModeThreshold: 1064,
   pink: '#fbadb0',
   babyBlue: '#adcce9'
 }

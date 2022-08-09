@@ -128,6 +128,7 @@ h1, h2, h3, h4, h5, h6 {
   padding: 20px 0;
   box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.1);
   color: #555555;
+  
 
   .header-container {
     display: flex;
@@ -173,6 +174,10 @@ h1, h2, h3, h4, h5, h6 {
     letter-spacing: initial;
   }
 
+  @media (max-width: 1365px) {
+    padding-top: 60px;
+  }
+
   @media (max-width: 1230px) {
     .title {
       font-size: 22px;
@@ -181,11 +186,14 @@ h1, h2, h3, h4, h5, h6 {
       font-size: 18px;
     }
   }
-  @media (max-width: 992px) {
+  @media (max-width: 1064px) {
     padding: 15px 0;
     .tab-as-subtab {
       display: list-item;
     }
+  }
+  @media (max-width: 666px) {
+    padding: 60px 0 15px 0;
   }
 
   @media (max-width: 560px) {
@@ -338,7 +346,7 @@ h1, h2, h3, h4, h5, h6 {
   color: #fff;
 }
 
-@media (max-width: 991px) {
+@media (max-width: 1063px) {
   .mobile-nav-toggle {
     display: block;
   }

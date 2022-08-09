@@ -34,6 +34,7 @@ module.exports = {
     'react/jsx-tag-spacing': 'warn',
     'no-trailing-spaces': 'warn',
     'jsx-quotes': 'warn',
+    'no-multiple-empty-lines': 'warn',
     'react-hooks/rules-of-hooks': 'error',
     'react-hooks/exhaustive-deps': 'error',
     'react/self-closing-comp': 'off',

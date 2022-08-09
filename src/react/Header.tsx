@@ -41,7 +41,7 @@ export function Header () {
   }[pathname] ?? tabs.find(tab => tab.to === pathname || tab.tabs?.find(subtab => subtab.to === pathname) != null)?.to
 
   function handleClick () {
-    if (window.matchMedia('(max-width: 991px)').matches) {
+    if (window.matchMedia('(max-width: 1063px)').matches) {
       // eslint-disable-next-line @typescript-eslint/no-explicit-any
       (window as any).toggleNavBarMobile()
     }

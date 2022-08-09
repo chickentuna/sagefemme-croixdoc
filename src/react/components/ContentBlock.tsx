@@ -1,7 +1,7 @@
 import classNames from 'classnames'
 import React, { ReactNode } from 'react'
 import { createUseStyles } from 'react-jss'
-import { Theme } from '../theme'
+import { Theme, theme } from '../theme'
 
 const useStyles = createUseStyles((theme: Theme) => ({
   container: {
@@ -12,7 +12,7 @@ const useStyles = createUseStyles((theme: Theme) => ({
     position: 'relative',
     gap: 30,
     width: '100%',
-    '@media (max-width: 992px)': {
+    [`@media (max-width: ${theme.verticalModeThreshold}px)`]: {
       flexDirection: 'column',
 
       '&$landscape': {

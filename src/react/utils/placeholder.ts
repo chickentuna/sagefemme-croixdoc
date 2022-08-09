@@ -1,5 +1,7 @@
+let n = 0
+
 export function waifu () {
-  return 'https://poulton.fun/placewaifu'
+  return `https://poulton.fun/placewaifu?rand=${n++}`
 }
 
 export function husbando () {
