@@ -68,7 +68,7 @@ function Massages () {
               flip
               landscape
             >
-              <h4>Massage drainant des jambes et pieds</h4>
+              <h4>Massage drainant des jambes et pieds à l'huile essentielle cèdre de Virginie</h4>
               <List>
                 <li>Massage permettant de soulager les oedèmes des membres inférieurs et les jambes lourdes, notamment pendant la grossesse.</li>
                 <li>Prévoir 45 minutes environ.</li>
