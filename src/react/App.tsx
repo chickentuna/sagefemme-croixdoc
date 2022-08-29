@@ -3,7 +3,6 @@ import { createUseStyles, ThemeProvider } from 'react-jss'
 import { Outlet } from 'react-router-dom'
 import Footer from './Footer'
 import Header from './Header'
-import TempPopup from './interactive/TempPopup'
 import { theme } from './theme'
 
 const useStyle = createUseStyles({
@@ -29,8 +28,6 @@ export default function App () {
           <Outlet />
           <Footer />
         </div>
-
-        <TempPopup />
 
       </ThemeProvider>
     </>
