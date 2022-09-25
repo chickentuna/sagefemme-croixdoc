@@ -6,6 +6,7 @@ import PageWrapper from './components/PageWrapper'
 import { faStethoscope, faHandHoldingMedical, faDroplet, faBandage, faBaby, faPersonBreastfeeding, faBandAid, faHeartbeat, faHeartPulse, faAmbulance, faBriefcase, faBriefcaseMedical, faSpa, faDisplay, faLaptopMedical } from '@fortawesome/free-solid-svg-icons'
 import PageTitle from './components/PageTitle'
 import Helmet from 'react-helmet'
+import isNight from './utils/utils'
 
 const useStyle = createUseStyles({
   emergencyBanner: {
@@ -103,7 +104,7 @@ export default function Home () {
       </PageWrapper>
       <div className={classes.emergencyBanner}>
         <ButtonLink
-          to='/urgences'
+          to={`/urgences-${isNight() ? 'nuit' : 'jour'}`}
           inline
           icon={faBriefcaseMedical}
           title={<>Une urgence&nbsp;?</>}

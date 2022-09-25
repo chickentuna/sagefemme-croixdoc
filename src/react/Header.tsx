@@ -4,6 +4,7 @@ import { Link, useLocation } from 'react-router-dom'
 import { ReactComponent as Logo } from '../svg/logo.svg'
 import MedicioButton from './components/MedicioButton/MedicioButton'
 import Doctolib from './Doctolib'
+import isNight from './utils/utils'
 
 interface Tab {
   label: string,
@@ -14,8 +15,6 @@ interface Tab {
 export function Header () {
   const { pathname } = useLocation()
   const showRDVButton = true
-  const date = new Date()
-  const night = date.getHours() >= 20 || date.getHours() <= 5
 
   const tabs: Tab[] = [
     {
@@ -31,7 +30,7 @@ export function Header () {
     { label: 'Votre sage-femme', to: '/a-propos' },
     {
       label: 'Urgences',
-      to: `/urgences-${night ? 'nuit' : 'jour'}`,
+      to: `/urgences-${isNight() ? 'nuit' : 'jour'}`,
       tabs: [
         { label: 'Urgences de jour', to: '/urgences-jour' },
         { label: 'Urgences de nuit', to: '/urgences-nuit' },
