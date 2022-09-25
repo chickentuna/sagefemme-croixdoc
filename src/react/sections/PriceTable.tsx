@@ -64,7 +64,7 @@ const categories = [
     title: 'Visite à Domicile',
     data: [
 
-      createData('visite à domicile', '29,00 €', '70%', '8,70 €'),
+      createData('Visite à domicile', '29,00 €', '70%', '8,70 €'),
       createData('Observation et traitement à domicile d’une grossesse nécessitant, sur prescription du médecin, une surveillance intensive', '29,20 €', '100%', '0,00 €'),
       createData('Surveillance à domicile mère-enfant de J2 à J12, les deux premières fois, un seul enfant', '50,20 €', '100%', '0,00 €'),
       createData('Surveillance à domicile mère-enfant de J2 à J12, vistes suivantes, un seul enfant', '37,60 €', '100%', '0,00 €'),
