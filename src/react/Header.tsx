@@ -14,6 +14,8 @@ interface Tab {
 export function Header () {
   const { pathname } = useLocation()
   const showRDVButton = true
+  const date = new Date()
+  const night = date.getHours() >= 20 || date.getHours() <= 5
 
   const tabs: Tab[] = [
     {
@@ -27,7 +29,14 @@ export function Header () {
       ]
     },
     { label: 'Votre sage-femme', to: '/a-propos' },
-    { label: 'Urgences', to: '/urgences' },
+    {
+      label: 'Urgences',
+      to: `/urgences-${night ? 'nuit' : 'jour'}`,
+      tabs: [
+        { label: 'Urgences de jour', to: '/urgences-jour' },
+        { label: 'Urgences de nuit', to: '/urgences-nuit' },
+      ]
+    },
     { label: 'Infos pratiques', to: '/infos-pratiques' },
     { label: 'Contact', to: '/contact' },
     { label: 'Documents utiles', to: '/documents-utiles' }

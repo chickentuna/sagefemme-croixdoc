@@ -29,6 +29,8 @@ const categories = [
       createData('Préparation à la Naissance 1 famille', '33,60 €', '100%', '0,00 €'),
       createData('Préparation à la Naissance 2-3 familles', '32,48 €', '100%', '0,00 €'),
       createData('Préparation à la Naissance 4-6 familles', '16,80 €', '100%', '0,00 €'),
+      createData('Entretien post-natal', '42,00 €', '70%', '12,60 €'),
+      createData('Séances post-natales', '27,00 €', '70%', '8,10 €'),
       createData('Accompagnement à la parentalité (au delà des 7 premières séances), individuel', '35,00 €', '0%', '35,00 €'),
       createData('Accompagnement à la parentalité (au delà des 7 premières séances), en groupe', '20,00 €', '0%', '20,00 €'),
       createData('Accompagnement à la parentalité (au delà des 7 premières séances), à domicile', '40,00 €', '0%', '40,00 €'),
@@ -185,7 +187,7 @@ function PriceTable () {
       <Disclaimer>
         Indemnités kilométriques : 0,45 € par kilomètre
       </Disclaimer>
-        
+
     </>
   )
 }

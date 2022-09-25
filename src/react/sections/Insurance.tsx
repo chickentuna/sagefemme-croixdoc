@@ -14,6 +14,7 @@ function Insurance () {
                 <li>Toute consultation, examen, soin effectués entre le début du 6e mois de grossesse jusqu’au 12ème jour après l’accouchement</li>
                 <li>Toute consultation, examen, soin effectués à un bénéficiaire d’un C2S (ex : CMU et ACS), AME, AT-MP, personnes incarcérées ou en aménagement de peine sans aucune activité professionnelle, ALD (sur ordonnance bizone ou avec mention ALD) et victimes d’actes de terrorisme.</li>
                 <li>Consultations de l’adolescente âgée de 15 à 17 ans inclus, avec possibilité d’anonymisation.</li>
+                <li> Toutes les consultations et actes liés à la contraception de la jeune fille et de la femme de moins de 26 ans inclus.</li>
               </ul>
               Dans les autres cas, le tiers payant sécu sera appliqué, c’est à dire que vous ne réglerez que la part mutuelle (soit 30% du montant), qui vous sera ensuite automatiquement remboursée dans les jours qui suivent si votre mutuelle couvre les soins effectués. Le nouveau-né est pris en charge dès la naissance à 70% par la Sécurité Sociale et les 30% restants par la mutuelle.
             </>

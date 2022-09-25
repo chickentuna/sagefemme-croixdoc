@@ -20,6 +20,8 @@ import Quand from './pages/Quand'
 import Reeducation from './pages/Reeducation'
 import Resources from './pages/Resources'
 import Urgences from './pages/Urgences'
+import UrgencesJour from './pages/UrgencesJour'
+import UrgencesNuit from './pages/UrgencesNuit'
 
 // TODO: whatsup with the /images/ url?
 
@@ -39,6 +41,8 @@ export function Index () {
           <Route path='/reeducation-perineale' element={<Reeducation />} />
           <Route path='/pnp' element={<Pnp />} />
           <Route path='/urgences' element={<Urgences />} />
+          <Route path='/urgences-nuit' element={<UrgencesNuit />} />
+          <Route path='/urgences-jour' element={<UrgencesJour />} />
           <Route path='/a-propos' element={<About />} />
           <Route path='/infos-pratiques' element={<Details />} />
           <Route path='/tarifs' element={<Pricing />} />

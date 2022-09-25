@@ -21,7 +21,7 @@ const useStyles = createUseStyles({
     alignItems: 'center',
     gap: 10,
     '& h3': {
-      marginTop: 30,
+      marginTop: 10,
       marginBottom: 0
     },
     '& ul': {
@@ -139,7 +139,7 @@ function Pnp () {
               ]}
             />
 
-            <h3>Séances spécifiques</h3>
+            <h3 style={{ marginTop: 30 }}>Séances spécifiques</h3>
             <Dash />
             <CustomAccordion
               selectedColor={theme.medicalBlue}
@@ -200,6 +200,61 @@ function Pnp () {
             Les ateliers fratries sont au tarif de 25 euros par famille (dans le cas où les 7 séances ont été utilisées).
           </div>
 
+          <h4 style={{ marginTop: 40 }}>
+            Entretien postnatal
+          </h4>
+          <p style={{ textAlign: 'justify' }}>
+            Individuel ou en couple, au cabinet ou à domicile, cet entretien a été rendu <b>obligatoire</b> par
+            le Ministère de la Santé en Septembre 2022, afin de faire face à l'incidence inquiétante de la dépression du post-partum,
+            qui touche désormais près d'une femme sur cinq. Son but est de faire le point sur le vécu de votre grossesse,
+            de votre accouchement, de votre séjour en maternité, de votre retour à la maison, répondre à vos questions,
+            et éventuellement vous orienter vers des sources de soutien appropriées.
+          </p>
+
+          <div className={classes.accordionBlocks}>
+            <div className={classes.preview}> Individuel ou en groupe, 2 séances remboursées à 70% par la sécurité sociale.</div>
+            <h3>Séances post-natales</h3>
+            <Dash />
+            <CustomAccordion
+              selectedColor={theme.medicalBlue}
+              hoverColor={theme.medicalBlueHover}
+              items={[
+                {
+                  summary: 'Alimentation du nouveau-né et du nourrisson',
+                  content: (
+                    <>
+                      Selon vos besoins&nbsp;: Allaitement, choix du lait, vitesse de tétine, procédure de sevrage,
+                      allaitement et reprise du travail&nbsp;…
+                    </>
+                  )
+                },
+
+                {
+                  summary: 'Comprendre et appréhender les cris du nouveau-né et du nourrisson.',
+                  content: (
+                    <>
+                      Il s'agit de la même séance que celle proposée pendant la grossesse, ouverte également en
+                      post-partum aux familles qui n'en n'ont pas bénéficié en prénatal et souhaitent y participer.
+                    </>
+                  ),
+                },
+                {
+                  summary: 'Prochainement',
+                  content: (
+                    <>
+                      À l'étude :
+                      <ul>
+                        <li>Des séances post-natales de gestes de premiers secours sur les nouveaux-nés, nourrissons et bambins</li>
+                        <li>Yoga post-natal et réhabilitation du bassin</li>
+                        <li>Ateliers fratries adaptés au post-natal</li>
+                      </ul>
+                    </>
+                  )
+                }
+
+              ]}
+            />
+          </div>
         </div>
       </PageWrapper>
     </>

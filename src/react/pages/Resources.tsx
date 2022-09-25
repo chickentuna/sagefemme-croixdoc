@@ -44,6 +44,10 @@ function Resources () {
     url: 'docs/Rendez-vous à prévoir en post-partum.pdf'
   },
   {
+    text: 'Pense-bête pour la maison',
+    url: 'docs/Pense-bête pour la maison.jpg'
+  },
+  {
     text: 'Préparation fratries : coloriage à imprimer',
     url: 'docs/Fratrie coloriage.png'
   },

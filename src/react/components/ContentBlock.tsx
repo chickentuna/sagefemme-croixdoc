@@ -89,7 +89,7 @@ const useStyles = createUseStyles((theme: Theme) => ({
 
 interface ContentBlockProps {
   imageUrl: string
-  children: ReactNode
+  children?: ReactNode
   flip?: boolean
   landscape?: boolean
 }
@@ -99,9 +99,11 @@ function ContentBlock ({ imageUrl, children, flip = false, landscape = false }: 
 
   return (
     <div className={classNames([classes.container, { [classes.landscape]: landscape, [classes.flip]: flip }])}>
-      <div className={classes.textBlock}>
-        {children}
-      </div>
+      {children != null && (
+        <div className={classes.textBlock}>
+          {children}
+        </div>
+      )}
       <div
         className={classes.imageBlock}
       >

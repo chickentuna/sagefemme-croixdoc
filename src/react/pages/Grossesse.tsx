@@ -42,19 +42,18 @@ const dataTipPhysio = (
 )
 const dataTipBilan = (
   <>
-
-    Il s’agit d’un bilan de santé générale, effectué en début de grossesse,
-    s’accompagnant de conseils concernant l’hygiène de vie durant la grossesse&nbsp;: alimentation, sexualité, pratique sportive, orientation vers un examen bucco-dentaire, tabacologie&nbsp;…
+    Il s'agit d'une consultation/entretien pré-accouchement. Conseillé en fin de grossesse, il permet de faire un bilan de santé,
+    vérifier que votre dossier est complet pour la maternité, et, si vous le souhaitez, rédiger ensemble votre projet de naissance.
   </>
 )
 const dataTipEPP = (
   <>
     <p>
-      Si le bilan prénatal fait état de votre santé physique, l’entretien prénatal précoce fait état de votre santé psychique.
-      Il permet de connaître vos souhaits, vos spécificités, en fonction de votre vécu et de vos représentations personnelles,
-      et de répondre à vos questions et éventuelles inquiétudes.
+      L’entretien prénatal précoce fait partie des consultations "obligatoires" de votre grossesse. Il permet devous connaitre dans votre globalité,
+      de connaître vos souhaits, vos spécificités, en fonction de votre vécu et de vos représentations personnelles,
+      et de répondre à vos questions et éventuelles inquiétudes concernant, la grossesse, l'accouchement, la parentalité.
     </p>
-    L’EPP permet de préparer ensembles un plan de préparation à la naissance et d’élaborer ensembles votre projet de naissance.
+    L’EPP permet également de préparer ensembles un plan de préparation à la naissance et d’élaborer ensembles votre projet de naissance.
   </>
 )
 const dataTipSortie = (
@@ -85,6 +84,28 @@ function Grossesse () {
             <li>Surveillance à domicile d’une grossesse à risque, avec ou sans monitoring, sur prescription</li>
             <li>Diagnostic de début de travail, diagnostic de rupture de la poche des eaux</li>
             <li>Vaccinations de la femme enceinte et de son entourage</li>
+            <li>Entretien postnatal{' '}
+              <InfoBubble
+                text={
+                  <>
+                    Entretien "obligatoire" depuis le 5 Septembre 2022, au même titre de l'entretien prénatal précoce.
+                    Son but est de faire le point sur le vécu de votre grossesse, de votre accouchement,
+                    de votre séjour en maternité, de votre retour à la maison, le but du ministère de la santé
+                    étant de diminuer l'incidence de la dépression du post-partum, qui concerne, à l'heure actuelle,
+                    une femme sur cinq. Cet entretien peut tout à fait être réalisé à domicile.
+                  </>
+                }
+              />
+              {' '}et séances postnatales{' '}
+              <InfoBubble
+                text={
+                  <>
+                    Basées sur le même principe que les séances de préparation à la naissance, vous avez droit à deux séances post-natales,
+                    qui s'adapteront à vos besoins : allaitement, cris du nouveau-né, lien parent-enfant, Yoga post-natal etc.
+                  </>
+                }
+              />
+            </li>
           </List>
         </ContentBlock>
 
@@ -103,9 +124,17 @@ function Grossesse () {
             <li>Rééducation périnéale</li>
           </List>
         </ContentBlock>
+
+        {/* TODO: mettre dans le footer */}
+        <ContentBlock
+          imageUrl='images/Logo CPTS Berange.jpg'
+        />
+
       </div>
     </PageWrapper>
   )
 }
+
+// TODO: "appelle moi pour le texte"
 
 export default React.memo(Grossesse)
