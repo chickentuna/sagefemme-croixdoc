@@ -45,7 +45,7 @@ function Resources () {
   },
   {
     text: 'Pense-bête pour la maison',
-    url: 'docs/Pense-bête pour la maison.jpg'
+    url: 'docs/pense bete.jpg'
   },
   {
     text: 'Préparation fratries : coloriage à imprimer',
