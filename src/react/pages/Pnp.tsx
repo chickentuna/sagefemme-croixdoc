@@ -158,7 +158,7 @@ function Pnp () {
                       A quoi est-ce que je vais pouvoir jouer avec mon petit frère ou ma petite soeur&nbsp;?<br />
                       <br />
                       Séance de préparation pour les 3 à 8 ans, avec présence et participation active d’un/des parents. Alternance discussion/ateliers manuels.
-                      Inclut des notions de sécurité. Durée environ 45 min.
+                      Inclut des notions de sécurité. Durée environ 1h30.
                     </>
                   )
                 },
