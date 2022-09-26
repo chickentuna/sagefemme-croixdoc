@@ -40,12 +40,7 @@ const dataTipPhysio = (
     et notamment dès le retour de la maternité par des visites à domicile.
   </>
 )
-const dataTipBilan = (
-  <>
-    Il s'agit d'une consultation/entretien pré-accouchement. Conseillé en fin de grossesse, il permet de faire un bilan de santé,
-    vérifier que votre dossier est complet pour la maternité, et, si vous le souhaitez, rédiger ensemble votre projet de naissance.
-  </>
-)
+
 const dataTipEPP = (
   <>
     <p>
@@ -77,7 +72,6 @@ function Grossesse () {
           <List noPad>
             <li>Consultation pré-conceptionnelle <InfoBubble text={dataTipGrossesse} /></li>
             <li>Suivi de grossesse physiologique - suivi semi-global <InfoBubble text={dataTipPhysio} /></li>
-            <li>Bilan prénatal <InfoBubble text={dataTipBilan} /></li>
             <li>Entretien prénatal précoce <InfoBubble text={dataTipEPP} /></li>
             <li>Préparation à la Naissance et à la Parentalité - Accouchement naturel</li>
             <li>Monitoring</li>
