@@ -119,11 +119,6 @@ function Grossesse () {
           </List>
         </ContentBlock>
 
-        {/* TODO: mettre dans le footer */}
-        {/* <ContentBlock
-          imageUrl='images/Logo CPTS Berange.jpg'
-        /> */}
-
       </div>
     </PageWrapper>
   )

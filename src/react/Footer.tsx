@@ -33,6 +33,9 @@ const useStyle = createUseStyles((theme: Theme) => ({
     marginLeft: 5,
     marginTop: -1,
   },
+  berange: {
+    height: '108px',
+  },
   legal: {
     fontSize: 18,
     display: 'flex',
@@ -53,11 +56,7 @@ export default function Footer () {
   return (
     <div className={classes.container}>
       <div className={classes.wrapper}>
-        {/* <div>
-          <Link className='button-39' to='/documents-utiles'>
-            Documents utiles
-          </Link>
-        </div> */}
+
         <div className={classes.legal}>
           <Link to='/mentions-legales'>
             Mentions légales
@@ -72,6 +71,11 @@ export default function Footer () {
         </div>
         <div>
           <ContactInfo />
+        </div>
+        <div>
+          <a href='https://www.cptsdemontpellier1.org/' target='_blank' rel='nofollow noreferrer'>
+            <img className={classes.berange} src='images/Logo CPTS Berange.jpg' />
+          </a>
         </div>
       </div>
 
