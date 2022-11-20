@@ -114,10 +114,12 @@ function Grossesse () {
             <li>Consultation du nouveau-né</li>
             <li>Surveillance de la bilirubinémie (ictère), pesées de contrôle</li>
             <li>Accompagnement et soutien de l’allaitement maternel</li>
+            <li>Entretien post-natal et séances d'accompagnement post-natal</li>
             <li>Consultation post-natale (6-8 semaines après l’accouchement)</li>
             <li>Rééducation périnéale</li>
           </List>
         </ContentBlock>
+
 
       </div>
     </PageWrapper>
