@@ -21,7 +21,7 @@ function createData (
 
 const categories = [
   {
-    title: 'Grossesse',
+    title: 'Grossesse et post-partum',
     data: [
       createData('Consultation', '25,00 €', '70%', '7,50 €'),
       createData('Entretien prénatal précoce', '42,00 €', '100%', '0,00 €'),
@@ -42,7 +42,7 @@ const categories = [
       createData('observation grossesse pathologique avec ERCF - grossesse multiple', '63,28 €', '100%', '0,00 €'),
       createData('ERCF sans prescription grossesse unique', '35,00 €', '100%', '0,00 €'),
       createData('ERCF sans prescription grossesse multiple', '54,60 €', '100%', '0,00 €'),
-      createData('Injection Rhophylac', '10,90 €', '100%', '0,00 €')
+      createData('Injection Rhophylac', '10,90 €', '100%', '0,00 €'),
     ]
   },
 

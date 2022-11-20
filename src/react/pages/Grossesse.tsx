@@ -120,12 +120,11 @@ function Grossesse () {
           </List>
         </ContentBlock>
 
-
       </div>
     </PageWrapper>
   )
 }
 
-// TODO: "appelle moi pour le texte"
+// I love you !!!
 
 export default React.memo(Grossesse)
