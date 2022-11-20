@@ -36,6 +36,12 @@ function Resources () {
   const [visited, setvisited] = useState(new Set())
 
   const files = [{
+    text: 'Suivi grossesse et post-partum',
+    url: 'docs/Suivi grossesse et post-partum.pdf'
+  }, {
+    text: 'Hygiène de vie et grossesse',
+    url: 'docs/Hygiène de vie et grossesse.pdf'
+  }, {
     text: 'Valises pour la maternité',
     url: 'docs/Valises pour la maternité.pdf'
   },
