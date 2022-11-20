@@ -83,7 +83,7 @@ const categories = [
       createData('Majoration de nuit de 20 h à 0 h et de 6 h à 8 h', '35,00 €', '100%', '0,00 €'),
       createData('Majoration de nuit de 0 h à 6 h', '40,00 €', '100%', '0,00 €'),
       createData('Majoration pour soins d’urgence faits au cabinet après examen en urgence d’un patient', '26,88 €', '70%', '8,06 €'),
-      createData('Majoration déplacement en zone éloignée du cabinet, à la demande de la patiente', '30,00 €', '0', '30,00 €'),
+
     ]
   }
 ]
