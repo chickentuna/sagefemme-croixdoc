@@ -5,5 +5,5 @@ export function waifu () {
 }
 
 export function husbando () {
-  return 'https://poulton.fun/placewaifu?type=husbando'
+  return 'https://poulton.fun/placewaifu/male'
 }
