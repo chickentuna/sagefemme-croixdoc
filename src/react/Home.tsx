@@ -3,7 +3,7 @@ import React from 'react'
 import { createUseStyles } from 'react-jss'
 import ButtonLink from './components/ButtonLink/ButtonLink'
 import PageWrapper from './components/PageWrapper'
-import { faStethoscope, faHandHoldingMedical, faDroplet, faBandage, faBaby, faPersonBreastfeeding, faBandAid, faHeartbeat, faHeartPulse, faAmbulance, faBriefcase, faBriefcaseMedical, faSpa, faDisplay, faLaptopMedical } from '@fortawesome/free-solid-svg-icons'
+import { faStethoscope, faHandHoldingMedical, faDroplet, faBandage, faBaby, faPersonBreastfeeding, faBandAid, faHeartbeat, faHeartPulse, faAmbulance, faBriefcase, faBriefcaseMedical, faSpa, faDisplay, faLaptopMedical, faSyringe } from '@fortawesome/free-solid-svg-icons'
 import PageTitle from './components/PageTitle'
 import Helmet from 'react-helmet'
 import isNight from './utils/utils'
@@ -55,6 +55,17 @@ const links = [
     to: 'reeducation-perineale',
     icon: faHandHoldingMedical,
     description: 'Fuites urinaires, descente d\'organes, douleurs lors des rapports sexuels... La rééducation permet de retrouver un tonus musculaire. Pour les femmes de tout âge, sans ordonnance.'
+  },
+  // {
+  //   label: 'Vaccins',
+  //   to: 'vaccins',
+  //   icon: faSyringe,
+  //   description: 'Piqûres. bzz bzz.'
+  // },
+  {
+    label: 'Vaccins',
+    icon: faSyringe,
+    description: 'À venir'
   },
   {
     label: 'Échographie',
