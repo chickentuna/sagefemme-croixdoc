@@ -56,21 +56,16 @@ const links = [
     icon: faHandHoldingMedical,
     description: 'Fuites urinaires, descente d\'organes, douleurs lors des rapports sexuels... La rééducation permet de retrouver un tonus musculaire. Pour les femmes de tout âge, sans ordonnance.'
   },
-  // {
-  //   label: 'Vaccins',
-  //   to: 'vaccins',
-  //   icon: faSyringe,
-  //   description: 'Piqûres. bzz bzz.'
-  // },
   {
     label: 'Vaccination',
     icon: faSyringe,
-    description: 'À venir'
+    description: 'Vaccination contre le papillomavirus, vaccination de la femme enceinte et de tout son entourage'
   },
   {
     label: 'Échographie',
     icon: faLaptopMedical,
-    description: 'À venir'
+    description: 'À venir',
+    disable: true
   }
 ]
 
@@ -93,10 +88,11 @@ export default function Home () {
             color='white'
           />
           <div className={classes.buttons}>
-            {links.map(({ label, to, icon, description }) => (
+            {links.map(({ label, to, icon, description, disable }) => (
               <ButtonLink
                 key={to}
                 to={to}
+                disable={disable}
                 icon={icon}
                 title={label}
               >

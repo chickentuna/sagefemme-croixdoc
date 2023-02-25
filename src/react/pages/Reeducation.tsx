@@ -58,7 +58,7 @@ function Reeducation () {
             <List>
               <li>rééducation manuelle</li>
               <li>électrostimulation</li>
-              <li>pas de biofeedback, par conviction professionnelle</li>
+              <li>biofeedback</li>
             </List>
             Ces séances permettent d’intégrer la connaissance et conscience du périnée et d’apprendre les exercices de rééducation périnéale.
           </ContentBlock>
