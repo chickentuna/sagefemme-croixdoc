@@ -24,10 +24,10 @@ const useStyles = createUseStyles({
     '& h3': {
       marginTop: 10,
       marginBottom: 0
-    },
-    '& ul': {
-      listStyle: 'circle'
     }
+  },
+  accordionSublist: {
+    listStyle: 'circle'
   }
 })
 
@@ -66,7 +66,7 @@ function Pnp () {
                     <>
                       Motifs de consultation en urgence - Les Contractions&nbsp;:  Qu’est ce qu’une contraction et à quoi servent-elles&nbsp;?
                       Comment les reconnaître et les distinguer&nbsp;? Comment les aider à être efficaces&nbsp;? Comment les gérer&nbsp;?
-                      <ul>
+                      <ul className={classes.accordionSublist}>
                         <li>Postures, massage, exercices de respiration</li>
                         <li>Rôles du/de la partenaire</li>
                         <li>Déclenchement</li>
@@ -251,7 +251,7 @@ function Pnp () {
                   content: (
                     <>
                       À l'étude :
-                      <ul>
+                      <ul className={classes.accordionSublist}>
                         <li>Des séances post-natales de gestes de premiers secours sur les nouveaux-nés, nourrissons et bambins</li>
                         <li>Yoga post-natal et réhabilitation du bassin</li>
                         <li>Ateliers fratries adaptés au post-natal</li>
