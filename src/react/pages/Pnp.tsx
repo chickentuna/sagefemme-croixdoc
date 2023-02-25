@@ -247,10 +247,9 @@ function Pnp () {
                   ),
                 },
                 {
-                  summary: 'Prochainement',
+                  summary: 'Autres',
                   content: (
                     <>
-                      À l'étude :
                       <ul className={classes.accordionSublist}>
                         <li>Des séances post-natales de gestes de premiers secours sur les nouveaux-nés, nourrissons et bambins</li>
                         <li>Yoga post-natal et réhabilitation du bassin</li>
