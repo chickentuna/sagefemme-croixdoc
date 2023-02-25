@@ -236,7 +236,6 @@ function Pnp () {
                     </>
                   )
                 },
-
                 {
                   summary: 'Comprendre et appréhender les cris du nouveau-né et du nourrisson.',
                   content: (
@@ -247,18 +246,32 @@ function Pnp () {
                   ),
                 },
                 {
-                  summary: 'Autres',
+                  summary: 'Gestes de premiers secours sur les nouveaux-nés, nourrissons et bambins',
+                  content: (
+                    <>
+                      Fausse route, chute, noyade, étouffement, blessure... Un atelier pour apprendre les bons réflexes en cas d'accident domestique.
+                    </>
+                  )
+                },
+                {
+                  summary: 'Yoga post-natal et réhabilitation du bassin',
                   content: (
                     <>
                       <ul className={classes.accordionSublist}>
-                        <li>Des séances post-natales de gestes de premiers secours sur les nouveaux-nés, nourrissons et bambins</li>
-                        <li>Yoga post-natal et réhabilitation du bassin</li>
-                        <li>Ateliers fratries adaptés au post-natal</li>
+                        <li>Reprise douce du sport par le Yoga, tout en respectant le périnée</li>
+                        <li>Resserrage du bassin pour soulager les douleurs ligamentaires en post-partum</li>
                       </ul>
                     </>
                   )
+                },
+                {
+                  summary: 'Ateliers fratries adaptés au post-natal',
+                  content: (
+                    <>
+                      Réponse aux questions des grands-frères / grandes-soeurs sur la grossesse, l'accouchement, le post-partum. Comment appréhender le quotidien avec son cadet, comment interagir avec lui.
+                    </>
+                  )
                 }
-
               ]}
             />
           </div>
