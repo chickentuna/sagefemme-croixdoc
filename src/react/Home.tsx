@@ -63,7 +63,7 @@ const links = [
   //   description: 'Piqûres. bzz bzz.'
   // },
   {
-    label: 'Vaccins',
+    label: 'Vaccination',
     icon: faSyringe,
     description: 'À venir'
   },
