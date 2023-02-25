@@ -57,12 +57,6 @@ const links = [
     description: 'Fuites urinaires, descente d\'organes, douleurs lors des rapports sexuels... La rééducation permet de retrouver un tonus musculaire. Pour les femmes de tout âge, sans ordonnance.'
   },
   {
-    label: 'Massages',
-    to: 'massages',
-    icon: faSpa,
-    description: 'Massages ayurvédiques de la femme et de la femme enceinte, drainage des œdèmes des jambes.'
-  },
-  {
     label: 'Échographie',
     icon: faLaptopMedical,
     description: 'À venir'

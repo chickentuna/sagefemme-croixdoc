@@ -5,6 +5,7 @@ import Dash from '../components/Dash'
 import Disclaimer from '../components/Disclaimer'
 import PageWrapper from '../components/PageWrapper'
 import { theme } from '../theme'
+import MassagesContent from './massages/MassagesContent'
 
 const useStyles = createUseStyles({
   content: {
@@ -188,8 +189,15 @@ function Pnp () {
                       Au cas par cas, selon les besoins spécifiques de chacun.<br />Préparation à l’accouchement physiologique (sans recours à l’analgésie péridurale).
                     </>
                   )
+                },
+                {
+                  summary: 'Massages ayurvédiques de la femme et de la femme enceinte, drainage des œdèmes des jambes',
+                  content: (
+                    <MassagesContent />
+                  )
                 }
               ]}
+              defaultExpanded={4}
             />
           </div>
           <div className={classes.preview}>
