@@ -47,7 +47,6 @@ function AbsenceTable () {
   const classes = useStyles()
 
   const indispo: ReactNode[] = [
-    'Jusqu\'au 15 Décembre inclus'
   ]
 
   return (
