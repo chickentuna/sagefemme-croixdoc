@@ -23,7 +23,7 @@ export function Timetable () {
         <tbody>
           <tr>
             <td>Lundi</td>
-            <td>9h - 16h30</td>
+            <td>9h - 17h</td>
           </tr>
           <tr>
             <td>Mardi</td>
@@ -31,15 +31,15 @@ export function Timetable () {
           </tr>
           <tr>
             <td>Jeudi</td>
-            <td>9h - 18h</td>
+            <td>9h - 15h30</td>
           </tr>
           <tr>
             <td>Vendredi</td>
-            <td>9h - 16h30</td>
+            <td>9h - 18h</td>
           </tr>
           <tr>
             <td>Samedi</td>
-            <td>10h - 15h</td>
+            <td>10h - 17h</td>
           </tr>
         </tbody>
       </table>
