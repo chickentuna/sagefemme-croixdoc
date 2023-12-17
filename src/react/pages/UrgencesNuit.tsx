@@ -189,9 +189,7 @@ function UrgencesNuit () {
           <div className={classes.price}>
             Ces visites sont prises en charge à 100% par la sécurité sociale, durant la grossesse et jusqu'à 12 jours après l'accouchement. En dehors de cette période, elles sont prises en charge à 70%, le reste vous sera alors remboursé par votre mutuelle.
             <br />
-            <br />Cependant, en cas de déplacement de nuit en zone éloignée du cabinet (supérieur à 15 km),
-            notamment sur les villes de Nîmes, Montpellier, Castelnau-Le-Lez,
-            un dépassement d’honoraires sous la forme d’un forfait de 30 euros <strong>non remboursables</strong> par la sécurité sociale sera appliqué.
+            <br />Le déplacement se fait dans la limite de 30 minutes de route, soit environ 15km autour du cabinet situé à Restinclières.
             <br />
             <br /> Si vous êtes suivie par une autre sage-femme, une fiche de liaison à l'attention de celle-ci vous sera remise afin
             d'optimiser la fluidité des soins.

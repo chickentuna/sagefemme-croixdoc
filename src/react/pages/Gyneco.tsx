@@ -38,6 +38,7 @@ function Gyneco () {
               <li>Diagnostic et traitement d’infections génitales basses (vaginites type mycoses, vaginoses bactériennes etc.)</li>
               <li>Dépistage des IST</li>
               <li>Vaccinations</li>
+              <li>Grossesse non désirée et avortement</li>
             </List>
           </ContentBlock>
 
@@ -75,7 +76,7 @@ function Gyneco () {
             <h4>Jeunes filles</h4>
             <List>
               <li>Consultation anonyme et gratuite de l’adolescente de 15 à 17 ans inclus</li>
-              <li>Vaccination HPV des jeunes filles à partir de 11 ans</li>
+              <li>vaccination HPV jeunes filles <b>et</b> jeunes garçons à partir de 11 ans</li>
             </List>
           </ContentBlock>
         </div>

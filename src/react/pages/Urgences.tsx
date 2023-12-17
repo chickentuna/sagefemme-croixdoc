@@ -13,6 +13,8 @@ import AbsenceTable from '../sections/AbsenceTable'
 import NumbersTable from '../sections/NumbersTable'
 import { Theme } from '../theme'
 
+/* i think this page is deprecated */
+
 const useStyles = createUseStyles((theme: Theme) => ({
   '@media (max-width: 603px)': {
     button: {
