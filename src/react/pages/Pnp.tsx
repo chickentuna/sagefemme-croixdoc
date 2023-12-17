@@ -1,8 +1,10 @@
 import React from 'react'
 import { createUseStyles } from 'react-jss'
+import ContentBlock from '../components/ContentBlock'
 import CustomAccordion from '../components/CustomAccordion'
 import Dash from '../components/Dash'
 import Disclaimer from '../components/Disclaimer'
+import List from '../components/List'
 import PageWrapper from '../components/PageWrapper'
 import { theme } from '../theme'
 import MassagesContent from './massages/MassagesContent'
@@ -150,16 +152,35 @@ function Pnp () {
                   summary: 'Préparation Fratries',
                   content: (
                     <>
-                      Pourquoi Maman doit-elle aller à l’hôpital&nbsp;? Est-ce qu’elle est malade&nbsp;? <br />
-                      Pourquoi est-ce que je ne peux pas aller avec elle&nbsp;?
-                      Quand est-ce qu’elle va revenir&nbsp;? <br />
-                      C’est quoi un accouchement&nbsp;? <br />
-                      Pourquoi est-ce qu’elle est toujours fatiguée&nbsp;?
-                      Et moi, dans tout ça&nbsp;? <br />
-                      A quoi est-ce que je vais pouvoir jouer avec mon petit frère ou ma petite soeur&nbsp;?<br />
+                      <ContentBlock
+                        imageUrl='images/prep-fratrie.jpg'
+                        landscape
+                        flip
+                      >
+                        <List>
+
+                          <li>Pourquoi Maman doit-elle aller à l’hôpital&nbsp;? Est-ce qu’elle est malade&nbsp;? </li>
+                          <li>
+                            Pourquoi est-ce que je ne peux pas aller avec elle&nbsp;?
+                            Quand est-ce qu’elle va revenir&nbsp;?
+                          </li>
+                          <li>C’est quoi un accouchement&nbsp;? </li>
+                          <li>
+                            Pourquoi est-ce qu’elle est toujours fatiguée&nbsp;?
+                            Et moi, dans tout ça&nbsp;?
+                          </li>
+                          <li>A quoi est-ce que je vais pouvoir jouer avec mon petit frère ou ma petite soeur&nbsp;?</li>
+                        </List>
+                      </ContentBlock>
                       <br />
-                      Séance de préparation pour les 3 à 8 ans, avec présence et participation active d’un/des parents. Alternance discussion/ateliers manuels.
-                      Inclut des notions de sécurité. Durée environ 1h30.
+                      <ContentBlock
+                        imageUrl='images/finger-gloves.jpg'
+                      >
+                        <List>
+                          <li>Séance de préparation pour les 3 à 8 ans, avec présence et participation active d’un/des parents. Alternance discussion/ateliers manuels.</li>
+                          <li>Inclut des notions de sécurité. Durée environ 1h30.</li>
+                        </List>
+                      </ContentBlock>
                     </>
                   )
                 },
