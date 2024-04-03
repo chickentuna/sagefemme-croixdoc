@@ -63,82 +63,95 @@ function Pnp () {
               hoverColor={theme.medicalBlueHover}
               items={[
                 {
-                  summary: 'Début de travail et départ à la maternité ',
+                  summary: 'Vivre sa grossesse en toute sérénité',
                   content: (
                     <>
-                      Motifs de consultation en urgence - Les Contractions&nbsp;:  Qu’est ce qu’une contraction et à quoi servent-elles&nbsp;?
-                      Comment les reconnaître et les distinguer&nbsp;? Comment les aider à être efficaces&nbsp;? Comment les gérer&nbsp;?
                       <ul className={classes.accordionSublist}>
-                        <li>Postures, massage, exercices de respiration</li>
-                        <li>Rôles du/de la partenaire</li>
-                        <li>Déclenchement</li>
-                        <li>Initiation au Yoga prénatal</li>
+                        <li>Notions d’anatomie et développement de bébé, de prématurité et terme, quand s’inquiéter et consulter aux urgences ?</li>
+                        <li>Petits maux, modifications corporelles, prise de poids, protéger son périnée</li>
+                        <li>Environnement et  grossesse : activité physique et grossesse, perturbateurs endocriniens</li>
+                        <li>Premiers exercices de respiration, exercices de Yoga</li>
                       </ul>
+                      <em>Vers 25 SA (semaines d’aménorrhée)</em>
+                    </>
+                  )
+                },
+                {
+                  summary: 'Départ à la maternité et prétravail',
+                  content: (
+                    <>
+                      <ul className={classes.accordionSublist}>
+                        <li>Contractions : Comment les reconnaître ? Comment les aider à être efficaces ? Comment les gérer ?</li>
+                        <li>Rupture de la poche des eaux ? Comment la reconnaître et que faire ?</li>
+                        <li>Notions de gestion de la douleur, respiration</li>
+                      </ul>
+                      <em>Vers 30-32 SA (semaines d’aménorrhée)</em>
                     </>
                   )
                 }, {
-                  summary: 'Travail et accouchement',
+                  summary: 'Travail - péridurale - césarienne',
                   content: (
                     <>
-                      Accueil à la maternité, déroulement du travail, concilier projet de naissance et contraintes médicales,
-                      s’approprier son accouchement, péridurale, césarienne en cours de travail&nbsp;…
-                      <br /> Gestion du stress et de la douleur. Comment préparer un accouchement naturel&nbsp;?
-                      <br />+ Exercices de respiration/relaxation, notions de massage/postures, exercices de Yoga prénatal.
+                      <ul className={classes.accordionSublist}>
+                        <li>Analgésie péridurale : procédure, effets indésirables, aménagements</li>
+                        <li>Déroulement du travail, concilier projet de naissance et contraintes médicales, s’approprier son accouchement</li>
+                        <li>Césarienne programmée, césarienne en urgence</li>
+                        <li>Yoga/méditation : gérer une angoisse pendant le travail</li>
+                      </ul>
+                      <em>Vers 31-33 SA (semaines d’aménorrhée)</em>
                     </>
                   )
                 }, {
-                  summary: 'La poussée et l’accueil de bébé ',
+                  summary: 'Poussée et accueil de bébé',
                   content: (
                     <>
-                      Circonstances, techniques de poussées, positions physiologiques d’accouchement, chemin parcouru par bébé,
-                      déchirures périnéales et épisiotomie, rôle du partenaire, accueil de bébé, peau à peau, tétée d’accueil, post-partum immédiat.
-                      Déroulement d’une césarienne et post partum immédiat en cas de césarienne. Exercices de respiration/relaxation, exercices de Yoga prénatal.
+                      <ul className={classes.accordionSublist}>
+                        <li>Poussée : Quand ? Comment ? S’approprier son accouchement, positions physiologiques d’accouchement.</li>
+                        <li>Placenta, cordon, déchirures/épisiotomie.</li>
+                        <li>Accueillir son enfant dans ce monde : peau à peau, soins à la naissance, tétée d’accueil.</li>
+                        <li>Yoga/méditation : synergie mère-enfant pendant la naissance.</li>
+                      </ul>
+                      <em>Vers 32-34 SA (semaines d’aménorrhée)</em>
                     </>
                   )
                 }, {
-                  summary: 'Et après ? Le post-partum, aspects pratiques',
+                  summary: 'Post-partum : Etre parents, aspects pratiques, psychiques et émotionnels',
                   content: (
                     <>
-                      Et après&nbsp;? Séjour à la maternité, puis quotidien, organisation, sources de soutien, prévention des accidents domestiques,
-                      généralités sur les besoins et soins du nouveau-né, RDVs à prévoir en post partum, retour de couches, retour de fertilité,
-                      reprise de l’activité sexuelle, reprise du travail, rééducation périnéale. Exercices de respiration/relaxation, exercices de Yoga prénatal.
+                      <ul className={classes.accordionSublist}>
+                        <li>Aspects pratiques : Séjour à la maternité, généralités sur les besoins et soins du nouveau-né, RDVs à prévoir en post partum, retour de couches, retour de fertilité, reprise de l’activité sexuelle, reprise du travail, rééducation périnéale. </li>
+                        <li>Que sait faire un foetus ? Un nouveau-né ? Comment perçoit-il le monde ? Développement sensoriel : Que peut-il voir ? Entendre ? Sentir ? Comment interagir avec un nouveau-né ? Quelles activités partager avec lui ? Besoins physiques et affectifs du nouveau-né.</li>
+                        <li>“Un bébé ça pleure.” Vrai, mais peu utile lorsque l’on se trouve seul, au bord de l’épuisement total, à 3h du matin, avec un bébé qui crie depuis des heures malgré les plus grands efforts de son entourage. Pourquoi bébé crie-t-il ? Comment gérer ses propres émotions afin de mieux accompagner bébé dans la gestion des siennes ? Quelques conseils pour éviter la surcharge émotionnelle, et quelques pistes pour calmer un bébé en crise.</li>
+                      </ul>
+                      <em>Vers 33-35 SA (semaines d’aménorrhée)</em>
                     </>
                   )
                 }, {
-                  summary: 'Aspects psychiques et émotionnels en post-partum - cultiver le lien parent-enfant',
+                  summary: 'Alimentation et petits maux du nouveau-né et du nourrisson',
                   content: (
                     <>
-                      Que sait faire un foetus&nbsp;? Un nouveau-né&nbsp;? Comment perçoit-il le monde&nbsp;? Développement sensoriel&nbsp;:
-                      Que peut-il voir&nbsp;? Entendre&nbsp;? Sentir&nbsp;? Comment interagir avec un nouveau-né&nbsp;?
-                      Quelles activités partager avec lui&nbsp;?<br />
-                      <br />
-                      Besoins physiques et affectifs du nouveau-né et du nourrisson, rythmes sommeil/éveil,
-                      portage, cocooning, bienfaits du massage bébé. Concilier les besoins et le bien-être de bébé avec ceux des parents.
-                      Exercices de respiration/relaxation, de Yoga prénatal.
+                      <ul className={classes.accordionSublist}>
+                        <li>Allaitement maternel : clefs pour un allaitement réussi, rythmes naturels, complications de l’allaitement et comment y faire face, allier allaitement et co-parent non allaitant.</li>
+                        <li>Alimentation au biberon : rythmes, ajustements des doses et des laits choisis, prévenir et prendre en charge la montée de lait.</li>
+                        <li>Petits maux fréquents du nouveau-né et du nourrisson : reflux, coliques, éruptions cutanées, tête plate… les prévenir, les reconnaître et les appréhender.</li>
+                      </ul>
+                      <em>Vers 33-35 SA (semaines d’aménorrhée)</em>
                     </>
                   )
                 }, {
-                  summary: 'Comprendre et appréhender les cris du nouveau-né et du nourrisson',
+                  summary: 'Coaching pour les coachs : séance à deux pour bien faire équipe le jour J',
                   content: (
                     <>
-                      “Un bébé ça pleure.” Vrai, mais peu utile lorsque l’on se trouve seul, au bord de l’épuisement total, à 3h du matin,
-                      avec un bébé qui crie depuis des heures malgré les plus grands efforts de son entourage. <br />
-                      Pourquoi bébé crie-t-il&nbsp;?<br />
-                      Comment gérer ses propres émotions afin de mieux accompagner bébé dans la gestion des siennes&nbsp;?<br />
-                      Quelques conseils pour éviter la surcharge émotionnelle, et quelques pistes pour calmer un bébé en crise.<br />
-                      Notions de postures, massages et phytothérapie pour soulager les maux classiques (douleurs abdominales, reflux&nbsp;…).
+                      <ul className={classes.accordionSublist}>
+                        <li>Place du co-parent ou de l’accompagnant durant le travail et l’accouchement.</li>
+                        <li>Accompagner la femme en travail : l’aider à gérer la douleur, favoriser le bon déroulement du travail.</li>
+                        <li>Massages, respiration, relaxation.</li>
+                        <li>Devenir papa.</li>
+                      </ul>
+                      <em>Vers 37 SA (semaines d’aménorrhée)</em>
                     </>
                   )
-                }, {
-                  summary: 'Allaitement maternel',
-                  content: (
-                    <>
-                      S’approprier son allaitement en posant son propre projet (allaitement maternel exclusif, mixte&nbsp;…)<br />
-                      Bases scientifiques de l’allaitement maternel. Comment gérer tous les sons de cloches qui résonnent autour de vous&nbsp;?
-                      Idées reçues, respect de la spécificité de chacun.
-                    </>
-                  )
-                }
+                },
               ]}
             />
 
