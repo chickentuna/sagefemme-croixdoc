@@ -33,8 +33,8 @@ function Reeducation () {
       <div className={classes.content}>
 
         <p className={classes.intro}>
-          Cette rééducation est accessible aux femmes de tout âge, en post-partum ou non, sans ordonnance si elle est effectuée par une sage-femme.
-          Les séances sont remboursées par la sécurité sociale à 100% dans les 3 ans suivant un accouchement, et à 70% en dehors de cette période (complété par la mutuelle).
+          Cette rééducation est accessible aux femmes de tout âge, sans ordonnance et prise en charge à 100 % par la sécurité sociale si elle est effectuée dans les 3 ans suivant
+          un accouchement, et sur ordonnance d'un médecin et prise en charge à 70% en dehors de ce cas, le reste à charge étant remboursé par les mutuelles.
         </p>
 
         <div className={classes.blocks}>
@@ -43,9 +43,13 @@ function Reeducation () {
             landscape
           >
             <h4>Première consultation&nbsp;: le bilan périnéal</h4>
+
             Evaluation du plancher pelvien, de la ceinture abdominale et du rachis,
             exploration d’éventuels troubles (incontinence, douleurs),
             permettant de déterminer la stratégie thérapeutique pour les prochaines séances si celles-ci sont indiquées.
+            <br />
+            Le bilan périnéal initial ne nécessite pas d'ordonnance et est pris en charge par la sécurité sociale et les mutuelles.
+
           </ContentBlock>
 
           <ContentBlock
