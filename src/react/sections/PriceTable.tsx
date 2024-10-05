@@ -43,8 +43,6 @@ const categories = [
       createData('Accompagnement à la parentalité (au delà des 7 premières séances), en groupe', 60.14, 0),
       createData('Atelier fratries (hors PNP)', 25.00, 0),
       createData('Séance de Yoga Prénatal collectif, hors préparation à la naissance', 15.00, 0),
-      createData('Massage Garbhvati', 45.00, 0),
-      createData('Massage drainant pieds et jambes', 35.00, 0),
       createData('observation grossesse pathologique avec ERCF - grossesse unique', 48.36, 100),
       createData('observation grossesse pathologique avec ERCF - grossesse multiple', 70.06, 100),
       createData('ERCF sans prescription grossesse unique', 38.75, 100),
@@ -74,7 +72,6 @@ const categories = [
       createData('Surveillance à domicile mère-enfant de J2 à J12, vistes suivantes, un seul enfant', 47.20, 100),
       createData('Surveillance à domicile mère-enfant de J2 à J12, les deux premières fois, naissance multiple', 75.30, 100),
       createData('Surveillance à domicile mère-enfant de J2 à J12, vistes suivantes, naissance multiple', 62.70, 100),
-      createData('Supplément domicile pour les massages et le Yoga', 10.00, 0),
     ]
   },
   {
