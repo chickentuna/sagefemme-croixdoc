@@ -2,6 +2,11 @@ import './Lucas.scss'
 import React, { useCallback, useEffect, useRef, useState } from 'react'
 
 const quiz = [
+  { word: 'annoncer', img: 'https://www.superbibi.net/wp-content/uploads/guide-facebook.png' },
+  { word: 'voyage', img: 'https://voxanova.com/medias/pdc/4258/2d63dd71295d5c1fdae5503cc21eecb6a54a26ad/AdobeStock_696182326-scaled.jpeg' },
+  { word: 'aimer', img: 'https://www.pourquoidocteur.fr/media/article/COPY_istock-877307560-1553262470.jpg' },
+  { word: 'devant', img: 'https://upload.wikimedia.org/wikipedia/commons/thumb/a/ad/Pr%C3%A9position_devant_%28lit%29.svg/1200px-Pr%C3%A9position_devant_%28lit%29.svg.png' },
+
   { word: 'petit', img: 'https://www.thelabradorsite.com/wp-content/uploads/2020/01/Small-Labrador-LS-long.jpg' },
   { word: 'grand', img: 'https://www.drawingtutorials101.com/drawing-tutorials/Cartoon-TV/Mr--Men/mr--tall/how-to-draw-Mr--Tall-from-Mr--Men-step-0.png' },
   { word: 'un enfant', img: 'https://www.educatout.com/images/medium/Trucs-et-conseils-pour-valoriser-l-enfant.jpg' },
@@ -11,7 +16,7 @@ const quiz = [
   { word: 'content', img: 'https://mrmen.com/cdn/shop/t/37/assets/svg--character--mr-happy.svg?v=32825736591941550291695746657' },
   { word: 'maintenant', img: 'https://media.gettyimages.com/id/1291564318/video/hourglass-countdown-close-up.jpg?s=640x640&k=20&c=KW_J5wAtb2EWE2wfKSsvNyyAdXTuAkiAp-_G5OPvEhQ=' },
   { word: 'apporter', img: 'https://www.woopets.fr/assets/img/011/425/1200x675/18-chiens-apportant-fierement-un-gros-baton.jpg' },
-  { word: 'une photo', img: 'https://www.photoweb.fr/espaces/magazine/wp-content/uploads/2017/05/poids-d-une-image.jpg' },
+  { word: 'photo', img: 'https://www.photoweb.fr/espaces/magazine/wp-content/uploads/2017/05/poids-d-une-image.jpg' },
   { word: 'plusieurs', img: 'https://nosoffres.ccas.fr/wp-content/uploads/sites/2/2023/08/Contrat-scolaire-1.jpg' },
   { word: 'la peur', img: 'https://www.hoptoys.fr/52260/15033.jpg' },
   { word: 'un loup', img: 'https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcTesKiNuOBeheJkQJ8kHHimltiEFwn-3KYMLaMb4B-3yVizb4ty' },
@@ -25,7 +30,7 @@ const quiz = [
   { word: 'année', img: 'https://fr.calcuworld.com/wp-content/uploads/sites/5/2019/01/365-jours.jpg', herrings: ['anné', 'anée', 'hanée', 'ané'] },
   { word: 'école', img: 'https://img.freepik.com/vecteurs-libre/garcons-jouant-au-football-ecole_1308-28036.jpg', herrings: ['écolle', 'écol', 'éccole'] },
   { word: 'tableau', img: 'https://www.shutterstock.com/image-vector/empty-blackboard-blank-classboard-education-260nw-1061565734.jpg', herrings: ['tableux', 'tablaux', 'tablau', 'tablo'] },
-  { word: 'maîtresse', img: 'https://media.sudouest.fr/7998123/1000x500/so-57eb8b7d66a4bd7760bbf31a-ph0.jpg?v=1420671600', herrings: ['maitresse', 'maittresse', 'maitesse', 'métres'] },
+  { word: 'maitresse', img: 'https://media.sudouest.fr/7998123/1000x500/so-57eb8b7d66a4bd7760bbf31a-ph0.jpg?v=1420671600', herrings: ['maitresse', 'maittresse', 'maitesse', 'métres'] },
   { word: 'noter', img: 'https://www.cahier-effacable.fr/wp-content/uploads/2022/05/Bloc-note-numerique.jpg', herrings: ['notter', 'nooter', 'noterre', 'noté'] },
   { word: 'mot', img: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcStC1CEVu1ark8QB-lDo9jBaXGGYU67sgtlag&s', herrings: ['motte', 'mott', 'mo', 'mote'] },
   { word: 'français', img: 'https://by.ambafrance.org/IMG/arton5049.jpg?1510666945', herrings: ['françai', 'fransé', 'francçais', 'fransé'] },
