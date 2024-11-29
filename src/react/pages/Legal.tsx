@@ -41,7 +41,7 @@ function Legal () {
       <div className={classes.content}>
         <LegalBlock title='Propriétaire du site'>
           Fanchon RIVOIRE
-          <br /> 2 rue Paul Valéry
+          <br /> 4 ter Chemin du Thym
           <br />34160 - Restinclières
         </LegalBlock>
         <LegalBlock title='Contact'>

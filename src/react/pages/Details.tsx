@@ -85,7 +85,7 @@ function Details () {
             <img src='images/panneau-acces-handicapes.jpg'></img>
             <h3>Adresse&nbsp;:</h3>
             <div className={classes.text}>
-              <p>2 rue Paul Valéry
+              <p>4 ter Chemin du Thym
                 <br />34160 - RESTINCLIÈRES
                 <br />Bus ligne 612 ou 31
               </p>
