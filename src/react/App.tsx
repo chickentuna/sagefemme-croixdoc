@@ -9,7 +9,8 @@ const useStyle = createUseStyles({
   box: {
     display: 'flex',
     flexFlow: 'column',
-    height: '100vh'
+    height: '100vh',
+    background: 'white'
   }
 })
 

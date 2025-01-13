@@ -3,7 +3,7 @@ import React from 'react'
 import { createUseStyles } from 'react-jss'
 import ButtonLink from './components/ButtonLink/ButtonLink'
 import PageWrapper from './components/PageWrapper'
-import { faStethoscope, faHandHoldingMedical, faDroplet, faBandage, faBaby, faPersonBreastfeeding, faBandAid, faHeartbeat, faHeartPulse, faAmbulance, faBriefcase, faBriefcaseMedical, faSpa, faDisplay, faLaptopMedical, faSyringe } from '@fortawesome/free-solid-svg-icons'
+import { faStethoscope, faHandHoldingMedical, faDroplet, faBandage, faBaby, faPersonBreastfeeding, faBandAid, faHeartbeat, faHeartPulse, faAmbulance, faBriefcase, faBriefcaseMedical, faSpa, faDisplay, faLaptopMedical, faSyringe, IconDefinition } from '@fortawesome/free-solid-svg-icons'
 import PageTitle from './components/PageTitle'
 import Helmet from 'react-helmet'
 import isNight from './utils/utils'
@@ -31,7 +31,13 @@ const useStyle = createUseStyles({
   }
 })
 
-const links = [
+const links: {
+  label: string
+  disable?: boolean
+  to?: string
+  icon: IconDefinition
+  description?: string
+}[] = [
   {
     label: 'Grossesse et post-partum',
     to: 'grossesse-et-post-partum',
@@ -64,8 +70,7 @@ const links = [
   {
     label: 'Échographie',
     icon: faLaptopMedical,
-    description: 'À venir',
-    disable: true
+    description: 'Échographies en gynécologie et obstétrique.'
   }
 ]
 
