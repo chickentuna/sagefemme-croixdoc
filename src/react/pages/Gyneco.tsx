@@ -33,7 +33,7 @@ function Gyneco () {
             <List>
               <li>Consultations de gynécologie</li>
               <li>Réalisation et interprétation de frottis cervico-vaginaux</li>
-              <li>Consultation pré-conceptionnelle</li>
+              <li>Échographie pelvienne</li>
               <li>Diagnostic et traitement d’infections urinaires basses (cystites)</li>
               <li>Diagnostic et traitement d’infections génitales basses (vaginites type mycoses, vaginoses bactériennes etc.)</li>
               <li>Dépistage des IST</li>

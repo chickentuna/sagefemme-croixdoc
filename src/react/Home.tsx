@@ -46,7 +46,7 @@ const links: {
   },
   {
     label: 'Préparation à la naissance',
-    to: 'pnp',
+    // to: 'pnp',
     icon: faBaby,
     description: 'Individuelle ou en couple, avec possibilité de séances de Yoga prénatal - préparation des fratries - préparation à l\'accouchement naturel.'
   },

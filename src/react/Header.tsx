@@ -24,7 +24,7 @@ export function Header () {
         { label: 'Grossesse et post-partum', to: '/grossesse-et-post-partum' },
         { label: 'Rééducation périnéale', to: '/reeducation-perineale' },
         { label: 'Gynécologie', to: '/gynecologie' },
-        { label: 'Préparation à la naissance', to: '/pnp' }
+        // { label: 'Préparation à la naissance', to: '/pnp' }
       ]
     },
     { label: 'Votre sage-femme', to: '/a-propos' },
