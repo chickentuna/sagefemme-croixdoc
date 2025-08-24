@@ -176,7 +176,6 @@ function Urgences () {
               <h4>Votre sage-femme libérale peut vous recevoir en urgence sur les horaires d’ouverture du cabinet, notamment pour&nbsp;:</h4>
               <List>
                 <li>Des difficultés/douleurs liées à l’allaitement</li>
-                <li>Une suspicion de rupture de la poche des eaux</li>
                 <li>Une mycose, une infection urinaire</li>
                 <li>Des conseils de prévention/contraception d’urgence suite à des rapports sexuels non protégés, consentis ou non</li>
               </List>
