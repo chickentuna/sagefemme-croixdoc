@@ -65,6 +65,7 @@ function About () {
                 <li>Conventionnée secteur 1</li>
                 <li>Diplôme d’Etat de Sage-Femme&nbsp;-&nbsp;2015</li>
                 <li>Diplôme d’Etat d’Infirmier&nbsp;-&nbsp;2019</li>
+                <li>DESIU échographique gynécologique & obstétricale&nbsp;-&nbsp;2024</li>
               </List>
 
             </ContentBlock>
@@ -77,9 +78,9 @@ function About () {
                 <li>Collège National des Sages-Femmes (CNSF)</li>
                 <li>Réseau Périnatalité d’Occitanie (RPO)</li>
                 <li>Naître et Grandir en Languedoc Roussillon (NGLR)</li>
-                <li>L’Aube des Naissances (ADN) - Maison de Naissance en Occitanie</li>
                 <li>Association Nationale des Sages-Femmes Libérales (ANSFL)</li>
-                <li>Collectif Maisons de Naissances (CMDN)</li>
+                <li>Communauté professionnelle territoriale de santé Montpellier et Bérange (CPTS)</li>
+                <li>Collège Français d'Echographie Foetale (CFEF)</li>
               </List>
 
             </ContentBlock>
@@ -105,11 +106,14 @@ function About () {
               <h4>Formations complémentaires</h4>
               <List>
                 <li>Repérage et prise en charge des vulnérabilités chez la femme enceinte</li>
-                <li>Suivi gynécologique de prévention</li>
+                <li>Suivi gynécologique de prévention &nbsp;-&nbsp;Niveau I et II.</li>
                 <li>Réanimation néonatale</li>
                 <li>Yoga prénatal et postnatal, professeur diplômée Fédération Française de Green Yoga®</li>
                 <li>Garbhvati&nbsp;: Massage ayurvédique de la femme et de la femme enceinte</li>
-                <li>Echographie gynécologique et obstétricale - en cours</li>
+                <li>Echographie gynécologique et obstétricale</li>
+                <li>Dépistages des cancers de la femme</li>
+                <li>Dermatologie gynécologique</li>
+                <li>Vulvodynie & vaginisme : diagnostic et prise en charge</li>
               </List>
 
             </ContentBlock>
