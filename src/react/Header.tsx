@@ -25,6 +25,7 @@ export function Header () {
         { label: 'Rééducation périnéale', to: '/reeducation-perineale' },
         { label: 'Gynécologie', to: '/gynecologie' },
         // { label: 'Préparation à la naissance', to: '/pnp' }
+        { label: 'Échographie', to: '/echographie' }
       ]
     },
     { label: 'Votre sage-femme', to: '/a-propos' },

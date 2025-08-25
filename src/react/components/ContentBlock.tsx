@@ -83,12 +83,13 @@ const useStyles = createUseStyles((theme: Theme) => ({
     zIndex: 2,
     width: '100%',
     height: '100%',
-    outline: `1px solid ${theme.sfBlack}`
+    outline: `1px solid ${theme.sfBlack}`,
+    background: 'white'
   }
 }))
 
 interface ContentBlockProps {
-  imageUrl: string
+  imageUrl?: string
   children?: ReactNode
   flip?: boolean
   landscape?: boolean
@@ -104,13 +105,15 @@ function ContentBlock ({ imageUrl, children, flip = false, landscape = false }: 
           {children}
         </div>
       )}
-      <div
-        className={classes.imageBlock}
-      >
-        <div className={classNames(classes.rect, classes.rectA)}></div>
-        <div className={classNames(classes.rect, classes.rectB)}></div>
-        <img src={imageUrl} className={classes.image} />
-      </div>
+      {imageUrl && (
+        <div
+          className={classes.imageBlock}
+        >
+          <div className={classNames(classes.rect, classes.rectA)}></div>
+          <div className={classNames(classes.rect, classes.rectB)}></div>
+          <img src={imageUrl} className={classes.image} />
+        </div>
+      )}
     </div>
   )
 }

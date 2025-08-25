@@ -23,6 +23,7 @@ import Urgences from './pages/Urgences'
 import UrgencesJour from './pages/UrgencesJour'
 import UrgencesNuit from './pages/UrgencesNuit'
 import Lucas from './pages/lucas/Lucas'
+import Echographie from './pages/echographie/Echographie'
 
 // TODO: whatsup with the /images/ url?
 
@@ -52,7 +53,7 @@ export function Index () {
           <Route path='/contact' element={<Contact />} />
           <Route path='/quand-aller-aux-urgences' element={<Quand />} />
           <Route path='/mentions-legales' element={<Legal />} />
-          <Route path='/massages' element={<Massages />} />
+          <Route path='/echographie' element={<Echographie />} />
           <Route path='*' element={<PageNotFound />} />
         </Route>
       </Routes>

@@ -69,6 +69,7 @@ const links: {
   },
   {
     label: 'Échographie',
+    to: 'echographie',
     icon: faLaptopMedical,
     description: 'Échographies en gynécologie et obstétrique.'
   }
