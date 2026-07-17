@@ -65,7 +65,7 @@ const links: {
   {
     label: 'Vaccination',
     icon: faSyringe,
-    description: 'Vaccination contre le papillomavirus, vaccination de la femme enceinte et de tout son entourage'
+    description: 'Vaccination contre le papillomavirus, vaccination de la femme enceinte et de tout son entourage.'
   },
   {
     label: 'Échographie',
