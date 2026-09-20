@@ -24,6 +24,7 @@ import UrgencesJour from './pages/UrgencesJour'
 import UrgencesNuit from './pages/UrgencesNuit'
 import Lucas from './pages/lucas/Lucas'
 import Echographie from './pages/echographie/Echographie'
+import DailyChecklist from './pages/checklist/DailyChecklist'
 
 // TODO: whatsup with the /images/ url?
 
@@ -37,6 +38,7 @@ export function Index () {
     <Router>
       <Routes>
         <Route path='/lucas' element={<Lucas />} />
+        <Route path='/checklist-parents' element={<DailyChecklist />} />
         <Route path='/' element={<App />}>
           <Route index element={<Home />} />
           <Route path='/gynecologie' element={<Gyneco />} />

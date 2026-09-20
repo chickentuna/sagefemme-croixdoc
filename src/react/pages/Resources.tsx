@@ -4,6 +4,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import classNames from 'classnames'
 import React, { useState } from 'react'
 import { createUseStyles } from 'react-jss'
+import { Link } from 'react-router-dom'
 import ContentBlock from '../components/ContentBlock'
 import PageWrapper from '../components/PageWrapper'
 import { Theme } from '../theme'
@@ -64,6 +65,10 @@ function Resources () {
   {
     text: 'Coordonnées utiles et numéros verts',
     url: 'docs/Coordonnées utiles et numéros verts.pdf'
+  },
+  {
+    text: 'Checklist de survie pour parent fatigué',
+    route: '/checklist-parents'
   }
   ]
 
@@ -92,13 +97,22 @@ function Resources () {
                 <p>
                   {file.text}
                 </p>
-                <a
-                  className={classNames([classes.link, { [classes.visited]: visited.has(idx) }])}
-                  href={file.url}
-                  download
-                  onClick={() => handleClick(idx)}
-                > <FontAwesomeIcon icon={faDownload} /> {file.url.split('docs/')[1]}
-                </a>
+                {file.route != null ? (
+                  <Link
+                    className={classNames([classes.link, { [classes.visited]: visited.has(idx) }])}
+                    to={file.route}
+                    onClick={() => handleClick(idx)}
+                  >Ouvrir la checklist
+                  </Link>
+                ) : (
+                  <a
+                    className={classNames([classes.link, { [classes.visited]: visited.has(idx) }])}
+                    href={file.url}
+                    download
+                    onClick={() => handleClick(idx)}
+                  > <FontAwesomeIcon icon={faDownload} /> {file.url?.split('docs/')[1]}
+                  </a>
+                )}
               </div>
             ))}
           </div>

@@ -1,0 +1,341 @@
+.checklist-page {
+  --bg: #F2EFE9;
+  --surface: #FFFFFF;
+  --ink: #23262A;
+  --ink-soft: #6E7570;
+  --accent: #1F6F64;
+  --accent-soft: #DCEAE6;
+  --line: #DDD7C9;
+  --line-strong: #C7C0AF;
+  --done-strike: #9CA39D;
+
+  background: var(--bg);
+  color: var(--ink);
+  font-family: 'Karla', 'Segoe UI', sans-serif;
+  min-height: 100vh;
+  padding: 0 20px;
+  display: flex;
+  justify-content: center;
+
+  * {
+    box-sizing: border-box;
+  }
+
+  .checklist-card-page {
+    width: 100%;
+    max-width: 640px;
+    padding: 48px 0 64px;
+  }
+
+  header {
+    margin-bottom: 36px;
+  }
+
+  .eyebrow {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 12.5px;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin: 0 0 14px;
+  }
+
+  h1 {
+    font-family: 'Fraunces', Georgia, serif;
+    font-optical-sizing: auto;
+    font-weight: 600;
+    font-size: clamp(28px, 6vw, 38px);
+    line-height: 1.15;
+    letter-spacing: -0.01em;
+    margin: 0 0 16px;
+    text-wrap: balance;
+    max-width: 20ch;
+  }
+
+  .rule-row {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-top: 26px;
+    padding: 14px 16px;
+    background: var(--surface);
+    border: 1px solid var(--line);
+    border-radius: 10px;
+  }
+
+  .rule-row .count {
+    font-family: 'IBM Plex Mono', monospace;
+    font-variant-numeric: tabular-nums;
+    font-size: 15px;
+    font-weight: 500;
+    color: var(--accent);
+    white-space: nowrap;
+  }
+
+  .rule-row .bar {
+    flex: 1;
+    height: 6px;
+    background: var(--accent-soft);
+    border-radius: 4px;
+    overflow: hidden;
+  }
+  .rule-row .bar-fill {
+    height: 100%;
+    width: 0%;
+    background: var(--accent);
+    border-radius: 4px;
+    transition: width 0.35s ease;
+  }
+
+  .reset-note {
+    font-size: 12.5px;
+    color: var(--ink-soft);
+    margin: 10px 2px 0;
+  }
+
+  ol.list {
+    list-style: none;
+    margin: 32px 0 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .item {
+    display: flex;
+    align-items: flex-start;
+    gap: 14px;
+    background: var(--surface);
+    border: 1px solid var(--line);
+    border-radius: 12px;
+    padding: 16px 16px;
+    cursor: pointer;
+    transition: background 0.15s ease, border-color 0.15s ease;
+  }
+  .item:hover {
+    border-color: var(--line-strong);
+  }
+
+  .item.done {
+    background: var(--accent-soft);
+    border-color: var(--accent-soft);
+  }
+
+  .num {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 12px;
+    color: var(--ink-soft);
+    width: 20px;
+    padding-top: 3px;
+    flex-shrink: 0;
+    font-variant-numeric: tabular-nums;
+  }
+
+  .box {
+    position: relative;
+    width: 22px;
+    height: 22px;
+    border-radius: 6px;
+    border: 2px solid var(--line-strong);
+    flex-shrink: 0;
+    margin-top: 1px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--surface);
+    transition: background 0.15s ease, border-color 0.15s ease;
+  }
+
+  .thumb-pop {
+    position: absolute;
+    left: 50%;
+    top: 0;
+    font-size: 18px;
+    line-height: 1;
+    pointer-events: none;
+    animation: thumb-pop 0.7s ease forwards;
+  }
+
+  @keyframes thumb-pop {
+    0% {
+      opacity: 0;
+      transform: translate(-50%, 0) scale(0.5);
+    }
+    30% {
+      opacity: 1;
+      transform: translate(-50%, -16px) scale(1.2);
+    }
+    100% {
+      opacity: 0;
+      transform: translate(-50%, -34px) scale(0.9);
+    }
+  }
+  .item.done .box {
+    background: var(--accent);
+    border-color: var(--accent);
+  }
+  .box svg {
+    width: 13px;
+    height: 13px;
+    opacity: 0;
+    transition: opacity 0.1s ease;
+  }
+  .item.done .box svg {
+    opacity: 1;
+  }
+
+  .text-wrap {
+    flex: 1;
+    min-width: 0;
+  }
+
+  .action {
+    font-weight: 700;
+    font-size: 15.5px;
+    line-height: 1.4;
+    color: var(--ink);
+  }
+  .item.done .action {
+    color: var(--done-strike);
+    text-decoration: line-through;
+    text-decoration-color: var(--done-strike);
+    text-decoration-thickness: 1.5px;
+  }
+
+  .detail {
+    font-size: 14px;
+    line-height: 1.5;
+    color: var(--ink-soft);
+    margin-top: 4px;
+  }
+  .item.done .detail {
+    color: var(--done-strike);
+  }
+
+  footer {
+    margin-top: 40px;
+    padding-top: 24px;
+    border-top: 1px solid var(--line);
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  button.print-btn {
+    font-family: 'Karla', sans-serif;
+    font-weight: 600;
+    font-size: 13.5px;
+    color: var(--accent);
+    background: var(--accent-soft);
+    border: none;
+    border-radius: 8px;
+    padding: 10px 16px;
+    cursor: pointer;
+    white-space: nowrap;
+  }
+  button.print-btn:hover {
+    filter: brightness(0.96);
+  }
+
+  @media (prefers-color-scheme: dark) {
+    --bg: #1B1E1C;
+    --surface: #242826;
+    --ink: #ECE8DE;
+    --ink-soft: #9CA39D;
+    --accent: #56B7A4;
+    --accent-soft: #24413D;
+    --line: #3A3F3B;
+    --line-strong: #4A4F4A;
+    --done-strike: #6E7570;
+  }
+}
+
+.celebrate-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(20, 22, 20, 0.45);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 50;
+  cursor: pointer;
+  animation: celebrate-fade 0.2s ease;
+}
+
+@keyframes celebrate-fade {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.celebrate-thumb {
+  font-size: min(45vw, 240px);
+  line-height: 1;
+  filter: drop-shadow(0 10px 30px rgba(0, 0, 0, 0.35));
+  animation: celebrate-thumb 0.5s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+@keyframes celebrate-thumb {
+  0% {
+    transform: scale(0.3) rotate(-10deg);
+    opacity: 0;
+  }
+  60% {
+    transform: scale(1.15) rotate(5deg);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1) rotate(0deg);
+    opacity: 1;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .thumb-pop,
+  .celebrate-overlay,
+  .celebrate-thumb {
+    animation: none !important;
+  }
+}
+
+@media print {
+  .checklist-page {
+    background: #fff;
+    color: #000;
+    padding: 0;
+
+    .rule-row,
+    footer,
+    .eyebrow {
+      display: none;
+    }
+
+    .checklist-card-page {
+      max-width: none;
+      padding: 0;
+    }
+
+    .item {
+      break-inside: avoid;
+      border: none;
+      border-bottom: 1px solid #ccc;
+      border-radius: 0;
+      padding: 10px 0;
+      background: #fff !important;
+    }
+
+    .box {
+      border: 1.5px solid #000;
+      background: #fff !important;
+    }
+
+    .item.done .action,
+    .item.done .detail {
+      color: #000 !important;
+      text-decoration: none !important;
+    }
+
+    h1 {
+      color: #000;
+    }
+  }
+}
