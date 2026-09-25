@@ -97,14 +97,15 @@ function Resources () {
                 <p>
                   {file.text}
                 </p>
-                {file.route != null ? (
+                {file.route != null && (
                   <Link
                     className={classNames([classes.link, { [classes.visited]: visited.has(idx) }])}
                     to={file.route}
                     onClick={() => handleClick(idx)}
                   >Ouvrir la checklist
                   </Link>
-                ) : (
+                )}
+                {file.route == null && (
                   <a
                     className={classNames([classes.link, { [classes.visited]: visited.has(idx) }])}
                     href={file.url}
